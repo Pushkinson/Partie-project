@@ -1,0 +1,367 @@
+.bg-animate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: 3s;
+    z-index: -2;
+
+    @keyframes line {
+        0% {}
+
+        100% {
+            top: 150%;
+        }
+    }
+
+    animation-name: line;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+
+
+    .line {
+        position: absolute;
+    }
+
+    .line-1 {
+        height: 107px;
+        width: 4px;
+        background-color: #9C42AB;
+        border-radius: 4px;
+        left: 7%;
+        top: 334.44px;
+
+    }
+
+    .line-2 {
+        width: 4px;
+        background-color: #9C42AB;
+        border-radius: 4px;
+        height: 147.69px;
+        left: 7%;
+        opacity: 0.4;
+        top: 399.38px;
+    }
+
+    .line-3 {
+        width: 1px;
+        background-color: #9C42AB;
+        border-radius: 4px;
+        height: 50.28px;
+        left: 10%;
+        top: 424.52px;
+    }
+
+    .line-4 {
+        width: 1px;
+        background-color: #9C42AB;
+        border-radius: 4px;
+        height: 85.54px;
+        left: 20%;
+        top: 580.1px;
+    }
+
+    .line-5 {
+        width: 4px;
+        background-color: #9C42AB;
+        border-radius: 4px;
+        height: 30px;
+        left: 22%;
+        top: 593px;
+    }
+
+    .line-6 {
+        width: 6px;
+        background-color: #6E4AFF;
+        border-radius: 4px;
+        height: 77.51px;
+        left: 58%;
+        top: 50.06px;
+    }
+
+    .line-7 {
+        width: 1px;
+        background-color: #6E4AFF;
+        border-radius: 4px;
+        height: 85.56px;
+        left: 70%;
+        top: 141px;
+    }
+
+    .line-8 {
+        width: 4px;
+        background-color: #6E4AFF;
+        border-radius: 4px;
+        height: 68px;
+        left: 72%;
+        top: 102px;
+    }
+
+    .line-9 {
+        width: 3px;
+        background-color: #6E4AFF;
+        border-radius: 4px;
+        height: 77.51px;
+        left: 84%;
+        top: 371.84px;
+    }
+
+    .line-10 {
+        width: 1px;
+        background-color: #9C42AB;
+        border-radius: 4px;
+        height: 50.28px;
+        left: 69%;
+        top: 745px;
+    }
+
+    .line-11 {
+        width: 4px;
+        background-color: #9C42AB;
+        border-radius: 4px;
+        height: 68.2px;
+        left: 65%;
+        top: 770.25px;
+        opacity: 0.4;
+    }
+
+    .line-12 {
+        width: 1px;
+        background-color: #6E4AFF;
+        border-radius: 4px;
+        height: 200.41px;
+        left: 322.76px;
+        top: 248.93px;
+        opacity: 0.2;
+    }
+
+    .line-13 {
+        width: 1px;
+        background-color: #6E4AFF;
+        border-radius: 4px;
+        height: 200.41px;
+        left: 228.22px;
+        top: 111.87px;
+        opacity: 0.2;
+    }
+
+
+}
+
+.screen-1 {
+    animation-name: line2;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    height: inherit;
+
+
+    @keyframes line2 {
+        0% {
+            top: -100%;
+        }
+        100% {
+            top: 100%;
+        }
+    }
+
+    .line2 {
+        position: absolute;
+    }
+
+    .line-1 {
+        left: 3%;
+    }
+
+    .line-2 {
+        left: 4%;
+    }
+
+    .line-3 {
+        left: 12%;
+    }
+
+    .line-4 {
+        left: 18%;
+    }
+
+    .line-5 {
+        left: 25%;
+    }
+
+    .line-6 {
+        left: 47%;
+    }
+
+    .line-7 {
+        left: 66%;
+    }
+
+    .line-8 {
+        left: 60%;
+    }
+
+    .line-9 {
+        left: 78%;
+    }
+
+    .line-10 {
+        left: 72%;
+    }
+
+    .line-11 {
+        left: 63%;
+    }
+    .line-12 {
+        left: 24%;
+    }
+    .line-13 {
+        left: 69%;
+    }
+}
+
+.screen-2 {
+    animation-name: line3;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    height: inherit;
+    animation-delay: 50s;
+
+    @keyframes line3 {
+        0% {
+            top: -105%;
+        }
+        100% {
+            top: 100%;
+        }
+    }
+
+    .line2 {
+        position: absolute;
+    }
+}
+
+.bg-red-blue {
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    position: fixed;
+    z-index: -1;
+
+    .bg-animate.red-blue {
+
+        .line-1 {
+            background-color: #EB4335;
+        }
+
+        .line-2 {
+            background-color: #EB4335;
+        }
+
+        .line-3 {
+            background-color: #EB4335;
+        }
+
+        .line-4 {
+            background-color: #EB4335;
+        }
+
+        .line-5 {
+            background-color: #EB4335;
+        }
+
+        .line-6 {
+            background-color:  #184292;
+        }
+
+        .line-7 {
+            background-color: #184292;
+        }
+
+        .line-8 {
+            background-color:  #184292;
+        }
+
+        .line-9 {
+            background-color:  #184292;
+        }
+
+        .line-10 {
+            background-color: #EB4335;
+        }
+
+        .line-11 {
+            background-color: #EB4335;
+        }
+
+        .line-12 {
+            background-color:  #184292;
+        }
+
+        .line-13 {
+            background-color:  #184292;
+        }
+    }
+
+}
+
+
+.bg-yellow-blue {
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+    position: fixed;
+    z-index: -1;
+
+    .bg-animate {
+        transition: 0s;
+    }
+
+    .bg-animate.yellow-blue {
+
+        .line-1 {
+            background-color: #D2C867;
+        }
+        .line-2 {
+            background-color: #D2C867;
+        }
+        .line-3 {
+            background-color: #D2C867;
+        }
+        .line-4 {
+            background-color: #D2C867;
+        }
+        .line-5 {
+            background-color: #D2C867;
+        }
+        .line-6 {
+            background-color:  #184292;
+        }
+        .line-7 {
+            background-color: #184292;
+        }
+        .line-8 {
+            background-color:  #184292;
+        }
+        .line-9 {
+            background-color:  #184292;
+        }
+        .line-10 {
+            background-color: #D2C867;
+        }
+        .line-11 {
+            background-color: #D2C867;
+        }
+        .line-12 {
+            background-color:  #184292;
+        }
+        .line-13 {
+            background-color:  #184292;
+        }
+    }
+}
+

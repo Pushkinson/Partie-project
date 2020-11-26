@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <title>Partie</title>
+</head>
+<body>
+
+<div class="feed">
+    <div id="gametragPlatform" class="platforms modal-wrapp open-modal">
+        <div class="modal center">
+            <div class="modal__head">
+                <svg id="back" onclick="back(gametragPlatform, gametrag)" class="btn-back" width="24" height="24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Select a plattfform
+                <button onclick="next(addGametrag, gametragPlatform)" class="platforms__create">Create</button>
+            </div>
+            <div class="modal__content">
+                <input id="hostXB" name="platform" type="radio">
+                <label for="hostXB" class="host-xb">Xbox</label>
+
+                <input id="hostPS" name="platform" type="radio">
+                <label for="hostPS" class="host-ps">Playstation</label>
+
+                <input id="hostOrigin" name="platform" type="radio">
+                <label for="hostOrigin" class="host-origin">Origin</label>
+
+                <input id="hostNin" name="platform" type="radio">
+                <label for="hostNin" class="host-sw">Nintendo</label>
+
+                <input id="hostEG" name="platform" type="radio">
+                <label for="hostEG" class="host-EG">Epic Games</label>
+
+                <input id="hostSteam" name="platform" type="radio">
+                <label for="hostSteam" class="host-steam">Steam</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gametrag-copied reportSubmitted">Report Submitted</div>
+<div id="postMenu" class="header__menu_menu">
+    <div class="close-place"></div>
+    <ul>
+        <li><a href="#">
+            <img src="img/icon/mute-r.png" width="16"/>
+            Mute</a></li>
+        <li><a href="#" onclick="openModal(partieReport)">
+            <img src="img/icon/report-r.png" width="16"/>
+            Report</a></li>
+        <li><a href="#">
+            <img src="img/icon/folow-f.png" width="16"/>
+            Follow gboy6827</a></li>
+        <li><a href="#">
+            <img src="img/icon/copy-f.png" width="16"/>
+            Copy link</a></li>
+        <li><a href="#" onclick="openModal(share)">
+            <img src="img/icon/share-f.png" width="16"/>
+            Share</a></li>
+    </ul>
+</div>
+
+<div id="feed" class="feed">
+    <img class="feed__people-btn" onclick="hiddenPeople()" src="img/icon/people-btn.png"/>
+    <div id="newPost" class="modal-wrapp">
+        <div class="new-post modal center">
+            <div class="modal__head">
+                New post
+                <div onclick="closeModal(newPost)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+                <button onclick="next(chooseGame, newPost)" class="empty-select">Select a Game (Optional)</button>
+                <textarea placeholder="What’s new?"></textarea>
+                <div class="new-post__row">
+                    <label for="photo2"></label>
+                    <input id="photo2" type="file" class="feed__what-new_photo">
+                    <button class="bg-fiolet">Public post</button>
+                    <button class="feed__what-new_post disabled">Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="chooseGame" class="modal-wrapp">
+        <div class="choose-game modal center">
+            <div class="modal__head">
+                <svg id="back" onclick="back(chooseGame, newPost)" class="btn-back" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Choose a game
+                <div onclick="back(chooseGame, newPost)" class="choose-game__close">None</div>
+            </div>
+            <div class="modal__content">
+                <input type="text" placeholder="Search">
+                <div class="choose-game__game game">
+                    <a href="#" class="game-cont">
+                        <div class="game__img"></div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" class="game-cont">
+                        <div class="game__img"></div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" class="game-cont">
+                        <div class="game__img"></div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" class="game-cont">
+                        <div class="game__img"></div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" class="game-cont">
+                        <div class="game__img"></div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" class="game-cont">
+                        <div class="game__img"></div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="feed__col1">
+        <div class="feed__search">
+            <a href="/" class="feed__search_logo"></a>
+            <div class="search-win">
+                <input class="feed__search_search" type="text" placeholder="Search">
+                <div class="search-win__box">
+                    <div class="search-win__content">
+                        <div class="recent">Recent</div>
+                        <ul>
+                            <li>
+                                <div class="clock"></div>
+                                Apex
+                                <div class="delete"></div>
+                            </li>
+                            <li>
+                                <div class="clock"></div>
+                                Apx
+                                <div class="delete"></div>
+                            </li>
+                            <li>
+                                <div class="clock"></div>
+                                Ape
+                                <div class="delete"></div>
+                            </li>
+                            <li>
+                                <div class="clock"></div>
+                                Ax
+                                <div class="delete"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-win__content search-win__content-search">
+                        <ul>
+                            <li>
+                                <div class="search-icon"></div>
+                                Apex
+                            </li>
+                            <li>
+                                <div class="search-icon"></div>
+                                Apx
+                            </li>
+                            <li>
+                                <div class="search-icon"></div>
+                                Ape
+                            </li>
+                            <li>
+                                <div class="search-icon"></div>
+                                Ax
+                            </li>
+                        </ul>
+                        <a href="/search.html">Show gg results</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feed__nav">
+            <ul>
+                <li>
+                    <a href="/feed.html" class="active-tab">
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.558576 8.77588C0.200188 9.14847 0 9.64537 0 10.1623V18.9999C0 19.5522 0.447716 19.9999 1 19.9999H6V15.0001C6 14.4478 6.44772 14.0001 7 14.0001H11C11.5523 14.0001 12 14.4478 12 15.0001V19.9999H17C17.5523 19.9999 18 19.5522 18 18.9999V10.1623C18 9.64537 17.7998 9.14847 17.4414 8.77588L9.72071 0.749148C9.32729 0.340127 8.67271 0.340128 8.27929 0.749149L0.558576 8.77588Z"
+                                  fill="#EBEBF5"/>
+                        </svg>
+                        Feed
+                    </a>
+                </li>
+                <li>
+                    <a href="/partie.html">
+                        <svg width="16" height="21" viewBox="0 0 16 21" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.8499 8.3887V12.3823C15.8499 12.3823 15.843 12.7838 15.4485 12.7838H10.8389V16.369C10.8389 16.369 10.8389 16.7705 10.4374 16.7705H5.82779V20.3558C5.82779 20.5772 5.64092 20.7572 5.42635 20.7572H0.40836C0.186877 20.7572 0.00692074 20.5703 0.00692074 20.3558V16.3621C0.00692074 16.3621 0.0207637 15.9607 0.40836 15.9607H5.01799V12.7838H0.40836C0.40836 12.7838 0.048449 12.7976 0.00692074 12.3823V8.3887C0.00692074 8.3887 0.00692093 7.98727 0.40836 7.98727C0.8098 7.98727 5.01799 7.98727 5.01799 7.98727V4.78959H0.394518C0.00692117 4.78959 0 4.39507 0 4.39507V0.40144C0 0.0069216 0.40144 0 0.40144 0H5.41251C5.80703 0 5.81395 0.40144 5.81395 0.40144V3.98671H10.4236C10.4236 3.98671 10.825 4.0144 10.825 4.38815V7.97342H15.4347C15.4416 7.98726 15.8499 7.99419 15.8499 8.3887ZM10.0221 11.974V8.79706H5.81395V11.974H10.0221Z"
+                                  fill="#322F42"/>
+                        </svg>
+                        Partie
+                    </a>
+                </li>
+                <li>
+                    <a href="/chats.html">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.1558 16.0238C19.2777 15.7667 19.3837 15.5048 19.4744 15.2385H19.4511C21.0394 10.5766 17.6992 5.67682 12.7681 5.43824C12.7682 5.4385 12.7681 5.43799 12.7681 5.43824C8.52527 5.24272 5 8.6391 5 12.8515C5 16.9408 8.32356 20.2678 12.4114 20.2737C13.5203 20.2722 14.583 20.0335 15.5741 19.5634C19.4425 20.3282 19.1408 20.2738 19.2297 20.2738C19.6317 20.2738 19.9321 19.9054 19.8535 19.5129L19.1558 16.0238Z" fill="#322F42"/>
+                            <path d="M0.710273 10.5946C0.588376 10.3375 0.482385 10.0755 0.391705 9.80931H0.41499C-1.17331 5.14736 2.16687 0.247594 7.09794 0.00901824C9.88218 -0.119289 12.3575 1.29872 13.7303 3.47973L12.8601 3.43962C7.47299 3.19137 3.00011 7.50317 3.00011 12.8515C3.00011 13.3669 3.04165 13.8727 3.12156 14.3658C2.76361 14.4366 2.45851 14.4971 2.1983 14.5486C0.729322 14.8397 0.691175 14.8472 0.653527 14.8453C0.652525 14.8452 0.651524 14.8452 0.650497 14.8451C0.646641 14.8449 0.642412 14.8446 0.636388 14.8446C0.234352 14.8446 -0.065978 14.4762 0.0125292 14.0837L0.710273 10.5946Z" fill="#322F42"/>
+                            <path d="M14.6833 5.78124C14.6834 5.78146 14.6833 5.78103 14.6833 5.78124V5.78124Z" fill="#322F42"/>
+                            <path d="M5 12.8515C5 12.8515 5 12.8515 5 12.8515C5 12.8866 5.00036 12.9217 5.00085 12.9567C5.00464 13.2284 5.02311 13.4967 5.05549 13.7607C5.08571 14.007 5.12803 14.2497 5.18186 14.488" fill="#322F42"/>
+                        </svg>
+                        Chats
+                    </a>
+                </li>
+                <li>
+                    <a href="/notifications.html">
+                        <div class="notifications">
+                            <svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.4099 14.7083L16.8628 17.13C16.9406 17.2603 16.9432 17.4245 16.8678 17.5566C16.7925 17.6886 16.6521 17.7706 16.4997 17.7706H0.422497C0.270186 17.7706 0.130568 17.6885 0.0552457 17.5557C-0.0200768 17.4228 -0.0183713 17.2604 0.0603227 17.1292L1.51319 14.7075C2.18335 13.5896 2.53791 12.3102 2.53791 11.0071V8.88578C2.53791 6.20765 4.32503 3.94246 6.76874 3.2122V1.69333C6.76874 0.759993 7.52776 0.000976562 8.4611 0.000976562C9.39444 0.000976562 10.1535 0.759993 10.1535 1.69333V3.2122C12.5972 3.94246 14.3843 6.20765 14.3843 8.88578V11.0071C14.3843 12.3102 14.7389 13.5905 15.4099 14.7083Z" fill="#322F42"/>
+                                <path d="M8.46108 21.291C7.28408 21.291 6.27375 20.5954 5.79651 19.5986H11.1257C10.6484 20.5954 9.63808 21.291 8.46108 21.291Z" fill="#322F42"/>
+                            </svg>
+                            <div class="notifications-counter">99+</div>
+                        </div>
+                        Notifications
+                    </a>
+                </li>
+                <li>
+                    <a href="/profile.html">
+                        <div class="feed__profile">
+                            <div class="avatar">
+                                <img src="img/icon/profile.png" height="32" width="32"/>
+                            </div>
+                        </div>
+                        <div>Profile</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="feed__col2 feed-tab">
+        <div class="feed__header tab">
+            <div onclick="openModal(preferencesModal)" class="feed__header_params">
+                <img src="img/icon/params.png" height="24" width="23"/>
+            </div>
+            <div class="feed__header_tabs">
+                <div class="tablinks" id="defaultOpenFeedTab" onclick="openTabFeed(event, 'ForYou')">
+                    For You
+                </div>
+                <div class="tablinks" onclick="openTabFeed(event, 'GlobalTab')">
+                    Global
+                </div>
+            </div>
+            <div onclick="openModal(newPost)" class="feed__header_post">+ Post</div>
+        </div>
+
+        <div class="search-win mobile">
+            <svg id="back" onclick="closeSearch()" class="btn-back mobile" width="24" height="24" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+            </svg>
+            <input class="feed__search_search" type="text" placeholder="Search">
+            <div class="search-win__box">
+                <div class="search-win__content">
+                    <div class="recent">Recent</div>
+                    <ul>
+                        <li>
+                            <div class="clock"></div>
+                            Apex
+                            <div class="delete"></div>
+                        </li>
+                        <li>
+                            <div class="clock"></div>
+                            Apx
+                            <div class="delete"></div>
+                        </li>
+                        <li>
+                            <div class="clock"></div>
+                            Ape
+                            <div class="delete"></div>
+                        </li>
+                        <li>
+                            <div class="clock"></div>
+                            Ax
+                            <div class="delete"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-win__content search-win__content-search">
+                    <ul>
+                        <li>
+                            <div class="search-icon"></div>
+                            Apex
+                        </li>
+                        <li>
+                            <div class="search-icon"></div>
+                            Apx
+                        </li>
+                        <li>
+                            <div class="search-icon"></div>
+                            Ape
+                        </li>
+                        <li>
+                            <div class="search-icon"></div>
+                            Ax
+                        </li>
+                    </ul>
+                    <a href="/search.html">Show gg results</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="ForYou" class="tabcontent for-you">
+            <div class="mobile-users mobile">
+                <div onclick="openModal(inviteFriendsSetting)" class="feed__friends_invite">
+                    <div class="icon-invite"></div>
+                </div>
+                <a href="/profiles.html" class="feed__friend">
+                    <div class="avatar">
+                        <div class="status-online"></div>
+                    </div>
+                </a>
+                <a href="/profiles.html" class="feed__friend">
+                    <div class="avatar">
+                        <div class="status-online"></div>
+                    </div>
+                </a>
+                <a href="/profiles.html" class="feed__friend">
+                    <div class="avatar">
+                        <div class="status-online"></div>
+                    </div>
+                </a>
+                <a href="/profiles.html" class="feed__friend">
+                    <div class="avatar">
+                        <div class="status-online"></div>
+                    </div>
+                </a>
+                <a href="/profiles.html" class="feed__friend">
+                    <div class="avatar">
+                        <div class="status-online"></div>
+                    </div>
+                </a>
+                <a href="/profiles.html" class="feed__friend">
+                    <div class="avatar">
+                        <div class="status-online"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="feed__what-new">
+                <div class="feed__what-new_head">
+                    <textarea onkeyup="showBtnPost(this)" maxlength="500" id="whatNewHead"
+                              placeholder="What’s new?"></textarea>
+                    <div>Select a Game (Optional)</div>
+                    <div class="photo-wrapp">
+                        <label for="photo-1"></label>
+                        <input id="photo-1" type="file" class="feed__what-new_photo">
+                    </div>
+                </div>
+                <div class="row-wrapp">
+                    <div class="feed__what-new_row">
+                        <label for="photo"></label>
+                        <input id="photo" type="file" class="feed__what-new_photo">
+                        <button class="public-post">Public post</button>
+                        <button onclick="loading()" class="feed__what-new_post">Post</button>
+                    </div>
+                </div>
+                <div class="loading">
+                    <div class="round-wrapp">
+                        <div class="round-1"></div>
+                        <div class="round-2"></div>
+                    </div>
+                    <div>Posting</div>
+                </div>
+            </div>
+            <div class="feed__post_wrapp">
+                <div class="feed__post">
+                    <div class="feed__post_head user">
+                        <a href="/profiles.html" class="user__content">
+                            <div class="avatar">
+                                <div class="avatar__star"></div>
+                            </div>
+                            <div class="user__name">
+                                <div>HungryDima</div>
+                                <div class="user__cd">CD: Warzone <span>1h</span></div>
+                            </div>
+                        </a>
+                        <div class="feed__header_menu">
+                            <!--                            <div class="header__menu_menu">-->
+                            <!--                                <div class="close-place"></div>-->
+                            <!--                                <ul>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/mute-r.png" width="16"/>-->
+                            <!--                                        Mute</a></li>-->
+                            <!--                                    <li><a href="#" onclick="openModal(partieReport)">-->
+                            <!--                                        <img src="img/icon/report-r.png" width="16"/>-->
+                            <!--                                        Report</a></li>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/folow-f.png" width="16"/>-->
+                            <!--                                        Follow gboy6827</a></li>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/copy-f.png" width="16"/>-->
+                            <!--                                        Copy link</a></li>-->
+                            <!--                                    <li><a href="#" onclick="openModal(share)">-->
+                            <!--                                        <img src="img/icon/share-f.png" width="16"/>-->
+                            <!--                                        Share</a></li>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
+
+                        </div>
+                    </div>
+                    <div class="feed__post_text">
+                        I want to play MW with others on the platform but hardly anyone here is online. It's such a pain in
+                        the butt ;(
+                    </div>
+                    <a href="/post_id.html" class="feed__post_img">
+                        <img src="img/pic/Rectangle 78.png" width="100%"/>
+                    </a>
+                    <div class="feed__post_footer">
+                        <div class="footer-social">
+                            <div class="like">
+                                <input id="like0" type="checkbox">
+                                <label for="like0">
+                                    <svg width="19" height="16" viewBox="0 0 19 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.4927 1.56581C16.5092 0.556101 15.1596 0 13.6923 0C12.5956 0 11.5912 0.328199 10.7069 0.975406C10.2607 1.3021 9.85645 1.70178 9.5 2.16828C9.14369 1.70192 8.73926 1.3021 8.29293 0.975406C7.40883 0.328199 6.40441 0 5.30766 0C3.84039 0 2.49068 0.556101 1.50713 1.56581C0.535332 2.56372 0 3.92701 0 5.40473C0 6.92567 0.598824 8.31791 1.88446 9.7863C3.03456 11.0998 4.68752 12.4332 6.6017 13.9772C7.25532 14.5044 7.9962 15.1021 8.7655 15.7388C8.96873 15.9072 9.22951 16 9.5 16C9.77035 16 10.0313 15.9072 10.2342 15.739C11.0035 15.1023 11.7448 14.5043 12.3987 13.9767C14.3126 12.433 15.9656 11.0998 17.1157 9.78616C18.4013 8.31791 19 6.92567 19 5.40459C19 3.92701 18.4647 2.56372 17.4927 1.56581Z"
+                                              fill="#75757A"/>
+                                    </svg>
+                                    <div class="like__counter">42</div>
+                                </label>
+                            </div>
+                            <a href="/post_id.html" class="comment">
+                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.5"
+                                          d="M2.91194 18.6432H1.49483L2.49687 17.5864C3.03716 17.0166 3.37455 16.2755 3.46526 15.4715C1.15153 13.8701 0 11.5503 0 9.11825C0 4.63143 3.91015 0.0717773 10.0339 0.0717773C16.5213 0.0717773 20 4.26752 20 8.72516C20 13.2122 16.4846 17.4051 10.0339 17.4051C8.90388 17.4051 7.72473 17.246 6.67198 16.9541C5.67541 18.0321 4.32514 18.6432 2.91194 18.6432Z"
+                                          fill="#EBEBF5"/>
+                                </svg>
+                                <div class="comment__counter">492</div>
+                            </a>
+                        </div>
+                        <svg onclick="openModal(share)" class="share" width="21" height="19" viewBox="0 0 21 19" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5"
+                                  d="M20.8328 9.49356L12.1751 0V5.66403H10.3344C4.62678 5.66403 0 10.2908 0 15.9984V19L0.817594 18.104C3.59732 15.0584 7.53048 13.3231 11.6541 13.3231H12.1751V18.9871L20.8328 9.49356Z"
+                                  fill="#EBEBF5"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="feed__post">
+                    <div class="feed__post_head user">
+                        <a href="/profiles.html" class="user__content">
+                            <div class="avatar">
+                                <div class="avatar__star"></div>
+                            </div>
+                            <div class="user__name">
+                                <div>HungryDima</div>
+                                <div class="user__cd">CD: Warzone <span>1h</span></div>
+                            </div>
+                        </a>
+                        <div class="feed__header_menu">
+                            <!--                            <div class="header__menu_menu">-->
+                            <!--                                <div class="close-place"></div>-->
+                            <!--                                <ul>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/mute-r.png" width="16"/>-->
+                            <!--                                        Mute</a></li>-->
+                            <!--                                    <li><a href="#" onclick="openModal(partieReport)">-->
+                            <!--                                        <img src="img/icon/report-r.png" width="16"/>-->
+                            <!--                                        Report</a></li>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/folow-f.png" width="16"/>-->
+                            <!--                                        Follow gboy6827</a></li>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/copy-f.png" width="16"/>-->
+                            <!--                                        Copy link</a></li>-->
+                            <!--                                    <li><a href="#" onclick="openModal(share)">-->
+                            <!--                                        <img src="img/icon/share-f.png" width="16"/>-->
+                            <!--                                        Share</a></li>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
+
+                        </div>
+                    </div>
+                    <div class="feed__post_text">
+                        I want to play MW with others on the platform but hardly anyone here is online. It's such a pain in
+                        the butt ;(
+                    </div>
+                    <a href="/post_id.html" class="feed__post_img">
+                        <img src="img/pic/Rectangle 78.png" width="100%"/>
+                    </a>
+                    <div class="feed__post_footer">
+                        <div class="footer-social">
+                            <div class="like">
+                                <input id="like0" type="checkbox">
+                                <label for="like0">
+                                    <svg width="19" height="16" viewBox="0 0 19 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.4927 1.56581C16.5092 0.556101 15.1596 0 13.6923 0C12.5956 0 11.5912 0.328199 10.7069 0.975406C10.2607 1.3021 9.85645 1.70178 9.5 2.16828C9.14369 1.70192 8.73926 1.3021 8.29293 0.975406C7.40883 0.328199 6.40441 0 5.30766 0C3.84039 0 2.49068 0.556101 1.50713 1.56581C0.535332 2.56372 0 3.92701 0 5.40473C0 6.92567 0.598824 8.31791 1.88446 9.7863C3.03456 11.0998 4.68752 12.4332 6.6017 13.9772C7.25532 14.5044 7.9962 15.1021 8.7655 15.7388C8.96873 15.9072 9.22951 16 9.5 16C9.77035 16 10.0313 15.9072 10.2342 15.739C11.0035 15.1023 11.7448 14.5043 12.3987 13.9767C14.3126 12.433 15.9656 11.0998 17.1157 9.78616C18.4013 8.31791 19 6.92567 19 5.40459C19 3.92701 18.4647 2.56372 17.4927 1.56581Z"
+                                              fill="#75757A"/>
+                                    </svg>
+                                    <div class="like__counter">42</div>
+                                </label>
+                            </div>
+                            <a href="/post_id.html" class="comment">
+                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.5"
+                                          d="M2.91194 18.6432H1.49483L2.49687 17.5864C3.03716 17.0166 3.37455 16.2755 3.46526 15.4715C1.15153 13.8701 0 11.5503 0 9.11825C0 4.63143 3.91015 0.0717773 10.0339 0.0717773C16.5213 0.0717773 20 4.26752 20 8.72516C20 13.2122 16.4846 17.4051 10.0339 17.4051C8.90388 17.4051 7.72473 17.246 6.67198 16.9541C5.67541 18.0321 4.32514 18.6432 2.91194 18.6432Z"
+                                          fill="#EBEBF5"/>
+                                </svg>
+                                <div class="comment__counter">492</div>
+                            </a>
+                        </div>
+                        <svg onclick="openModal(share)" class="share" width="21" height="19" viewBox="0 0 21 19" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5"
+                                  d="M20.8328 9.49356L12.1751 0V5.66403H10.3344C4.62678 5.66403 0 10.2908 0 15.9984V19L0.817594 18.104C3.59732 15.0584 7.53048 13.3231 11.6541 13.3231H12.1751V18.9871L20.8328 9.49356Z"
+                                  fill="#EBEBF5"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="feed__post">
+                    <div class="feed__post_head user">
+                        <a href="/profiles.html" class="user__content">
+                            <div class="avatar">
+                                <div class="avatar__star"></div>
+                            </div>
+                            <div class="user__name">
+                                <div>HungryDima</div>
+                                <div class="user__cd">CD: Warzone <span>1h</span></div>
+                            </div>
+                        </a>
+                        <div class="feed__header_menu">
+                            <!--                            <div class="header__menu_menu">-->
+                            <!--                                <div class="close-place"></div>-->
+                            <!--                                <ul>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/mute-r.png" width="16"/>-->
+                            <!--                                        Mute</a></li>-->
+                            <!--                                    <li><a href="#" onclick="openModal(partieReport)">-->
+                            <!--                                        <img src="img/icon/report-r.png" width="16"/>-->
+                            <!--                                        Report</a></li>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/folow-f.png" width="16"/>-->
+                            <!--                                        Follow gboy6827</a></li>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/copy-f.png" width="16"/>-->
+                            <!--                                        Copy link</a></li>-->
+                            <!--                                    <li><a href="#" onclick="openModal(share)">-->
+                            <!--                                        <img src="img/icon/share-f.png" width="16"/>-->
+                            <!--                                        Share</a></li>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
+
+                        </div>
+                    </div>
+                    <div class="feed__post_text">
+                        I want to play MW with others on the platform but hardly anyone here is online. It's such a pain in
+                        the butt ;(
+                    </div>
+                    <a href="/post_id.html" class="feed__post_img">
+                        <img src="img/pic/Rectangle 78.png" width="100%"/>
+                    </a>
+                    <div class="feed__post_footer">
+                        <div class="footer-social">
+                            <div class="like">
+                                <input id="like0" type="checkbox">
+                                <label for="like0">
+                                    <svg width="19" height="16" viewBox="0 0 19 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.4927 1.56581C16.5092 0.556101 15.1596 0 13.6923 0C12.5956 0 11.5912 0.328199 10.7069 0.975406C10.2607 1.3021 9.85645 1.70178 9.5 2.16828C9.14369 1.70192 8.73926 1.3021 8.29293 0.975406C7.40883 0.328199 6.40441 0 5.30766 0C3.84039 0 2.49068 0.556101 1.50713 1.56581C0.535332 2.56372 0 3.92701 0 5.40473C0 6.92567 0.598824 8.31791 1.88446 9.7863C3.03456 11.0998 4.68752 12.4332 6.6017 13.9772C7.25532 14.5044 7.9962 15.1021 8.7655 15.7388C8.96873 15.9072 9.22951 16 9.5 16C9.77035 16 10.0313 15.9072 10.2342 15.739C11.0035 15.1023 11.7448 14.5043 12.3987 13.9767C14.3126 12.433 15.9656 11.0998 17.1157 9.78616C18.4013 8.31791 19 6.92567 19 5.40459C19 3.92701 18.4647 2.56372 17.4927 1.56581Z"
+                                              fill="#75757A"/>
+                                    </svg>
+                                    <div class="like__counter">42</div>
+                                </label>
+                            </div>
+                            <a href="/post_id.html" class="comment">
+                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.5"
+                                          d="M2.91194 18.6432H1.49483L2.49687 17.5864C3.03716 17.0166 3.37455 16.2755 3.46526 15.4715C1.15153 13.8701 0 11.5503 0 9.11825C0 4.63143 3.91015 0.0717773 10.0339 0.0717773C16.5213 0.0717773 20 4.26752 20 8.72516C20 13.2122 16.4846 17.4051 10.0339 17.4051C8.90388 17.4051 7.72473 17.246 6.67198 16.9541C5.67541 18.0321 4.32514 18.6432 2.91194 18.6432Z"
+                                          fill="#EBEBF5"/>
+                                </svg>
+                                <div class="comment__counter">492</div>
+                            </a>
+                        </div>
+                        <svg onclick="openModal(share)" class="share" width="21" height="19" viewBox="0 0 21 19" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5"
+                                  d="M20.8328 9.49356L12.1751 0V5.66403H10.3344C4.62678 5.66403 0 10.2908 0 15.9984V19L0.817594 18.104C3.59732 15.0584 7.53048 13.3231 11.6541 13.3231H12.1751V18.9871L20.8328 9.49356Z"
+                                  fill="#EBEBF5"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="GlobalTab" class="tabcontent global">
+            <div class="slider">
+                <div class="slider__item">
+                    <img src="img/pic/slide1.png"/>
+                </div>
+                <div class="slider__item">
+                    <img src="img/pic/slide1.png"/>
+                </div>
+                <div class="slider__item">
+                    <img src="img/pic/slide2.png"/>
+                </div>
+                <div class="slider__item">
+                    <img src="img/pic/slide3.png"/>
+                </div>
+                <div class="slider__item">
+                    <img src="img/pic/slide4.png"/>
+                </div>
+                <div class="slider__item">
+                    <img src="img/pic/slide2.png"/>
+                </div>
+                <div class="slider__item">
+                    <img src="img/pic/slide2.png"/>
+                </div>
+                <div class="slider__item">
+                    <img src="img/pic/slide2.png"/>
+                </div>
+                <div class="slider__item">
+                    <img src="img/pic/Rectangle%2078.png"/>
+                </div>
+                <div class="slider__item">
+                    <img src="img/pic/checkemail.png"/>
+                </div>
+                <div class="slider__item">
+                    <img src="img/pic/ava.png"/>
+                </div>
+            </div>
+            <div class="feed__post_wrapp">
+                <div class="single-post">
+                    <div class="single-post__wrapp">
+                        <div class="single-post__text">Partie Hot<br> Fix Update</div>
+                        <button>Details</button>
+                    </div>
+                </div>
+                <div class="feed__post">
+                    <div class="feed__post_head user">
+                        <a href="/profiles.html" class="user__content">
+                            <div class="avatar">
+                                <div class="avatar__star"></div>
+                            </div>
+                            <div class="user__name">
+                                <div>HungryDima</div>
+                                <div class="user__cd">CD: Warzone <span>1h</span></div>
+                            </div>
+                        </a>
+                        <div class="feed__header_menu">
+                            <!--                            <div class="header__menu_menu">-->
+                            <!--                                <div class="close-place"></div>-->
+                            <!--                                <ul>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/mute-r.png" width="16"/>-->
+                            <!--                                        Mute</a></li>-->
+                            <!--                                    <li><a href="#" onclick="openModal(partieReport)">-->
+                            <!--                                        <img src="img/icon/report-r.png" width="16"/>-->
+                            <!--                                        Report</a></li>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/folow-f.png" width="16"/>-->
+                            <!--                                        Follow gboy6827</a></li>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/copy-f.png" width="16"/>-->
+                            <!--                                        Copy link</a></li>-->
+                            <!--                                    <li><a href="#" onclick="openModal(share)">-->
+                            <!--                                        <img src="img/icon/share-f.png" width="16"/>-->
+                            <!--                                        Share</a></li>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
+
+                        </div>
+                    </div>
+                    <div class="feed__post_text">
+                        I want to play MW with others on the platform but hardly anyone here is online. It's such a
+                        pain in
+                        the butt ;(
+                    </div>
+                    <a href="/post_id.html" class="feed__post_img">
+                        <img src="img/pic/Rectangle 78.png" width="100%"/>
+                    </a>
+                    <div class="feed__post_footer">
+                        <div class="footer-social">
+                            <div class="like">
+                                <input id="like13" type="checkbox">
+                                <label for="like13">
+                                    <svg width="19" height="16" viewBox="0 0 19 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.4927 1.56581C16.5092 0.556101 15.1596 0 13.6923 0C12.5956 0 11.5912 0.328199 10.7069 0.975406C10.2607 1.3021 9.85645 1.70178 9.5 2.16828C9.14369 1.70192 8.73926 1.3021 8.29293 0.975406C7.40883 0.328199 6.40441 0 5.30766 0C3.84039 0 2.49068 0.556101 1.50713 1.56581C0.535332 2.56372 0 3.92701 0 5.40473C0 6.92567 0.598824 8.31791 1.88446 9.7863C3.03456 11.0998 4.68752 12.4332 6.6017 13.9772C7.25532 14.5044 7.9962 15.1021 8.7655 15.7388C8.96873 15.9072 9.22951 16 9.5 16C9.77035 16 10.0313 15.9072 10.2342 15.739C11.0035 15.1023 11.7448 14.5043 12.3987 13.9767C14.3126 12.433 15.9656 11.0998 17.1157 9.78616C18.4013 8.31791 19 6.92567 19 5.40459C19 3.92701 18.4647 2.56372 17.4927 1.56581Z"
+                                              fill="#75757A"/>
+                                    </svg>
+                                    <div class="like__counter">42</div>
+                                </label>
+                            </div>
+                            <a href="/post_id.html" class="comment">
+                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.5"
+                                          d="M2.91194 18.6432H1.49483L2.49687 17.5864C3.03716 17.0166 3.37455 16.2755 3.46526 15.4715C1.15153 13.8701 0 11.5503 0 9.11825C0 4.63143 3.91015 0.0717773 10.0339 0.0717773C16.5213 0.0717773 20 4.26752 20 8.72516C20 13.2122 16.4846 17.4051 10.0339 17.4051C8.90388 17.4051 7.72473 17.246 6.67198 16.9541C5.67541 18.0321 4.32514 18.6432 2.91194 18.6432Z"
+                                          fill="#EBEBF5"/>
+                                </svg>
+                                <div class="comment__counter">492</div>
+                            </a>
+                        </div>
+                        <svg onclick="openModal(share)" class="share" width="21" height="19" viewBox="0 0 21 19"
+                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5"
+                                  d="M20.8328 9.49356L12.1751 0V5.66403H10.3344C4.62678 5.66403 0 10.2908 0 15.9984V19L0.817594 18.104C3.59732 15.0584 7.53048 13.3231 11.6541 13.3231H12.1751V18.9871L20.8328 9.49356Z"
+                                  fill="#EBEBF5"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="feed__post">
+                    <div class="feed__post_head user">
+                        <a href="/profiles.html" class="user__content">
+                            <div class="avatar">
+                                <div class="avatar__star"></div>
+                            </div>
+                            <div class="user__name">
+                                <div>HungryDima</div>
+                                <div class="user__cd">CD: Warzone <span>1h</span></div>
+                            </div>
+                        </a>
+                        <div class="feed__header_menu">
+                            <!--                            <div class="header__menu_menu">-->
+                            <!--                                <div class="close-place"></div>-->
+                            <!--                                <ul>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/mute-r.png" width="16"/>-->
+                            <!--                                        Mute</a></li>-->
+                            <!--                                    <li><a href="#" onclick="openModal(partieReport)">-->
+                            <!--                                        <img src="img/icon/report-r.png" width="16"/>-->
+                            <!--                                        Report</a></li>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/folow-f.png" width="16"/>-->
+                            <!--                                        Follow gboy6827</a></li>-->
+                            <!--                                    <li><a href="#">-->
+                            <!--                                        <img src="img/icon/copy-f.png" width="16"/>-->
+                            <!--                                        Copy link</a></li>-->
+                            <!--                                    <li><a href="#" onclick="openModal(share)">-->
+                            <!--                                        <img src="img/icon/share-f.png" width="16"/>-->
+                            <!--                                        Share</a></li>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
+
+                        </div>
+                    </div>
+                    <div class="feed__post_text">
+                        I want to play MW with others on the platform but hardly anyone here is online. It's such a
+                        pain in
+                        the butt ;(
+                    </div>
+                    <a href="/post_id.html" class="feed__post_img">
+                        <img src="img/pic/Rectangle 78.png" width="100%"/>
+                    </a>
+                    <div class="feed__post_footer">
+                        <div class="footer-social">
+                            <div class="like">
+                                <input id="like4" type="checkbox">
+                                <label for="like4">
+                                    <svg width="19" height="16" viewBox="0 0 19 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.4927 1.56581C16.5092 0.556101 15.1596 0 13.6923 0C12.5956 0 11.5912 0.328199 10.7069 0.975406C10.2607 1.3021 9.85645 1.70178 9.5 2.16828C9.14369 1.70192 8.73926 1.3021 8.29293 0.975406C7.40883 0.328199 6.40441 0 5.30766 0C3.84039 0 2.49068 0.556101 1.50713 1.56581C0.535332 2.56372 0 3.92701 0 5.40473C0 6.92567 0.598824 8.31791 1.88446 9.7863C3.03456 11.0998 4.68752 12.4332 6.6017 13.9772C7.25532 14.5044 7.9962 15.1021 8.7655 15.7388C8.96873 15.9072 9.22951 16 9.5 16C9.77035 16 10.0313 15.9072 10.2342 15.739C11.0035 15.1023 11.7448 14.5043 12.3987 13.9767C14.3126 12.433 15.9656 11.0998 17.1157 9.78616C18.4013 8.31791 19 6.92567 19 5.40459C19 3.92701 18.4647 2.56372 17.4927 1.56581Z"
+                                              fill="#75757A"/>
+                                    </svg>
+                                    <div class="like__counter">42</div>
+                                </label>
+                            </div>
+                            <a href="/post_id.html" class="comment">
+                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.5"
+                                          d="M2.91194 18.6432H1.49483L2.49687 17.5864C3.03716 17.0166 3.37455 16.2755 3.46526 15.4715C1.15153 13.8701 0 11.5503 0 9.11825C0 4.63143 3.91015 0.0717773 10.0339 0.0717773C16.5213 0.0717773 20 4.26752 20 8.72516C20 13.2122 16.4846 17.4051 10.0339 17.4051C8.90388 17.4051 7.72473 17.246 6.67198 16.9541C5.67541 18.0321 4.32514 18.6432 2.91194 18.6432Z"
+                                          fill="#EBEBF5"/>
+                                </svg>
+                                <div class="comment__counter">492</div>
+                            </a>
+                        </div>
+                        <svg onclick="openModal(share)" class="share" width="21" height="19" viewBox="0 0 21 19"
+                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5"
+                                  d="M20.8328 9.49356L12.1751 0V5.66403H10.3344C4.62678 5.66403 0 10.2908 0 15.9984V19L0.817594 18.104C3.59732 15.0584 7.53048 13.3231 11.6541 13.3231H12.1751V18.9871L20.8328 9.49356Z"
+                                  fill="#EBEBF5"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feed__col3">
+        <div>
+            <div class="feed__header">
+                <div>People</div>
+            </div>
+            <div class="feed__friends">
+                <div onclick="openModal(inviteFriendsSetting)" class="feed__friends_invite">
+                    <div class="icon-invite"></div>
+                    <div class="icon-invite-text">Invite friends</div>
+                </div>
+                <a href="/profiles.html" class="feed__friend">
+                    <div class="avatar">
+                        <div class="status-online"></div>
+                    </div>
+                    <div class="feed__friend_name">
+                        MirinaAkhaviik
+                        <div class="level">54 level</div>
+                    </div>
+                </a>
+                <a href="/profiles.html" class="feed__friend">
+                    <div class="avatar">
+                        <div class="status-online"></div>
+                    </div>
+                    <div class="feed__friend_name">
+                        MirinaAkhaviik
+                        <div class="level">54 level</div>
+                    </div>
+                </a>
+                <a href="/profiles.html" class="feed__friend">
+                    <div class="avatar">
+                        <div class="status-online"></div>
+                    </div>
+                    <div class="feed__friend_name">
+                        MirinaAkhaviik
+                        <div class="level">54 level</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--mobile content-->
+<div class="mobile-nav mobile">
+    <ul>
+        <li>
+            <a href="/feed.html"><svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.558576 8.77588C0.200188 9.14847 0 9.64537 0 10.1623V18.9999C0 19.5522 0.447716 19.9999 1 19.9999H6V15.0001C6 14.4478 6.44772 14.0001 7 14.0001H11C11.5523 14.0001 12 14.4478 12 15.0001V19.9999H17C17.5523 19.9999 18 19.5522 18 18.9999V10.1623C18 9.64537 17.7998 9.14847 17.4414 8.77588L9.72071 0.749148C9.32729 0.340127 8.67271 0.340128 8.27929 0.749149L0.558576 8.77588Z"
+                      fill="#EBEBF5"/>
+            </svg></a>
+        </li>
+        <li>
+            <a href="/chats.html"><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.1558 16.0238C19.2777 15.7667 19.3837 15.5048 19.4744 15.2385H19.4511C21.0394 10.5766 17.6992 5.67682 12.7681 5.43824C12.7682 5.4385 12.7681 5.43799 12.7681 5.43824C8.52527 5.24272 5 8.6391 5 12.8515C5 16.9408 8.32356 20.2678 12.4114 20.2737C13.5203 20.2722 14.583 20.0335 15.5741 19.5634C19.4425 20.3282 19.1408 20.2738 19.2297 20.2738C19.6317 20.2738 19.9321 19.9054 19.8535 19.5129L19.1558 16.0238Z"
+                      fill="#322F42"/>
+                <path d="M0.710273 10.5946C0.588376 10.3375 0.482385 10.0755 0.391705 9.80931H0.41499C-1.17331 5.14736 2.16687 0.247594 7.09794 0.00901824C9.88218 -0.119289 12.3575 1.29872 13.7303 3.47973L12.8601 3.43962C7.47299 3.19137 3.00011 7.50317 3.00011 12.8515C3.00011 13.3669 3.04165 13.8727 3.12156 14.3658C2.76361 14.4366 2.45851 14.4971 2.1983 14.5486C0.729322 14.8397 0.691175 14.8472 0.653527 14.8453C0.652525 14.8452 0.651524 14.8452 0.650497 14.8451C0.646641 14.8449 0.642412 14.8446 0.636388 14.8446C0.234352 14.8446 -0.065978 14.4762 0.0125292 14.0837L0.710273 10.5946Z"
+                      fill="#322F42"/>
+                <path d="M14.6833 5.78124C14.6834 5.78146 14.6833 5.78103 14.6833 5.78124V5.78124Z" fill="#322F42"/>
+                <path d="M5 12.8515C5 12.8515 5 12.8515 5 12.8515C5 12.8866 5.00036 12.9217 5.00085 12.9567C5.00464 13.2284 5.02311 13.4967 5.05549 13.7607C5.08571 14.007 5.12803 14.2497 5.18186 14.488"
+                      fill="#322F42"/>
+            </svg></a>
+        </li>
+        <li>
+            <a href="/partie.html"><svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.8499 8.3887V12.3823C15.8499 12.3823 15.843 12.7838 15.4485 12.7838H10.8389V16.369C10.8389 16.369 10.8389 16.7705 10.4374 16.7705H5.82779V20.3558C5.82779 20.5772 5.64092 20.7572 5.42635 20.7572H0.40836C0.186877 20.7572 0.00692074 20.5703 0.00692074 20.3558V16.3621C0.00692074 16.3621 0.0207637 15.9607 0.40836 15.9607H5.01799V12.7838H0.40836C0.40836 12.7838 0.048449 12.7976 0.00692074 12.3823V8.3887C0.00692074 8.3887 0.00692093 7.98727 0.40836 7.98727C0.8098 7.98727 5.01799 7.98727 5.01799 7.98727V4.78959H0.394518C0.00692117 4.78959 0 4.39507 0 4.39507V0.40144C0 0.0069216 0.40144 0 0.40144 0H5.41251C5.80703 0 5.81395 0.40144 5.81395 0.40144V3.98671H10.4236C10.4236 3.98671 10.825 4.0144 10.825 4.38815V7.97342H15.4347C15.4416 7.98726 15.8499 7.99419 15.8499 8.3887ZM10.0221 11.974V8.79706H5.81395V11.974H10.0221Z" fill="#322F42"/>
+            </svg></a>
+        </li>
+        <li>
+            <a href="/notifications.html"><svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.4099 14.7083L16.8628 17.13C16.9406 17.2603 16.9432 17.4245 16.8678 17.5566C16.7925 17.6886 16.6521 17.7706 16.4997 17.7706H0.422497C0.270186 17.7706 0.130568 17.6885 0.0552457 17.5557C-0.0200768 17.4228 -0.0183713 17.2604 0.0603227 17.1292L1.51319 14.7075C2.18335 13.5896 2.53791 12.3102 2.53791 11.0071V8.88578C2.53791 6.20765 4.32503 3.94246 6.76874 3.2122V1.69333C6.76874 0.759993 7.52776 0.000976562 8.4611 0.000976562C9.39444 0.000976562 10.1535 0.759993 10.1535 1.69333V3.2122C12.5972 3.94246 14.3843 6.20765 14.3843 8.88578V11.0071C14.3843 12.3102 14.7389 13.5905 15.4099 14.7083Z" fill="#322F42"/>
+                <path d="M8.46108 21.291C7.28408 21.291 6.27375 20.5954 5.79651 19.5986H11.1257C10.6484 20.5954 9.63808 21.291 8.46108 21.291Z" fill="#322F42"/>
+            </svg></a>
+        </li>
+        <li>
+            <a href="/profile.html">
+                <div class="avatar"></div>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="close-place post-menu mobile">
+    <div class="header__menu_menu">
+        <ul>
+            <li><a href="#">
+                <img src="img/icon/mute-r.png" width="16"/>
+                Mute</a></li>
+            <li><a href="#" onclick="openModal(partieReport)">
+                <img src="img/icon/report-r.png" width="16"/>
+                Report</a></li>
+            <li><a href="#">
+                <img src="img/icon/folow-f.png" width="16"/>
+                Follow back</a></li>
+            <li><a onclick="openModal(unfollow)" href="#">
+                <img src="img/icon/unfollow.png" width="21"/>
+                Unfollow</a></li>
+            <li><a href="#">
+                <img src="img/icon/copy-f.png" width="16"/>
+                Copy link</a></li>
+            <li><a href="#" onclick="openModal(share)">
+                <img src="img/icon/share-f.png" width="16"/>
+                Share</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+</html>

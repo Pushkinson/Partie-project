@@ -1,0 +1,2921 @@
+<div class="feed">
+    <div id="newPost" class="modal-wrapp">
+        <div class="new-post modal center">
+            <div class="modal__head">
+                New post
+                <div onclick="closeModal(newPost)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+                <button onclick="next(chooseGame, newPost)" class="empty-select">Select a Game (Optional)</button>
+                <button class="game AL">
+                    <div class="game__icon"></div>
+                    Apex Legends
+                </button>
+                <textarea oninput="btnPost(this)" maxlength="500" placeholder="What’s new?"></textarea>
+
+                <div class="hostLiveShow__img">
+                    <img id="myimage" src="img/pic/Image (2).png"/>
+                    <div onclick="deleteImg()" class="delete-img"></div>
+                </div>
+
+                <div class="new-post__row">
+                    <label for="photo2"></label>
+                    <input onchange="onFileSelected(event)" id="photo2" type="file" class="feed__what-new_photo">
+                    <button class="public-post-popup bg-fiolet">Public post</button>
+                    <button class="feed__what-new_post disabled">Post</button>
+                </div>
+            </div>
+        </div>
+        <div onclick="closeModal(newPost)" class="modal__backdrop"></div>
+    </div>
+    <div id="chooseGame" class="modal-wrapp">
+        <div class="choose-game modal center">
+            <div class="modal__head">
+                <svg id="back" onclick="back(chooseGame, newPost)" class="btn-back" width="24" height="24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Choose a game
+                <div onclick="back(chooseGame, newPost)" class="choose-game__close">None</div>
+            </div>
+            <div class="modal__content">
+                <input type="text" placeholder="Search">
+                <div class="choose-game__game game">
+                    <a href="#" class="game-cont">
+                        <div class="game__img"></div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" class="game-cont">
+                        <div class="game__img"></div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" class="game-cont">
+                        <div class="game__img"></div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" class="game-cont">
+                        <div class="game__img"></div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" class="game-cont">
+                        <div class="game__img"></div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" class="game-cont">
+                        <div class="game__img"></div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div onclick="closeModal(chooseGame)" class="modal__backdrop"></div>
+    </div>
+    <div id="profileProgress" class="modal-wrapp">
+        <div class="profile-progress-modal modal center">
+            <div class="modal__head">
+                Partner Progress
+                <div onclick="closeModal(profileProgress)" class="modal__close"></div>
+            </div>
+            <div class="info_avatar__progress-wrapp">
+                <div onclick="next(applyPartner, profileProgress)" class="info_avatar__progress">
+                    <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.8499 8.3887V12.3823C15.8499 12.3823 15.843 12.7838 15.4485 12.7838H10.8389V16.369C10.8389 16.369 10.8389 16.7705 10.4374 16.7705H5.82779V20.3558C5.82779 20.5772 5.64092 20.7572 5.42635 20.7572H0.40836C0.186877 20.7572 0.00692074 20.5703 0.00692074 20.3558V16.3621C0.00692074 16.3621 0.0207637 15.9607 0.40836 15.9607H5.01799V12.7838H0.40836C0.40836 12.7838 0.048449 12.7976 0.00692074 12.3823V8.3887C0.00692074 8.3887 0.00692093 7.98727 0.40836 7.98727C0.8098 7.98727 5.01799 7.98727 5.01799 7.98727V4.78959H0.394518C0.00692117 4.78959 0 4.39507 0 4.39507V0.40144C0 0.0069216 0.40144 0 0.40144 0H5.41251C5.80703 0 5.81395 0.40144 5.81395 0.40144V3.98671H10.4236C10.4236 3.98671 10.825 4.0144 10.825 4.38815V7.97342H15.4347C15.4416 7.98726 15.8499 7.99419 15.8499 8.3887ZM10.0221 11.974V8.79706H5.81395V11.974H10.0221Z"
+                              fill="#fff"/>
+                    </svg>
+                    <div class="info_avatar__progress_text">
+                        Partner Progress
+                        <div>23%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__content">
+                <div class="info_avatar__progress-bar">
+                    <div class="progress-bar__text">
+                        Host 25 Successful Parties
+                        <div class="progress-bar__counter">14</div>
+                    </div>
+                    <div class="progress-bar__progress"></div>
+                </div>
+                <div class="info_avatar__progress-bar">
+                    <div class="progress-bar__text">
+                        Reach 20 Followers
+                        <div class="progress-bar__counter">14</div>
+                    </div>
+                    <div class="progress-bar__progress"></div>
+                </div>
+                <div class="info_avatar__progress-bar">
+                    <div class="progress-bar__text">
+                        Receive 50 Tokens
+                        <div class="progress-bar__counter">14</div>
+                    </div>
+                    <div class="progress-bar__progress"></div>
+                </div>
+                <div class="info_avatar__progress-bar">
+                    <div class="progress-bar__text">
+                        Get 10 5-Star Ratings
+                        <div class="progress-bar__counter">14</div>
+                    </div>
+                    <div class="progress-bar__progress"></div>
+                </div>
+                <div class="info_avatar__progress-bar">
+                    <div class="progress-bar__text">
+                        Do something 60 times
+                        <div class="progress-bar__counter">14</div>
+                    </div>
+                    <div class="progress-bar__progress"></div>
+                </div>
+                <div class="info_avatar__progress-bar">
+                    <div class="progress-bar__text">
+                        Host 25 Successful Parties
+                        <div class="progress-bar__counter">14</div>
+                    </div>
+                    <div class="progress-bar__progress"></div>
+                </div>
+                <div class="info_avatar__progress-bar">
+                    <div class="progress-bar__text">
+                        Reach 20 Followers
+                        <div class="progress-bar__counter">14</div>
+                    </div>
+                    <div class="progress-bar__progress"></div>
+                </div>
+                <div class="info_avatar__progress-bar">
+                    <div class="progress-bar__text">
+                        Receive 50 Tokens
+                        <div class="progress-bar__counter">14</div>
+                    </div>
+                    <div class="progress-bar__progress"></div>
+                </div>
+            </div>
+            <div class="info_avatar__about">
+                <span>About Partnership</span>
+            </div>
+
+            <div class="close-tap-wrapp close-tap">
+                <div onclick="closeModal(profileProgress)" class="close-tap mobile"></div>
+            </div>
+        </div>
+        <div onclick="closeModal(profileProgress)" class="modal__backdrop"></div>
+    </div>
+    <div id="applyPartner" class="modal-wrapp">
+        <div class="partner modal center">
+            <div onclick="closeModal(applyPartner)" class="close-tap mobile"></div>
+            <div class="modal__head">
+                <div onclick="closeModal(applyPartner)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+                <img src="img/icon/congr.png" width="103"/>
+                <div class="partner__great">Great job!</div>
+                <div class="partner__text">Congrats! You can now apply to become a Partner.</div>
+                <button onclick="closeModal(applyPartner)" class="bg-fiolet">Apply</button>
+                <div class="partner__about">About Partnership</div>
+                    <div class="bg-animate yellow-blue">
+                        <div class="line-1 line"></div>
+                        <div class="line-2 line"></div>
+                        <div class="line-3 line"></div>
+                        <div class="line-4 line"></div>
+                        <div class="line-5 line"></div>
+                        <div class="line-6 line"></div>
+                        <div class="line-7 line"></div>
+                        <div class="line-8 line"></div>
+                        <div class="line-9 line"></div>
+                        <div class="line-10 line"></div>
+                        <div class="line-11 line"></div>
+                        <div class="line-12 line"></div>
+                        <div class="line-13 line"></div>
+                    </div>
+                    <div class="bg-animate screen-1 yellow-blue">
+                        <div class="line-1 line2"></div>
+                        <div class="line-2 line2"></div>
+                        <div class="line-3 line2"></div>
+                        <div class="line-4 line2"></div>
+                        <div class="line-5 line2"></div>
+                        <div class="line-6 line2"></div>
+                        <div class="line-7 line2"></div>
+                        <div class="line-8 line2"></div>
+                        <div class="line-9 line2"></div>
+                        <div class="line-10 line2"></div>
+                        <div class="line-11 line2"></div>
+                        <div class="line-12 line"></div>
+                        <div class="line-13 line"></div>
+                    </div>
+                    <div class="bg-animate screen-2 yellow-blue">
+                        <div class="line-1 line2"></div>
+                        <div class="line-2 line2"></div>
+                        <div class="line-3 line2"></div>
+                        <div class="line-4 line2"></div>
+                        <div class="line-5 line2"></div>
+                        <div class="line-6 line2"></div>
+                        <div class="line-7 line2"></div>
+                        <div class="line-8 line2"></div>
+                        <div class="line-9 line2"></div>
+                        <div class="line-10 line2"></div>
+                        <div class="line-11 line2"></div>
+                        <div class="line-12 line"></div>
+                        <div class="line-13 line"></div>
+                    </div>
+            </div>
+        </div>
+        <div onclick="closeModal(applyPartner)" class="modal__backdrop"></div>
+    </div>
+
+    <div id="editProfile" class="modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                Edit Profile
+                <div onclick="closeModal(editProfile)" class="modal__close"></div>
+                <button class="editProfile__save mobile">Save</button>
+            </div>
+            <div class="modal__content">
+                <div class="edit-avatar">
+                    <div class="avatar"></div>
+                    <label  for="photoAvatar"></label>
+                    <input id="photoAvatar" type="file">
+                </div>
+                <div class="editProfile__title">Description</div>
+
+                <textarea id="editProfileDescription" oninput="btnSave()" class="editProfile__description description"
+                          maxlength="500"
+                          placeholder="Add description"></textarea>
+                <div class="editProfile__website">
+                    <div class="editProfile__title">Website</div>
+                    <input id="editProfileWebsite" oninput="btnSave()" type="text" placeholder="Add website">
+                </div>
+                <div class="editProfile__account">
+                    <a href="/settings.html">
+                        Account settings
+                    </a>
+                </div>
+                <button id="editProfileBtn" class="bg-fiolet">Save</button>
+            </div>
+        </div>
+        <div onclick="closeModal(editProfile)" class="modal__backdrop"></div>
+    </div>
+
+<!--Create parties-->
+    <div id="hostPartie" class="modal-wrapp">
+        <div class="choose-game modal center">
+            <div class="modal__head">
+                Host partie
+                <div onclick="closeModal(hostPartie)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+                <input type="text" placeholder="Search">
+                <div class="bg-click"></div>
+
+                <div class="choose-game__game game">
+                    <a href="#" onclick="next(hostPlatform, hostPartie)" class="game-cont">
+                        <div class="game__img">
+                            <div class="card__partie">
+                                <img src="img/icon/partie.png"/>
+                                424
+                            </div>
+                        </div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" onclick="next(hostPlatform, hostPartie)" class="game-cont">
+                        <div class="game__img">
+                            <div class="card__partie">
+                                <img src="img/icon/partie.png"/>
+                                424
+                            </div>
+                        </div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" onclick="next(hostPlatform, hostPartie)" class="game-cont">
+                        <div class="game__img">
+                            <div class="card__partie">
+                                <img src="img/icon/partie.png"/>
+                                424
+                            </div>
+                        </div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" onclick="next(hostPlatform, hostPartie)" class="game-cont">
+                        <div class="game__img">
+                            <div class="card__partie">
+                                <img src="img/icon/partie.png"/>
+                                424
+                            </div>
+                        </div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                    <a href="#" onclick="next(hostPlatform, hostPartie)" class="game-cont">
+                        <div class="game__img">
+                            <div class="card__partie">
+                                <img src="img/icon/partie.png"/>
+                                424
+                            </div>
+                        </div>
+                        <div class="game__name">Fortnite</div>
+                    </a>
+                </div>
+                <div class="shortcuts">
+                    <div class="shortcuts__title">
+                        Shortcuts
+                        <div onclick="shortcutsUp()" class="btn-up">
+                            <img src="img/icon/arrow-down-ww.png" width="15"/>
+                        </div>
+                    </div>
+                    <div class="shortcuts__box">
+                        <div class="shortcuts__box_name">Apex Legends</div>
+                        <div class="shortcuts__box_btns">
+                            <div class="shortcuts__btn origin">
+                                <div class="tooltip">
+                                    <div class="popover__name">Platform: PC</div>
+                                </div>
+                            </div>
+                            <div class="shortcuts__btn pc">
+                                <div class="tooltip">
+                                    <div class="popover__name">Platform: PC</div>
+                                </div>
+                            </div>
+                            <div class="shortcuts__btn mic">
+                                <div class="tooltip">
+                                    <div class="popover__name">Platform: PC</div>
+                                </div>
+                            </div>
+                            <button class="shortcuts__btn-limited">Limited test</button>
+                        </div>
+                        <div class="shortcuts__box_menu">
+                            <div class="menu-wrapper">
+                                <div class="edit-shortcut">
+                                    <span onclick="openModal(editShortcutMobile)">Edit shortcut</span>
+                                </div>
+                                <div class="delete">
+                                    <span>Delete</span>
+                                </div>
+                                <div class="close-place"></div>
+                                <div class="close-tap mobile"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shortcuts__box">
+                        <div class="shortcuts__box_name">Apex Legends</div>
+                        <div class="shortcuts__box_btns">
+                            <div class="shortcuts__btn origin">
+                                <div class="tooltip">
+                                    <div class="popover__name">Platform: PC</div>
+                                </div>
+                            </div>
+                            <div class="shortcuts__btn pc">
+                                <div class="tooltip">
+                                    <div class="popover__name">Platform: PC</div>
+                                </div>
+                            </div>
+                            <div class="shortcuts__btn mic">
+                                <div class="tooltip">
+                                    <div class="popover__name">Platform: PC</div>
+                                </div>
+                            </div>
+                            <button class="shortcuts__btn-limited">Limited test</button>
+                        </div>
+                    </div>
+                    <div class="shortcuts__create">
+                        <span>Create</span>
+                    </div>
+                    <div onclick="shortcutsDown()" class="close-tap mobile"></div>
+                </div>
+            </div>
+
+        </div>
+        <div onclick="closeModal(hostPartie)" class="modal__backdrop"></div>
+    </div>
+    <div id="gamertags" class="modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <svg id="back" onclick="closeModal(gamertags)" class="btn-back" width="24" height="24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Gamertags
+                <div onclick="openModal(hostPlatform)" class="gamertags__add">+ Add</div>
+            </div>
+            <button class="epic">GameLiveShow</button>
+            <button class="origin bg-orange">GameLiveShow</button>
+            <button class="ps-mobile">GameLiveShow</button>
+        </div>
+        <div onclick="closeModal(gamertags)" class="modal__backdrop"></div>
+    </div>
+    <div id="hostPlatform" class="platforms modal-wrapp">
+        <div class="modal center">
+            <div onclick="closeModal(hostPlatform)" class="close-tap mobile"></div>
+            <div class="modal__head">
+                <svg id="back" onclick="back(hostPlatform, hostPartie)" class="btn-back" width="24" height="24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Host partie
+                <div onclick="closeModal(hostPlatform)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+                <div class="platform__title">Select a platform</div>
+                <button onclick="next(gametrag, hostPlatform)" class="host-xb">Xbox</button>
+                <button onclick="next(gametrag, hostPlatform)" class="host-ps">Playstation</button>
+                <button onclick="next(gametrag, hostPlatform)" class="host-pc">PC</button>
+                <button onclick="next(gametrag, hostPlatform)" class="host-sw">Switch</button>
+                <button onclick="next(gametrag, hostPlatform)" class="host-mob">Mobile</button>
+            </div>
+        </div>
+        <div class="modal__backdrop" onclick="closeModal(hostPlatform)"></div>
+    </div>
+    <div id="addGametrag" class="platforms modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <svg id="back" onclick="back(addGametrag, gametragPlatform)" class="btn-back" width="24" height="24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Add gametrag
+                <button onclick="closeModal(addGametrag)" class="platforms__done">Done</button>
+            </div>
+            <div class="modal__content">
+                <div class="platform__title">Select a platform</div>
+                <button class="host-xb">Xbox</button>
+                <div class="platform__title platform__title_gametrag">Gametrag</div>
+                <textarea maxlength="500" placeholder="Text"></textarea>
+            </div>
+        </div>
+        <div onclick="closeModal(addGametrag)" class="modal__backdrop"></div>
+    </div>
+    <div id="hostLiveShow" class="hostLiveShow modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <svg id="back" onclick="back(hostLiveShow, gametrag)" class="btn-back" width="24" height="24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Host partie
+                <div onclick="closeModal(hostLiveShow)" class="modal__close"></div>
+            </div>
+
+            <div class="modal__content">
+                <button class="game AL">
+                    <div class="game__icon"></div>
+                    Apex Legends
+                </button>
+                <div class="platform__title">Partie name</div>
+                <input type="text" placeholder="Add name">
+                <textarea maxlength="500" placeholder="Add description"></textarea>
+
+                <div class="hostLiveShow__img">
+                    <img src="img/pic/Image (2).png"/>
+                    <div class="delete-img"></div>
+                </div>
+
+                <div class="hostLiveShow__btns">
+                    <div class="d-flex">
+                        <input id="hostLiveShowPhoto" type="file">
+                        <label for="hostLiveShowPhoto"></label>
+                        <button onclick="changeBtnPublic(this)" class="btn-public">Public partie</button>
+                        <div class="epic btn-round">
+                            <div class="btn-round__hover">GameLiveShow</div>
+                        </div>
+                        <div class="pc btn-round">
+                            <div class="btn-round__hover">GameLiveShow</div>
+                        </div>
+                        <div class="mic btn-round">
+                            <div class="btn-round__hover">GameLiveShow</div>
+                        </div>
+                        <div class="other btn-round">
+                            <div class="other__counter">2</div>
+                        </div>
+                    </div>
+                    <button onclick="next(additionalSettings, hostLiveShow)" class="btn-create">Create</button>
+                </div>
+                <div class="hostLiveShow__save">
+                    <div>
+                        <div class="hostLiveShow__save_title">Save as shortcut</div>
+                        <div class="hostLiveShow__save_desc">Description here</div>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div onclick="closeModal(hostLiveShow)" class="modal__backdrop"></div>
+    </div>
+    <div id="additionalSettings" class="modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <svg id="back" onclick="back(additionalSettings, hostLiveShow)" class="btn-back" width="24" height="24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Additional Settings
+            </div>
+
+            <div class="modal__content">
+                <div class="additionalSettings__block">
+                   <div class="additionalSettings__block_title">
+                       Skill
+                   </div>
+                    <button onclick="next(selectGame, additionalSettings)">Select game type skill</button>
+                </div>
+                <div class="additionalSettings__block">
+                    <div class="additionalSettings__block_title">
+                        Game Type
+                    </div>
+                    <button onclick="next(selectGame, additionalSettings)">Select game type game type</button>
+                </div>
+                <div class="additionalSettings__block">
+                    <div class="additionalSettings__block_title">
+                        Role / Class
+                    </div>
+                    <button onclick="next(selectGame, additionalSettings)">Select game type role / class</button>
+                </div>
+                <div class="additionalSettings__block">
+                    <div class="additionalSettings__block_title">
+                        Number of people
+                    </div>
+                    <button onclick="next(selectGame, additionalSettings)">Select game type number of people</button>
+                </div>
+            </div>
+        </div>
+        <div onclick="closeModal(additionalSettings)" class="modal__backdrop"></div>
+    </div>
+    <div id="selectGame" class="modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <svg id="back" onclick="back(selectGame, additionalSettings)" class="btn-back" width="24" height="24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Select game type
+            </div>
+
+            <div class="modal__content">
+                <input id="any" name="selectGame" type="radio">
+                <label for="any" class="selectGame__btn">Any</label>
+
+                <input id="time" name="selectGame" type="radio">
+                <label for="time" class="selectGame__btn">Limited time mode</label>
+
+                <input id="ranked" name="selectGame" type="radio">
+                <label for="ranked" class="selectGame__btn">Ranked</label>
+
+                <input id="public" name="selectGame" type="radio">
+                <label for="public" class="selectGame__btn">Public</label>
+            </div>
+        </div>
+        <div onclick="closeModal(selectGame)" class="modal__backdrop"></div>
+    </div>
+    <div id="preferencesModal" class="modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                Preferences
+                <div onclick="closeModal(preferencesModal)" class="modal__close"></div>
+            </div>
+
+            <div class="modal__content">
+                <div class="btn-box">
+                    <div class="btn-box__title">
+                        <div class="btn-box__title_title">Platform</div>
+                        <div onclick="openModal(settingsPlatforms)" class="btn-box__title_change">Change</div>
+                    </div>
+                    <button class="ps modal-platform">Playstation</button>
+                </div>
+
+                <div class="btn-box">
+                    <div class="btn-box__title">
+                        <div class="btn-box__title_title">Favorite games</div>
+                        <div onclick="openModal(chooseGameSettings)" class="btn-box__title_change">Change</div>
+                    </div>
+                    <button class="game AL">
+                        <div class="game__icon"></div>
+                        Apex Legends
+                    </button>
+                    <button class="game FN">
+                        <div class="game__icon"></div>
+                        Fortnite
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div onclick="closeModal(preferencesModal)" class="modal__backdrop"></div>
+    </div>
+
+<!--Active partie-->
+    <div id="removeUser" class="removeUser modal-wrapp">
+        <div class="modal center">
+            <div onclick="closeModal(removeUser)" class="close-tap mobile"></div>
+            <div class="modal__head">
+                <div onclick="closeModal(removeUser)" class="modal__close"></div>
+                Remove user
+            </div>
+
+            <div class="modal__content">
+                <div class="removeUser__title">
+                    Reason for removal
+                </div>
+                <div class="removeUser-mobile">
+                    <input id="Spam" name="removeUser" type="radio">
+                    <label for="Spam">Spam</label>
+
+                    <input id="Behavior" name="removeUser" type="radio">
+                    <label for="Behavior">Behavior</label>
+
+                    <input id="Inactivity" name="removeUser" type="radio">
+                    <label for="Inactivity">Inactivity</label>
+
+                    <input id="Other" name="removeUser" type="radio">
+                    <label for="Other">Other</label>
+                </div>
+
+                <textarea maxlength="500" placeholder="Add a description"></textarea>
+                <button>Remove User</button>
+            </div>
+        </div>
+        <div onclick="closeModal(removeUser)" class="modal__backdrop"></div>
+    </div>
+    <div id="titleModal" class="titleModal modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <div onclick="next(editPartie, titleModal)" class="btn-edit">Edit</div>
+                <div onclick="closeModal(titleModal)" class="modal__close"></div>
+                <div class="modal__head-title">From Bronze to Predators
+                    <div>3 active</div>
+                </div>
+            </div>
+
+            <div class="modal__content">
+                <div class="titleModal__btns">
+                    <div class="btn-container">
+                        <div onclick="openModal(share)" class="big-round-btn share"></div>
+                        <div class="big-round-text">Share</div>
+                    </div>
+                    <div onclick="openModal(inviteFriends)" class="btn-container">
+                        <div class="big-round-btn invite"></div>
+                        <div class="big-round-text">Invite</div>
+                    </div>
+                    <div onclick="openMorePartie()" class="btn-container">
+                        <div class="big-round-btn more">
+<!--                            <div class="more__win">-->
+<!--                                <div>-->
+<!--                                    <div class="more__win_row start">Start Partie</div>-->
+<!--                                </div>-->
+<!--                                <div>-->
+<!--                                    <div class="more__win_row end">End Partie</div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <div class="more__win dev">
+                                <div>
+                                    <div onclick="next(partieReport, titleModal)" class="more__win_row report">Report</div>
+                                </div>
+                                <div>
+                                    <div onclick="openModal(ratingPartie)" class="more__win_row leave">Leave</div>
+                                </div>
+                            </div>
+                            <div class="close-place"></div>
+                        </div>
+                        <div class="big-round-text">More</div>
+                    </div>
+                </div>
+                <div class="titleModal__text">
+                    <div class="titleModal__text_text">
+                        <textarea maxlength="500">You hate to play with people who never played the game before?</textarea>
+                    </div>
+                    <div class="titleModal__text_btns">
+                        <div class="round-btn xbox"></div>
+                        <div class="round-btn mic"></div>
+                        <div class="ranked-btn">Ranked</div>
+                    </div>
+                </div>
+                <div class="titleModal__active">
+                    <div class="user">
+                        <a href="/profiles.html" class="avatar"></a>
+                        <div>
+                            <a href="/profiles.html" class="user__name">GameLiveShow</a>
+                            <div onclick="openModal(levelProgress)" class="user__level pointer">54 level</div>
+                        </div>
+                        <div class="user__creator">Creator</div>
+                    </div>
+                    <div class="user">
+                        <a href="/profiles.html" class="avatar"></a>
+                        <div>
+                            <a href="/profiles.html" class="user__name">GameLiveShow</a>
+                            <div onclick="openModal(levelProgress)" class="user__level pointer">54 level</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div onclick="closeModal(titleModal)" class="modal__backdrop"></div>
+    </div>
+    <div id="editPartie" class="hostLiveShow modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                Edit partie
+                <div onclick="closeModal(editPartie)" class="modal__close"></div>
+            </div>
+
+            <div class="modal__content">
+                <button class="game AL">
+                    <div class="game__icon"></div>
+                    Apex Legends
+                </button>
+                <div class="platform__title">Partie name</div>
+                <input type="text" placeholder="Add name">
+                <textarea maxlength="500" placeholder="Add description"></textarea>
+                <div class="hostLiveShow__img">
+                    <img src="img/pic/Image (2).png"/>
+                    <div class="delete-img"></div>
+                </div>
+                <div class="hostLiveShow__btns">
+                    <div class="d-flex">
+                        <div class="hostLiveShow__btns_label">
+                            <input id="hostLiveShowPhoto" type="file">
+                            <label for="hostLiveShowPhoto"></label>
+                        </div>
+                        <button onclick="changeBtnPublic(this)" class="btn-public">Public partie</button>
+                        <div class="epic btn-round">
+                            <div class="btn-round__hover">GameLiveShow</div>
+                        </div>
+                        <div class="pc btn-round">
+                            <div class="btn-round__hover">GameLiveShow</div>
+                        </div>
+                        <div class="mic btn-round">
+                            <div class="btn-round__hover">GameLiveShow</div>
+                        </div>
+                        <div class="other btn-round">
+                            <div class="other__counter">2</div>
+                        </div>
+                    </div>
+                    <button onclick="next(titleModalStart, editPartie)" class="btn-create">Save</button>
+                </div>
+                <div class="editPartie__btns mobile">
+                    <div class="modal__content platform">
+                        <div class="platform__title">Select a platform</div>
+                        <button onclick="next(gametragPlatform, hostPlatform)" class="host-ps">Playstation</button>
+                    </div>
+                    <div class="modal__content gametrag">
+                        <div class="platform__title">Gametrag</div>
+                        <button onclick="next(gametrag, hostPlatform)">GameLiveShow</button>
+                    </div>
+                    <div class="modal__content communication">
+                        <div class="platform__title">Communication</div>
+                        <button onclick="next(gametrag, hostPlatform)">Mic on</button>
+                    </div>
+                    <div class="modal__content skill">
+                        <div class="platform__title">Skill</div>
+                        <button onclick="next(gametrag, hostPlatform)">Any</button>
+                    </div>
+                    <div class="modal__content game-type">
+                        <div class="platform__title">Game Type</div>
+                        <button onclick="next(gametrag, hostPlatform)">Select game type</button>
+                    </div>
+                    <div class="modal__content role-class">
+                        <div class="platform__title">Role / Class</div>
+                        <button onclick="next(gametrag, hostPlatform)">Select Role / Class</button>
+                    </div>
+                    <div class="modal__content role-class">
+                        <div class="platform__title">Number of people</div>
+                        <button onclick="next(gametrag, hostPlatform)">Any</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div onclick="closeModal(editPartie)" class="modal__backdrop"></div>
+    </div>
+    <div id="titleModalStart" class="titleModal modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <div onclick="next(editPartie, titleModalStart)" class="btn-edit">Edit</div>
+                <div onclick="closeModal(titleModalStart)" class="modal__close"></div>
+                <div class="modal__head-title">From Bronze to Predators
+                    <div>3 active</div>
+                </div>
+            </div>
+
+            <div class="modal__content">
+                <div class="titleModal__btns">
+                    <div onclick="clickStart()" class="btn-container">
+                        <div class="big-round-btn start"></div>
+                        <div class="big-round-text">Start</div>
+                    </div>
+                    <div onclick="openModal(inviteFriends)" class="btn-container">
+                        <div class="big-round-btn invite"></div>
+                        <div class="big-round-text">Invite</div>
+                    </div>
+                    <div class="btn-container">
+                        <div onclick="openModal(share)" class="big-round-btn share"></div>
+                        <div class="big-round-text">Share</div>
+                    </div>
+                </div>
+                <div class="titleModal__text">
+                    <div class="titleModal__text_text">
+                        <textarea maxlength="500">You hate to play with people who never played the game before?</textarea>
+                    </div>
+                    <div class="titleModal__text_btns">
+                        <div class="round-btn xbox"></div>
+                        <div class="round-btn mic"></div>
+                        <div class="ranked-btn">Ranked</div>
+                    </div>
+                </div>
+                <div class="titleModal__active requests mobile">
+                    <div class="requests__title">Requests (1)</div>
+                    <div class="user">
+                        <div class="avatar"></div>
+                        <div>
+                            <div class="user__name">GameLiveShow</div>
+                            <div class="user__level">54 level</div>
+                        </div>
+                        <button >Accept</button>
+                    </div>
+                </div>
+                <div class="titleModal__active">
+                    <div class="titleModal__active_title">2 active</div>
+                    <div class="user">
+                        <a href="/profiles.html" class="avatar"></a>
+                        <div>
+                            <a href="/profiles.html" class="user__name">GameLiveShow</a>
+                            <div onclick="openModal(levelProgress)" class="user__level pointer">54 level</div>
+                        </div>
+                        <div class="user__creator">Creator</div>
+                    </div>
+                    <div class="user">
+                        <a href="/profiles.html" class="avatar"></a>
+                        <div>
+                            <a href="/profiles.html" class="user__name">GameLiveShow</a>
+                            <div onclick="openModal(levelProgress)" class="user__level pointer">54 level</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div onclick="closeModal(titleModalStart)" class="modal__backdrop"></div>
+    </div>
+    <div id="partieReport" class="removeUser modal-wrapp">
+        <div class="modal center">
+            <div onclick="closeModal(partieReport)" class="close-tap mobile"></div>
+            <div class="modal__head">
+                <div onclick="closeModal(partieReport)" class="modal__close"></div>
+                Partie Report
+            </div>
+
+            <div class="modal__content">
+                <div class="removeUser__title only-pc">
+                    Reason for report
+                </div>
+                <div onclick="backPartieReport(partieReport)" class="removeUser__title mobile">
+                    Reason for report
+                </div>
+                <div class="removeUser-mobile">
+                    <input id="reportSpam" name="partieReport" type="radio">
+                    <label for="reportSpam">Spam</label>
+
+                    <input id="reportBehavior" name="partieReport" type="radio">
+                    <label for="reportBehavior">Behavior</label>
+
+                    <input id="reportInactivity" name="partieReport" type="radio">
+                    <label for="reportInactivity">Inactivity</label>
+
+                    <input id="reportOther" name="partieReport" type="radio">
+                    <label for="reportOther">Other</label>
+                </div>
+                <textarea maxlength="500" placeholder="Add a description"></textarea>
+                <button onclick="reportSubmitted()" disabled class="disabled">Send report</button>
+            </div>
+        </div>
+        <div onclick="closeModal(partieReport)" class="modal__backdrop"></div>
+    </div>
+    <div id="ratingPartie" class="ratingPartie modal-wrapp">
+        <div class="modal center">
+            <div class="modal__content">
+                <div class="avatar"></div>
+                <div class="rating__title">Rate Partie</div>
+
+                <div class="rating-area">
+                    <input type="radio" id="star-5" name="rating" value="5">
+                    <label for="star-5"></label>
+                    <input type="radio" id="star-4" name="rating" value="4">
+                    <label for="star-4"></label>
+                    <input type="radio" id="star-3" name="rating" value="3">
+                    <label for="star-3"></label>
+                    <input type="radio" id="star-2" name="rating" value="2">
+                    <label for="star-2"></label>
+                    <input type="radio" id="star-1" name="rating" value="1">
+                    <label for="star-1"></label>
+                </div>
+                <button id="btnSkip" onclick="closeModal(ratingPartie)">Skip</button>
+
+                <div class="star-2">
+                    <hr>
+                    <textarea onkeyup="textareaWidth(this)"
+                              maxlength="500"
+                              type="text"
+                              placeholder="What went wrong?"></textarea>
+                    <button onclick="closeModal(ratingPartie)" class="bg-fiolet">Done</button>
+                </div>
+
+                <div class="star-3">
+                    <hr>
+                    <div class="star-3__title">Offer tokens</div>
+                    <div class="star-3__tokens">
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Great Communication</div>
+                        </div>
+                        <div class="token">
+                            <div class="token__img"></div>
+                            <div class="token__name">All-Star</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Mission Accomplished</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Great Communication</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">All-Star</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Mission Accomplished</div>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <button onclick="next(share, ratingPartie)">Share</button>
+                        <button onclick="closeModal(ratingPartie)" class="bg-fiolet">Done</button>
+                    </div>
+
+                </div>
+
+                <div class="star-4">
+                    <hr>
+                    <div class="star-3__title">Offer tokens</div>
+                    <div class="star-3__tokens">
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Great Communication</div>
+                        </div>
+                        <div class="token">
+                            <div class="token__img"></div>
+                            <div class="token__name">All-Star</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Mission Accomplished</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Great Communication</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">All-Star</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Mission Accomplished</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Mission Accomplished</div>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <button>Share</button>
+                        <button onclick="closeModal(ratingPartie)" class="bg-fiolet">Done</button>
+                    </div>
+
+                </div>
+
+                <div class="star-5">
+                    <hr>
+                    <div class="star-3__title">Offer tokens</div>
+                    <div class="star-3__tokens">
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Great Communication</div>
+                        </div>
+                        <div class="token">
+                            <div class="token__img"></div>
+                            <div class="token__name">All-Star</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Mission Accomplished</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Great Communication</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">All-Star</div>
+                        </div>
+                        <div class="token token-opacity">
+                            <div class="token__img"></div>
+                            <div class="token__name">Mission Accomplished</div>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <button>Share</button>
+                        <button onclick="closeModal(ratingPartie)" class="bg-fiolet">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div onclick="closeModal(ratingPartie)" class="modal__backdrop"></div>
+    </div>
+
+<!--Chats-->
+    <div id="newChat" class="inviteFriends modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <div onclick="closeModal(newChat)" class="modal__close"></div>
+                New chat
+                <button onclick="openChat()" class="bg-fiolet">Start</button>
+            </div>
+
+            <div class="modal__content">
+                <input type="text" placeholder="Search">
+                <div class="users-check">
+                    <div class="user-check bg-fiolet">gboy6827</div>
+                    <div class="user-check bg-yellow">gboy6827</div>
+                </div>
+                <div class="suggested">
+                    <div class="suggested__titile">Suggested</div>
+                    <div class="suggested__box">
+                        <input id="chat_user1" name="suggested" type="checkbox">
+                        <label for="chat_user1">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="chat_user1"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="chat_user2" name="suggested" type="checkbox">
+                        <label for="chat_user2">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="chat_user2"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="chat_user3" name="suggested" type="checkbox">
+                        <label for="chat_user3">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="chat_user3"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="chat_user4" name="suggested" type="checkbox">
+                        <label for="chat_user4">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="chat_user4"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="chat_user5" name="suggested" type="checkbox">
+                        <label for="chat_user5">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="chat_user5"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="chat_user6" name="suggested" type="checkbox">
+                        <label for="chat_user6">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="chat_user6"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="chat_user7" name="suggested" type="checkbox">
+                        <label for="chat_user7">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="chat_user7"></label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div onclick="closeModal(newChat)" class="modal__backdrop"></div>
+    </div>
+    <div id="chatHead" class="titleModal modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <div onclick="next(editChat, chatHead)" class="btn-edit">Edit</div>
+                <div onclick="closeModal(chatHead)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+
+                <div class="titleModal__users">
+                    <div class="titleModal__users_avatar">
+                        <div class="avatar"></div>
+                        <div class="avatar"></div>
+                    </div>
+                    <div class="titleModal__users_name">
+                        gboy6827, Killershyguy, Kamasdfdfafds
+                    </div>
+                    <div class="titleModal__users_active">3 active</div>
+                </div>
+
+                <div class="titleModal__btns">
+                    <div class="btn-container">
+                        <div class="big-round-btn invite"></div>
+                        <div class="big-round-text">Invite</div>
+                    </div>
+                    <div onclick="openMoreChats(event)" class="btn-container">
+                        <div class="big-round-btn more">
+                            <div class="more__win more__win-chats dev">
+                                <div>
+                                    <div class="more__win_row report">Report</div>
+                                </div>
+                                <div>
+                                    <div onclick="openModal(leaveChat)" class="more__win_row leave">Leave</div>
+                                </div>
+                            </div>
+                            <div class="close-place more__win-chats"></div>
+                        </div>
+                        <div class="big-round-text">More</div>
+                    </div>
+                </div>
+                <div class="titleModal__active">
+                    <div class="members mobile">3 members</div>
+                    <div class="user">
+                        <a href="/profiles.html" class="avatar"></a>
+                        <div>
+                            <a href="/profiles.html" class="user__name">GameLiveShow</a>
+                            <div onclick="openModal(levelProgress)" class="user__level pointer">54 level</div>
+                        </div>
+                        <div class="user__creator">Creator</div>
+                    </div>
+                    <div class="user">
+                        <a href="/profiles.html" class="avatar"></a>
+                        <div>
+                            <a href="/profiles.html" class="user__name">GameLiveShow</a>
+                            <div onclick="openModal(levelProgress)" class="user__level pointer">54 level</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div onclick="closeModal(chatHead)" class="modal__backdrop"></div>
+    </div>
+    <div id="editChat" class="titleModal modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <div class="modal__head-title">Edit chat</div>
+                <div onclick="closeModal(editChat)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+                <div class="titleModal__users">
+                    <div class="titleModal__users_avatar">
+                        <div class="avatar"></div>
+                        <div class="avatar"></div>
+
+                        <input id="editChatPhoto" type="file">
+                        <label for="editChatPhoto"></label>
+                    </div>
+
+                </div>
+                <div class="titleModal__chat-name">
+                    <div class="titleModal__text_title">Chat name</div>
+                    <input type="text" class="titleModal__text_name" value="gboy6827, Killershyguy, Mandalorian">
+                </div>
+                <button class="bg-fiolet">Save</button>
+            </div>
+        </div>
+        <div onclick="closeModal(editChat)" class="modal__backdrop"></div>
+    </div>
+    <div id="leaveChat" class="leaveChat modal-wrapp">
+        <div class="modal center">
+            <div onclick="closeModal(leaveChat)" class="close-tap mobile"></div>
+            <div class="modal__content">
+                <div class="leaveChat__text">
+                    Are you sure you want
+                    to leave chat?
+                </div>
+                <div class="leaveChat__btns">
+                    <button onclick="closeModal(leaveChat)">Cancel</button>
+                    <a  href="/partie.html" class="btn">Yes</a>
+                </div>
+            </div>
+        </div>
+        <div onclick="closeModal(leaveChat)" class="modal__backdrop"></div>
+    </div>
+
+<!--Settings-->
+    <div id="inviteFriendsSetting" class="modal-wrapp">
+        <div class="modal center">
+            <div onclick="closeModal(inviteFriendsSetting)" class="close-tap mobile"></div>
+            <div class="modal__head">
+                <div onclick="closeModal(inviteFriendsSetting)" class="modal__close"></div>
+            </div>
+
+            <div class="modal__content">
+                <div class="invite__img"></div>
+                <div class="invite__title">Invite Friends</div>
+                <div class="invite__text">Feeling lonely in here? How about you start inviting some friends?</div>
+                <div class="invite__refactor">Referal link</div>
+                <div class="invite__link">
+                    <a href="https://app.partie.com/referral/bd622d5a">
+                        https://app.partie.com/referral/bd622d5a
+                    </a>
+                </div>
+                <div class="invite__btns">
+                    <button>Copy</button>
+                    <button class="bg-fiolet">Share</button>
+                </div>
+            </div>
+        </div>
+        <div onclick="closeModal(inviteFriendsSetting)" class="modal__backdrop"></div>
+    </div>
+    <div id="deleteAccount" class="leaveChat modal-wrapp">
+        <div class="modal center">
+            <div onclick="closeModal(deleteAccount)" class="close-tap mobile"></div>
+            <div class="modal__content">
+                <div class="leaveChat__text">
+                    Are you sure you want
+                    delete account?
+                </div>
+                <div class="leaveChat__btns">
+                    <button onclick="closeModal(deleteAccount)">Cancel</button>
+                    <a  href="/partie.html" class="btn">Yes</a>
+                </div>
+            </div>
+        </div>
+        <div onclick="closeModal(deleteAccount)" class="modal__backdrop"></div>
+    </div>
+    <div id="changePaymentMethod" class="modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <svg id="back" onclick="closeModal(changePaymentMethod)" class="btn-back mobile" width="24" height="24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Before you go
+                <div onclick="closeModal(changePaymentMethod)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+                <div class="changePaymentMethod__description">
+                    Will you take a few seconds to let us know why you decided to cancel your subscription?
+                </div>
+                <div>
+                    <div class="radio-row">
+                        <input id="method-1" name="PaymentMethod" type="radio">
+                        <label class="checkbox" for="method-1"></label>
+                        <label class="text" for="method-1">I did’t find the parties</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="method-2" name="PaymentMethod" type="radio">
+                        <label class="checkbox" for="method-2"></label>
+                        <label class="text" for="method-2">I can’t create something</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="method-3" name="PaymentMethod" type="radio">
+                        <label class="checkbox" for="method-3"></label>
+                        <label class="text" for="method-3">Reason number 3</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="method-4" name="PaymentMethod" type="radio">
+                        <label class="checkbox" for="method-4"></label>
+                        <label class="text" for="method-4">And few more reasons</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="method-5" name="PaymentMethod" type="radio">
+                        <label class="checkbox" for="method-5"></label>
+                        <label class="text" for="method-5">I did’t find the parties</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="method-6" name="PaymentMethod" type="radio">
+                        <label class="checkbox" for="method-6"></label>
+                        <label class="text" for="method-6">Reason number 3</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="method-7" name="PaymentMethod" type="radio">
+                        <label class="checkbox" for="method-7"></label>
+                        <label class="text" for="method-7">And few more reasons</label>
+                    </div>
+
+                    <div class="radio-row">
+                        <input id="method-8" name="PaymentMethod" type="radio">
+                        <label class="checkbox" for="method-8"></label>
+                        <label class="text" for="method-8">I did’t find the parties</label>
+                    </div>
+
+                </div>
+                <textarea maxlength="500" placeholder="Add a description"></textarea>
+                <a href="/settings.html" class="btn bg-fiolet">Yes, cancel my subscription</a>
+            </div>
+        </div>
+        <div onclick="closeModal(changePaymentMethod)" class="modal__backdrop"></div>
+    </div>
+    <div id="addCreditCardSetting" class="modal-wrapp">
+        <div class="add-credit-card center modal">
+            <div class="modal__head">
+                <svg id="back" onclick="closeModal(addCreditCardSetting)" class="btn-back mobile" width="24" height="24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                <span>Add a Credit card</span>
+                <div onclick="closeModal(addCreditCardSetting)" class="modal__close"></div>
+            </div>
+            <div class="add-credit-card__text">
+                Few words about privacy and something like that and Privacy Policy.
+            </div>
+            <input class="card-number" type="text" placeholder="Card number">
+            <input class="card-name" type="text" placeholder="Name on the card">
+            <div class="add-credit-card__input-group">
+                <input class="input-date" type="text" placeholder="Date">
+                <input class="input-CVC" type="password" placeholder="CVC" maxlength="3">
+            </div>
+            <a href="#" class="btn bg-fiolet">Confirm</a>
+            <div class="subscription__policy">
+                By signing up, your agree to Partie’s <span>Terms and Conditions</span> Terms and Conditions,
+                End-User License Agreement and Privacy Policy.
+            </div>
+        </div>
+        <div onclick="closeModal(addCreditCardSetting)" class="modal__backdrop"></div>
+    </div>
+    <div id="unfollow" class="leaveChat modal-wrapp">
+        <div class="modal center">
+            <div onclick="closeModal(unfollow)" class="close-tap mobile"></div>
+            <div class="modal__content">
+                <div class="leaveChat__text">
+                    Are you sure you want
+                    to unfollow?
+                </div>
+                <div class="leaveChat__btns">
+                    <button onclick="closeModal(unfollow)">Cancel</button>
+                    <a  href="/partie.html" class="btn">Yes</a>
+                </div>
+            </div>
+        </div>
+        <div onclick="closeModal(unfollow)" class="modal__backdrop"></div>
+    </div>
+    <div id="settingsPlatforms" class="platforms modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                Platforms
+                <div onclick="closeModal(settingsPlatforms)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+                <div class="platform__title">Select a platform</div>
+
+                <input id="settingsPlatformXbox" type="radio" name="settingsPlatform" value="Xbox">
+                <label for="settingsPlatformXbox" onclick="closeModal(settingsPlatforms)" class="btn host-xb">Xbox</label>
+
+                <input id="settingsPlatformPlaystation" type="radio" name="settingsPlatform" value="Playstation">
+                <label for="settingsPlatformPlaystation" onclick="closeModal(settingsPlatforms)" class="btn host-ps">Playstation</label>
+
+                <input id="settingsPlatformPC" type="radio" name="settingsPlatform" value="PC">
+                <label for="settingsPlatformPC" onclick="closeModal(settingsPlatforms)" class="btn host-pc">PC</label>
+
+                <input id="settingsPlatformSwitch" type="radio" name="settingsPlatform" value="Switch">
+                <label for="settingsPlatformSwitch" onclick="closeModal(settingsPlatforms)" class="btn host-sw">Switch</label>
+
+                <input id="settingsPlatformMobile" type="radio" name="settingsPlatform" value="Mobile">
+                <label for="settingsPlatformMobile" onclick="closeModal(settingsPlatforms)" class="btn host-mob">Mobile</label>
+            </div>
+        </div>
+        <div onclick="closeModal(settingsPlatforms)" class="modal__backdrop"></div>
+    </div>
+    <div id="chooseGameSettings" class="modal-wrapp">
+        <div class="choose-game modal center">
+            <div class="modal__head">
+                Choose a game
+                <div onclick="closeModal(chooseGameSettings)" class="choose-game__close">Confirm</div>
+            </div>
+            <div class="modal__content">
+                <input type="text" placeholder="Search">
+                <div class="choose-game__game game">
+                    <div class="cards">
+                        <input id="card-1" type="checkbox">
+                        <label for="card-1" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide4.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-1"></label>
+                        </label>
+
+                        <input id="card-2" type="checkbox">
+                        <label for="card-2" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide1.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-2"></label>
+                        </label>
+
+                        <input id="card-3" type="checkbox">
+                        <label for="card-3" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide2.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-3"></label>
+                        </label>
+
+
+                        <input id="card-4" type="checkbox">
+                        <label for="card-4" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide3.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-4"></label>
+                        </label>
+
+                        <input id="card-5" type="checkbox">
+                        <label for="card-5" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide4.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-5"></label>
+                        </label>
+
+                        <input id="card-6" type="checkbox">
+                        <label for="card-6" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide1.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-6"></label>
+                        </label>
+
+                        <input id="card-7" type="checkbox">
+                        <label for="card-7" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide2.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-7"></label>
+                        </label>
+
+                        <input id="card-8" type="checkbox">
+                        <label for="card-8" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide3.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-8"></label>
+                        </label>
+
+                        <input id="card-9" type="checkbox">
+                        <label for="card-9" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide4.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-9"></label>
+                        </label>
+
+                        <input id="card-10" type="checkbox">
+                        <label for="card-10" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide1.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-10"></label>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div onclick="closeModal(chooseGameSettings)" class="modal__backdrop"></div>
+    </div>
+
+
+    <div id="levelProgress" class="modal-wrapp">
+        <div class="level-progress modal center">
+            <div onclick="closeModal(levelProgress)" class="close-tap mobile"></div>
+            <div class="modal__head">
+                Level Progress
+                <div onclick="closeModal(levelProgress)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+                <div class="modal__content_row">
+                    <div class="romb">64</div>
+                    <div class="progress">
+                        <div class="progress__text">
+                            <div class="progress__text_left">Progress</div>
+                            <div class="progress__text_right">1200/4000</div>
+                        </div>
+                        <div class="progress__progress-bar"></div>
+                    </div>
+                    <div class="romb -m">65</div>
+                </div>
+                <div class="counters">
+                    <div class="counter">
+                        <div class="counter__number">48h</div>
+                        <div class="counter__text">In parties</div>
+                    </div>
+                    <div class="counter">
+                        <div class="counter__number">331</div>
+                        <div class="counter__text">Parties</div>
+                    </div>
+                    <div class="counter">
+                        <div class="counter__number">699</div>
+                        <div class="counter__text">Badges</div>
+                    </div>
+                </div>
+
+                <div class="progressbar mobile"><div></div></div>
+                <div class="level-progress__tab">
+                    <!--tabs-->
+                    <div class="tab">
+                        <div class="tablinks active" id="defaultOpen2" onclick="openTabModal(event, 'Tokens')">
+                            <svg width="23" height="16" viewBox="0 0 23 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="15" width="14" height="14" rx="7" transform="rotate(-180 15 15)"
+                                      fill="#322F42" stroke="black" stroke-width="2"/>
+                                <rect x="22" y="15" width="14" height="14" rx="7" transform="rotate(-180 22 15)"
+                                      fill="#322F42" stroke="black" stroke-width="2"/>
+                            </svg>
+                            Tokens
+                        </div>
+                        <div class="tablinks" onclick="openTabModal(event, 'Achivements')">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.54384 1.01636C8.72053 0.622675 9.27947 0.622674 9.45616 1.01636L11.657 5.91989C11.7297 6.08189 11.8828 6.19317 12.0594 6.21226L17.403 6.79007C17.832 6.83646 18.0047 7.36804 17.6849 7.65774L13.7015 11.2661C13.5699 11.3853 13.5114 11.5654 13.5478 11.7392L14.6495 16.9998C14.7379 17.4221 14.2858 17.7507 13.9114 17.536L9.2487 14.8626C9.09466 14.7743 8.90534 14.7743 8.7513 14.8626L4.08859 17.536C3.71424 17.7507 3.26205 17.4221 3.35051 16.9998L4.45225 11.7392C4.48865 11.5654 4.43014 11.3853 4.29854 11.2661L0.315091 7.65774C-0.00472718 7.36804 0.167993 6.83646 0.597014 6.79007L5.94063 6.21226C6.11717 6.19317 6.27033 6.08189 6.34304 5.91989L8.54384 1.01636Z"
+                                      fill="#322F42"/>
+                            </svg>
+                            Achivements
+                        </div>
+                    </div>
+                    <!--tabs content-->
+                    <div id="Tokens" class="tabcontent">
+                        <div class="tokens">
+                            <div class="tokens-pc">
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">39</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Badge Name Tokens</div>
+                                        <div class="popover__description">Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">23</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">146</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token token-disabled">
+                                    <img src="img/pic/taken1.png"/>
+                                </div>
+                                <div class="token token-disabled">
+                                    <img src="img/pic/taken1.png"/>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">8</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tokens-mobile-wrap">
+                                <div class="tokens-mobile mobile">
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">23</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">146</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">39</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Badge Name Tokens</div>
+                                        <div class="popover__description">Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">23</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">23</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">146</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">39</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Badge Name Tokens</div>
+                                        <div class="popover__description">Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="token__counter">23</div>
+                                    <div class="popover">
+                                        <div class="popover__name">Tokens</div>
+                                        <div class="popover__description">Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Achivements" class="tabcontent">
+                        <div class="tokens">
+                            <div class="tokens-pc">
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="popover">
+                                        <div class="popover__name">Achivements</div>
+                                        <div class="popover__description">1 Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="popover">
+                                        <div class="popover__name">Achivements</div>
+                                        <div class="popover__description">2 Bage Description Bage Description Bage
+                                            Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="popover">
+                                        <div class="popover__name">Achivements</div>
+                                        <div class="popover__description">3 Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token token-disabled">
+                                    <img src="img/pic/taken1.png"/>
+                                </div>
+                                <div class="token token-disabled">
+                                    <img src="img/pic/taken1.png"/>
+                                </div>
+                                <div class="token token-disabled">
+                                    <img src="img/pic/taken1.png"/>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="popover">
+                                        <div class="popover__name">Achivements</div>
+                                        <div class="popover__description">7 Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="popover">
+                                        <div class="popover__name">Achivements</div>
+                                        <div class="popover__description">8 Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="popover">
+                                        <div class="popover__name">Achivements</div>
+                                        <div class="popover__description">9 Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="popover">
+                                        <div class="popover__name">Achivements</div>
+                                        <div class="popover__description">10 Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="popover">
+                                        <div class="popover__name">Achivements</div>
+                                        <div class="popover__description">11 Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="popover">
+                                        <div class="popover__name">Achivements</div>
+                                        <div class="popover__description">12 Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="popover">
+                                        <div class="popover__name">Achivements</div>
+                                        <div class="popover__description">13 Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="popover">
+                                        <div class="popover__name">Achivements</div>
+                                        <div class="popover__description">14 Bage Description</div>
+                                    </div>
+                                </div>
+                                <div class="token pop">
+                                    <img src="img/pic/taken1.png"/>
+                                    <div class="popover">
+                                        <div class="popover__name">Achivements</div>
+                                        <div class="popover__description">15 Bage Description</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tokens-mobile-wrap">
+                                <div class="tokens-mobile mobile">
+                                    <div class="token pop">
+                                        <img src="img/pic/taken1.png"/>
+                                        <div class="popover">
+                                            <div class="popover__name">Achivements</div>
+                                            <div class="popover__description">1 Bage Description</div>
+                                        </div>
+                                    </div>
+                                    <div class="token pop">
+                                        <img src="img/pic/taken1.png"/>
+                                        <div class="popover">
+                                            <div class="popover__name">Achivements</div>
+                                            <div class="popover__description">2 Bage Description Bage Description Bage
+                                                Description
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="token pop">
+                                        <img src="img/pic/taken1.png"/>
+                                        <div class="popover">
+                                            <div class="popover__name">Achivements</div>
+                                            <div class="popover__description">3 Bage Description</div>
+                                        </div>
+                                    </div>
+                                    <div class="token token-disabled">
+                                        <img src="img/pic/taken1.png"/>
+                                    </div>
+                                    <div class="token token-disabled">
+                                        <img src="img/pic/taken1.png"/>
+                                    </div>
+                                    <div class="token pop">
+                                        <img src="img/pic/taken1.png"/>
+                                        <div class="popover">
+                                            <div class="popover__name">Achivements</div>
+                                            <div class="popover__description">3 Bage Description</div>
+                                        </div>
+                                    </div>
+                                    <div class="token pop">
+                                        <img src="img/pic/taken1.png"/>
+                                        <div class="popover">
+                                            <div class="popover__name">Achivements</div>
+                                            <div class="popover__description">3 Bage Description</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div onclick="closeModal(levelProgress)" class="modal__backdrop"></div>
+    </div>
+    <div id="levelProgressToken" class="modal-wrapp">
+        <div class="modal center overflow-hidden">
+            <div class="levelProgressSlider__head-title">
+                <span>Tokens</span>
+            </div>
+            <div class="modal__content">
+                <div class="levelProgressSlider__box">
+                    <div class="levelProgressSlider__img"></div>
+                    <div class="levelProgressSlider__title">
+                        Great job!
+                    </div>
+                    <div class="levelProgressSlider__description">
+                        Congrats! You can now apply to become a Partner.
+                    </div>
+                </div>
+                <div class="levelProgressSlider__box">
+                    <div class="levelProgressSlider__img"></div>
+                    <div class="levelProgressSlider__title">
+                        Great job!
+                    </div>
+                    <div class="levelProgressSlider__description">
+                        Congrats! You can now apply to become a Partner.
+                    </div>
+                </div>
+                <div class="levelProgressSlider__box">
+                    <div class="levelProgressSlider__img"></div>
+                    <div class="levelProgressSlider__title">
+                        Great job!
+                    </div>
+                    <div class="levelProgressSlider__description">
+                        Congrats! You can now apply to become a Partner.
+                    </div>
+                </div>
+            </div>
+            <div onclick="closeModal(levelProgressToken)" class="modal__backdrop"></div>
+
+        </div>
+    </div>
+    <div id="levelProgressAchivements" class="modal-wrapp">
+        <div class="modal center">
+            <div class="levelProgressSlider__head-title">
+                <span>Achivements</span>
+            </div>
+            <div class="modal__content">
+                <div class="levelProgressSlider__box">
+                    <div class="levelProgressSlider__img"></div>
+                    <div class="levelProgressSlider__title">
+                        Great job!
+                    </div>
+                    <div class="levelProgressSlider__description">
+                        Congrats! You can now apply to become a Partner.
+                    </div>
+                </div>
+                <div class="levelProgressSlider__box">
+                    <div class="levelProgressSlider__img"></div>
+                    <div class="levelProgressSlider__title">
+                        Great job!
+                    </div>
+                    <div class="levelProgressSlider__description">
+                        Congrats! You can now apply to become a Partner.
+                    </div>
+                </div>
+                <div class="levelProgressSlider__box">
+                    <div class="levelProgressSlider__img"></div>
+                    <div class="levelProgressSlider__title">
+                        Great job!
+                    </div>
+                    <div class="levelProgressSlider__description">
+                        Congrats! You can now apply to become a Partner.
+                    </div>
+                </div>
+                <div class="levelProgressSlider__box">
+                    <div class="levelProgressSlider__img"></div>
+                    <div class="levelProgressSlider__title">
+                        Great job!
+                    </div>
+                    <div class="levelProgressSlider__description">
+                        Congrats! You can now apply to become a Partner.
+                    </div>
+                </div>
+                <div class="levelProgressSlider__box">
+                    <div class="levelProgressSlider__img"></div>
+                    <div class="levelProgressSlider__title">
+                        Great job!
+                    </div>
+                    <div class="levelProgressSlider__description">
+                        Congrats! You can now apply to become a Partner.
+                    </div>
+                </div>
+                <div class="levelProgressSlider__box">
+                    <div class="levelProgressSlider__img"></div>
+                    <div class="levelProgressSlider__title">
+                        Great job!
+                    </div>
+                    <div class="levelProgressSlider__description">
+                        Congrats! You can now apply to become a Partner.
+                    </div>
+                </div>
+                <div class="levelProgressSlider__box">
+                    <div class="levelProgressSlider__img"></div>
+                    <div class="levelProgressSlider__title">
+                        Great job!
+                    </div>
+                    <div class="levelProgressSlider__description">
+                        Congrats! You can now apply to become a Partner.
+                    </div>
+                </div>
+                <div class="levelProgressSlider__box">
+                    <div class="levelProgressSlider__img"></div>
+                    <div class="levelProgressSlider__title">
+                        Great job!
+                    </div>
+                    <div class="levelProgressSlider__description">
+                        Congrats! You can now apply to become a Partner.
+                    </div>
+                </div>
+                <div class="levelProgressSlider__box">
+                    <div class="levelProgressSlider__img"></div>
+                    <div class="levelProgressSlider__title">
+                        Great job!
+                    </div>
+                    <div class="levelProgressSlider__description">
+                        Congrats! You can now apply to become a Partner.
+                    </div>
+                </div>
+            </div>
+            <div onclick="closeModal(levelProgressAchivements)" class="modal__backdrop"></div>
+        </div>
+    </div>
+    <div id="inviteFriends" class="inviteFriends modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <div onclick="closeModal(inviteFriends)" class="modal__close"></div>
+                Invite friends
+                <button class="bg-fiolet">Invite</button>
+            </div>
+
+            <div class="modal__content">
+                <input type="text" placeholder="Search">
+                <div class="users-check">
+                    <div class="user-check bg-fiolet">gboy6827</div>
+                    <div class="user-check bg-yellow">gboy6827</div>
+                </div>
+                <div class="suggested">
+                    <div class="suggested__titile">Suggested</div>
+                    <div class="suggested__box">
+                        <input id="user1" name="suggested" type="checkbox">
+                        <label for="user1">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user1"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="user2" name="suggested" type="checkbox">
+                        <label for="user2">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user2"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="user3" name="suggested" type="checkbox">
+                        <label for="user3">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user3"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="user4" name="suggested" type="checkbox">
+                        <label for="user4">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user4"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="user5" name="suggested" type="checkbox">
+                        <label for="user5">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user5"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="user6" name="suggested" type="checkbox">
+                        <label for="user6">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user6"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="user7" name="suggested" type="checkbox">
+                        <label for="user7">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user7"></label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div onclick="closeModal(inviteFriends)" class="modal__backdrop"></div>
+    </div>
+    <div id="members" class="members modal-wrapp">
+        <div class="modal center">
+            <div class="modal__head">
+                <div onclick="closeModal(members)" class="modal__close"></div>
+                    Members
+                <button class="bg-red">Remove</button>
+            </div>
+
+            <div class="modal__content">
+                <input type="text" placeholder="Search">
+                <div class="users-check">
+                    <div class="user-check bg-fiolet">gboy6827</div>
+                    <div class="user-check bg-yellow">gboy6827</div>
+                </div>
+                <div class="suggested">
+                    <div class="suggested__titile">Suggested</div>
+                    <div class="suggested__box">
+                        <input id="user8" name="suggested" type="checkbox">
+                        <label for="user8">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user8"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="user9" name="suggested" type="checkbox">
+                        <label for="user9">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user9"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="user10" name="suggested" type="checkbox">
+                        <label for="user10">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user10"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="user11" name="suggested" type="checkbox">
+                        <label for="user11">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user11"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="user12" name="suggested" type="checkbox">
+                        <label for="user12">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user12"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="user13" name="suggested" type="checkbox">
+                        <label for="user13">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user13"></label>
+                    </div>
+                    <div class="suggested__box">
+                        <input id="user14" name="suggested" type="checkbox">
+                        <label for="user14">
+                            <div class="avatar"></div>
+                            <div class="user">
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </label>
+                        <label for="user14"></label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div onclick="closeModal(members)" class="modal__backdrop"></div>
+    </div>
+    <div id="share" class="modal-wrapp">
+        <div class="modal center">
+            <div onclick="closeModal(share)" class="close-tap mobile"></div>
+            <div class="modal__head">
+                Share
+                <div onclick="closeModal(share)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+                <div class="share__btns">
+                    <div class="btn__box">
+                        <div class="btn__logo FB"></div>
+                        <div class="btn__name">Facebook</div>
+                    </div>
+                    <div class="btn__box">
+                        <div class="btn__logo TW"></div>
+                        <div class="btn__name">Twitter</div>
+                    </div>
+                    <div class="btn__box">
+                        <div class="btn__logo BL"></div>
+                        <div class="btn__name">Blogger</div>
+                    </div>
+                    <div class="btn__box">
+                        <div class="btn__logo RD"></div>
+                        <div class="btn__name">Reddit</div>
+                    </div>
+                    <div class="btn__box">
+                        <div class="btn__logo TM"></div>
+                        <div class="btn__name">Tumblr</div>
+                    </div>
+                    <div class="btn__box">
+                        <div class="btn__logo TM"></div>
+                        <div class="btn__name">Tumblr</div>
+                    </div>
+                </div>
+                <div class="share__copy">
+                    <input id="shareCopy" type="text" readonly value="https://app.partie.com/profile/02babsdfsdfasf">
+                    <label for="shareCopy">copy</label>
+                </div>
+            </div>
+        </div>
+        <div onclick="closeModal(share)" class="modal__backdrop"></div>
+    </div>
+
+
+
+    <!--mobile-->
+    <div id="hostLiveShowMobile" class="hostLiveShow modal-wrapp mobile">
+        <div class="modal center">
+            <div class="modal__head">
+                <div onclick="closeModal(hostLiveShowMobile)" class="modal__close"></div>
+                Host partie
+                <button class="btn-create">Host</button>
+            </div>
+
+            <div class="modal__content">
+                <button class="game AL">
+                    <div class="game__icon"></div>
+                    Apex Legends
+                </button>
+                <div class="platform__title">Partie name</div>
+                <input readonly onclick="openModal(gametragName)" type="text" placeholder="Add name">
+                <textarea maxlength="500" placeholder="Add description"></textarea>
+
+                <div class="hostLiveShow__img">
+                    <img src="img/pic/Image (2).png"/>
+                    <div class="delete-img"></div>
+                </div>
+
+                <div class="hostLiveShow__btns">
+                    <div class="d-flex">
+                        <input id="hostLiveShowPhoto" type="file">
+                        <label for="hostLiveShowPhoto"></label>
+                        <button onclick="changeBtnPublic(this)" class="btn-public">Public partie</button>
+                    </div>
+                </div>
+                <div class="hostLiveShow__save">
+                    <div>
+                        <div class="hostLiveShow__save_title">Save as shortcut</div>
+                        <div class="hostLiveShow__save_desc">Description here</div>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="modal__content platform">
+                <div class="platform__title">Select a platform</div>
+                <button onclick="next(gametragPlatform, hostPlatform)" class="host-ps">Playstation</button>
+            </div>
+            <div class="modal__content gametrag">
+                <div class="platform__title">Gametrag</div>
+                <button onclick="next(gametrag, hostPlatform)">GameLiveShow</button>
+            </div>
+            <div class="modal__content communication">
+                <div class="platform__title">Communication</div>
+                <button onclick="next(gametrag, hostPlatform)">Mic on</button>
+            </div>
+            <div class="modal__content skill">
+                <div class="platform__title">Skill</div>
+                <button onclick="next(gametrag, hostPlatform)">Any</button>
+            </div>
+            <div class="modal__content game-type">
+                <div class="platform__title">Game Type</div>
+                <button onclick="next(gametrag, hostPlatform)">Select game type</button>
+            </div>
+            <div class="modal__content role-class">
+                <div class="platform__title">Role / Class</div>
+                <button onclick="next(gametrag, hostPlatform)">Select Role / Class</button>
+            </div>
+            <div class="modal__content role-class">
+                <div class="platform__title">Role / Class</div>
+                <button onclick="next(gametrag, hostPlatform)">Select Role / Class</button>
+            </div>
+            <div class="subscription__policy mobile">
+                By signing up, your agree to Partie’s <span>Terms and Conditions</span>,
+                End-User License Agreement and Privacy Policy.
+            </div>
+        </div>
+    </div>
+    <div id="gametragPlatform" class="platforms modal-wrapp">
+        <div class="modal center">
+            <div onclick="closeModal(gametragPlatform)" class="close-tap mobile"></div>
+            <div class="modal__head">
+                <svg id="back" onclick="closeModal(gametragPlatform)" class="btn-back" width="24" height="24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Select a platform
+                <button onclick="next(addGametrag, gametragPlatform)" class="platforms__create">Create</button>
+            </div>
+            <div class="modal__content">
+                <input id="hostXB" name="platform" type="radio">
+                <label for="hostXB" class="host-xb">Xbox</label>
+
+                <input id="hostPS" name="platform" type="radio">
+                <label for="hostPS" class="host-ps">Playstation</label>
+
+                <input id="hostOrigin" name="platform" type="radio">
+                <label for="hostOrigin" class="host-origin">Origin</label>
+
+                <input id="hostNin" name="platform" type="radio">
+                <label for="hostNin" class="host-sw">Nintendo</label>
+
+                <input id="hostEG" name="platform" type="radio">
+                <label for="hostEG" class="host-EG">Epic Games</label>
+
+                <input id="hostSteam" name="platform" type="radio">
+                <label for="hostSteam" class="host-steam">Steam</label>
+            </div>
+        </div>
+        <div onclick="closeModal(gametragPlatform)" class="modal__backdrop"></div>
+    </div>
+    <div id="gametrag" class="modal-wrapp gametrag-modal">
+        <div class="modal center">
+            <div onclick="closeModal(gametrag)" class="close-tap mobile"></div>
+            <div class="modal__head">
+                <svg id="back" onclick="back(gametrag, hostPlatform)" class="btn-back" width="24" height="24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Host partie
+                <div onclick="closeModal(gametrag)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+                <div class="gametrag__title">Gametrag</div>
+                <button onclick="next(hostLiveShow, gametrag)" class="gametrag__GameLiveShow">GameLiveShow</button>
+                <div class="add-gametrag">
+                    <span onclick="next(gametragPlatform, gametrag)">Add gametrag</span>
+                </div>
+            </div>
+            <div class="gametrag-mobile mobile">
+                <div onclick="back(gametrag, hostPlatform)" class="gametrag-mobile__title">Gamertag</div>
+                <div class="gametrag-mobile__row">
+                    <div class="label"></div>
+                    <input onkeyup="showBtnGametrag(this)" type="text" placeholder="Enter gametrag">
+                    <button onclick="next(createShortcutMobile,gametrag)" class="bg-fiolet next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gametragName" class="modal-wrapp gametrag-modal mobile">
+        <div class="modal center">
+            <div onclick="closeModal(gametragName)" class="close-tap mobile"></div>
+            <div class="modal__head">
+                <svg id="back" onclick="back(gametrag, hostPlatform)" class="btn-back" width="24" height="24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                </svg>
+                Host partie
+                <div onclick="closeModal(gametrag)" class="modal__close"></div>
+            </div>
+            <div class="modal__content">
+                <div class="gametrag__title">Gametrag</div>
+                <button onclick="next(hostLiveShow, gametrag)" class="gametrag__GameLiveShow">GameLiveShow</button>
+                <div class="add-gametrag">
+                    <span onclick="next(gametragPlatform, gametrag)">Add gametrag</span>
+                </div>
+            </div>
+            <div class="gametrag-mobile mobile">
+                <div onclick="closeModal(gametragName)" class="gametrag-mobile__title">Partie name</div>
+                <div class="gametrag-mobile__row">
+                    <input onkeyup="showBtnGametrag(this)" type="text" placeholder="Enter gametrag">
+                    <button id="gametragNext" onclick="next(createShortcutMobile,gametragName)" class="bg-fiolet next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="createShortcutMobile" class="hostLiveShow modal-wrapp mobile">
+        <div class="modal center">
+            <div class="modal__head">
+                <div onclick="closeModal(createShortcutMobile)" class="modal__close"></div>
+                Create shortcut
+                <button class="btn-create">Create</button>
+            </div>
+
+            <div class="modal__content">
+                <button class="game AL">
+                    <div class="game__icon"></div>
+                    Apex Legends
+                </button>
+                <div class="platform__title">Partie name</div>
+                <input readonly onclick="openModal(gametragName)" type="text" placeholder="Add name">
+                <textarea maxlength="500" placeholder="Add description"></textarea>
+
+                <div class="hostLiveShow__img">
+                    <img src="img/pic/Image (2).png"/>
+                    <div class="delete-img"></div>
+                </div>
+
+                <div class="hostLiveShow__btns">
+                    <div class="d-flex">
+                        <input id="hostLiveShowPhoto" type="file">
+                        <label for="hostLiveShowPhoto"></label>
+                        <button onclick="changeBtnPublic(this)" class="btn-public">Public partie</button>
+                    </div>
+                </div>
+                <div class="hostLiveShow__save">
+                    <div>
+                        <div class="hostLiveShow__save_title">Save as shortcut</div>
+                        <div class="hostLiveShow__save_desc">Description here</div>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="modal__content platform">
+                <div class="platform__title">Select a platform</div>
+                <button onclick="next(gametragPlatform, hostPlatform)" class="host-ps">Playstation</button>
+            </div>
+            <div class="modal__content gametrag">
+                <div class="platform__title">Gametrag</div>
+                <button onclick="next(gametrag, hostPlatform)">GameLiveShow</button>
+            </div>
+            <div class="modal__content communication">
+                <div class="platform__title">Communication</div>
+                <button onclick="next(gametrag, hostPlatform)">Mic on</button>
+            </div>
+            <div class="modal__content skill">
+                <div class="platform__title">Skill</div>
+                <button onclick="next(gametrag, hostPlatform)">Any</button>
+            </div>
+            <div class="modal__content game-type">
+                <div class="platform__title">Game Type</div>
+                <button onclick="next(gametrag, hostPlatform)">Select game type</button>
+            </div>
+            <div class="modal__content role-class">
+                <div class="platform__title">Role / Class</div>
+                <button onclick="next(gametrag, hostPlatform)">Select Role / Class</button>
+            </div>
+            <div class="modal__content role-class">
+                <div class="platform__title">Role / Class</div>
+                <button onclick="next(gametrag, hostPlatform)">Select Role / Class</button>
+            </div>
+            <div class="subscription__policy mobile">
+                By signing up, your agree to Partie’s <span>Terms and Conditions</span>,
+                End-User License Agreement and Privacy Policy.
+            </div>
+        </div>
+    </div>
+    <div id="editShortcutMobile" class="hostLiveShow modal-wrapp mobile">
+        <div class="modal center">
+            <div class="modal__head">
+                <div onclick="closeModal(editShortcutMobile)" class="modal__close"></div>
+                Edit shortcut
+                <button onclick="closeModal(editShortcutMobile)" class="btn-create">Save</button>
+            </div>
+
+            <div class="modal__content">
+                <button class="game AL">
+                    <div class="game__icon"></div>
+                    Apex Legends
+                </button>
+                <div class="platform__title">Partie name</div>
+                <input readonly onclick="openModal(gametragName)" type="text" placeholder="Add name">
+                <textarea maxlength="500" placeholder="Add description"></textarea>
+
+                <div class="hostLiveShow__img">
+                    <img src="img/pic/Image (2).png"/>
+                    <div class="delete-img"></div>
+                </div>
+
+                <div class="hostLiveShow__btns">
+                    <div class="d-flex">
+                        <input id="hostLiveShowPhoto" type="file">
+                        <label for="hostLiveShowPhoto"></label>
+                        <button onclick="changeBtnPublic(this)" class="btn-public">Public partie</button>
+                    </div>
+                </div>
+                <div class="hostLiveShow__save">
+                    <div>
+                        <div class="hostLiveShow__save_title">Save as shortcut</div>
+                        <div class="hostLiveShow__save_desc">Description here</div>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="modal__content platform">
+                <div class="platform__title">Select a platform</div>
+                <button onclick="next(gametragPlatform, hostPlatform)" class="host-ps">Playstation</button>
+            </div>
+            <div class="modal__content gametrag">
+                <div class="platform__title">Gametrag</div>
+                <button onclick="next(gametrag, hostPlatform)">GameLiveShow</button>
+            </div>
+            <div class="modal__content communication">
+                <div class="platform__title">Communication</div>
+                <button onclick="next(gametrag, hostPlatform)">Mic on</button>
+            </div>
+            <div class="modal__content skill">
+                <div class="platform__title">Skill</div>
+                <button onclick="next(gametrag, hostPlatform)">Any</button>
+            </div>
+            <div class="modal__content game-type">
+                <div class="platform__title">Game Type</div>
+                <button onclick="next(gametrag, hostPlatform)">Select game type</button>
+            </div>
+            <div class="modal__content role-class">
+                <div class="platform__title">Role / Class</div>
+                <button onclick="next(gametrag, hostPlatform)">Select Role / Class</button>
+            </div>
+            <div class="modal__content role-class">
+                <div class="platform__title">Role / Class</div>
+                <button onclick="next(gametrag, hostPlatform)">Select Role / Class</button>
+            </div>
+            <div class="subscription__policy mobile">
+                By signing up, your agree to Partie’s <span>Terms and Conditions</span>,
+                End-User License Agreement and Privacy Policy.
+            </div>
+        </div>
+    </div>
+
+
+</div>

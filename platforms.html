@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <title>Partie</title>
+</head>
+<body>
+    <a href="#" onclick="location.reload()" class="header__logo">
+        <img src="img/icon/fiolet-logo.png" height="50"/>
+        <div class="header__logo-text">Partie</div>
+    </a>
+
+    <div id ="#logInPlatforms" class="platforms">
+        <div class="bg-red-blue">
+            <div class="bg-animate red-blue">
+                <div class="line-1 line"></div>
+                <div class="line-2 line"></div>
+                <div class="line-3 line"></div>
+                <div class="line-4 line"></div>
+                <div class="line-5 line"></div>
+                <div class="line-6 line"></div>
+                <div class="line-7 line"></div>
+                <div class="line-8 line"></div>
+                <div class="line-9 line"></div>
+                <div class="line-10 line"></div>
+                <div class="line-11 line"></div>
+                <div class="line-12 line"></div>
+                <div class="line-13 line"></div>
+            </div>
+            <div class="bg-animate red-blue screen-1">
+                <div class="line-1 line2"></div>
+                <div class="line-2 line2"></div>
+                <div class="line-3 line2"></div>
+                <div class="line-4 line2"></div>
+                <div class="line-5 line2"></div>
+                <div class="line-6 line2"></div>
+                <div class="line-7 line2"></div>
+                <div class="line-8 line2"></div>
+                <div class="line-9 line2"></div>
+                <div class="line-10 line2"></div>
+                <div class="line-11 line2"></div>
+                <div class="line-12 line"></div>
+                <div class="line-13 line"></div>
+            </div>
+            <div class="bg-animate red-blue screen-2">
+                <div class="line-1 line2"></div>
+                <div class="line-2 line2"></div>
+                <div class="line-3 line2"></div>
+                <div class="line-4 line2"></div>
+                <div class="line-5 line2"></div>
+                <div class="line-6 line2"></div>
+                <div class="line-7 line2"></div>
+                <div class="line-8 line2"></div>
+                <div class="line-9 line2"></div>
+                <div class="line-10 line2"></div>
+                <div class="line-11 line2"></div>
+                <div class="line-12 line"></div>
+                <div class="line-13 line"></div>
+            </div>
+        </div>
+        <div class="platforms__wrapper">
+            <div class="platforms__container">
+                <div class="platforms__title">Where do you play?</div>
+                <div class="platforms__description">You can select multiply <br> choices</div>
+                <form onsubmit="return false;" class="platforms__form">
+                    <div class="platforms__card">
+                        <input id="pc" class="platforms__card_input" name="platforms" type="checkbox">
+                        <label for="pc" class="platforms__card_label"></label>
+                        <div class="platforms__card_name">PC</div>
+                    </div>
+                    <div class="platforms__card">
+                        <input id="ps" class="platforms__card_input" name="platforms" type="checkbox">
+                        <label for="ps" class="platforms__card_label"></label>
+                        <div class="platforms__card_name">Playstation</div>
+                    </div>
+                    <div class="platforms__card">
+                        <input id="xbox" class="platforms__card_input" name="platforms" type="checkbox">
+                        <label for="xbox" class="platforms__card_label"></label>
+                        <div class="platforms__card_name">XBOX</div>
+                    </div>
+                    <div class="platforms__card">
+                        <input id="switch" class="platforms__card_input" name="platforms" type="checkbox">
+                        <label for="switch" class="platforms__card_label"></label>
+                        <div class="platforms__card_name">Switch</div>
+                    </div>
+                    <div class="platforms__card">
+                        <input id="mobile" class="platforms__card_input" name="platforms" type="checkbox">
+                        <label for="mobile" class="platforms__card_label"></label>
+                        <div class="platforms__card_name">Mobile</div>
+                    </div>
+                </form>
+                <button id="btnPlatforms" onclick="next(logInPlatformsGames, logInPlatforms)"
+                            class="platforms__button bg-fiolet animate__animated">Continue
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const platformsButton = document.querySelector('.platforms__button');
+        const platformsCard = document.querySelectorAll('.platforms__card');
+        let ar = [];
+        platformsCard.forEach((item) => {
+            item.addEventListener('click', (e) => {
+                let bgRedBlue = document.querySelector( '.bg-red-blue' );
+                const platform = e.target.getAttribute('for');
+                if (!platform) {
+                    return;
+                }
+                if (ar.includes(platform)) {
+                    ar = ar.filter((item) => {
+                        return item !== platform;
+                    });
+                } else {
+                    ar.push(platform);
+                }
+                if (ar.length) {
+                    platformsButton.classList.remove("animate__fadeOutDown");
+                    platformsButton.classList.add("animate__fadeInUp");
+                    bgRedBlue.style.zIndex = '0';
+                } else {
+                    platformsButton.classList.remove("animate__fadeInUp");
+                    platformsButton.classList.add("animate__fadeOutDown");
+                    bgRedBlue.style.zIndex = '-1';
+                }
+                platformsButton.classList.add("animate__fadeInUp");
+                platformsButton.style.display = ar.length ? 'block' : 'block';
+            });
+        });
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+</html>

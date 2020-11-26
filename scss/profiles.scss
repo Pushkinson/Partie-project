@@ -1,0 +1,175 @@
+#profile.profiles {
+    .profile__info {
+
+        > button {
+            font-weight: 400;
+        }
+
+        .avatar {
+            background: url('../img/pic/ava1.png') center / cover no-repeat;
+        }
+
+        .info_avatar__counters {
+            margin-bottom: 20px;
+        }
+
+        .btns-row {
+            display: flex;
+            margin-bottom: 20px;
+
+            .btn-follow {
+                width: 174px;
+                height: 52px;
+            }
+
+            .btn-chat {
+                height: 52px;
+                width: 52px;
+                background: #F8F6FF url('../img/icon/Chats.svg') center / 20px no-repeat;
+                margin-left: 8px;
+            }
+        }
+
+        .private {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            padding: 40px 133px;
+            background: #100F15;
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+            .btn_lock {
+                width: 50px;
+                height: 50px;
+                background: #131219 url('../img/icon/lock.svg') center / 15px no-repeat;
+                border-radius: 20px;
+                margin-bottom: 10px;
+            }
+
+            .private__title {
+                font-weight: bold;
+                font-size: 17px;
+                line-height: 150%;
+                margin-bottom: 5px;
+            }
+
+            .private__description {
+                line-height: 150%;
+                opacity: 0.5;
+                text-align: center;
+            }
+        }
+
+        .ps {
+            height: 0;
+            overflow: hidden;
+            background: #3069E8 url('../img/icon/ps.svg') 26px 50% / 23px no-repeat;
+            transition: .3s;
+        }
+    }
+
+    .followers {
+        display: none;
+
+        .feed__header {
+            justify-content: center;
+
+            a {
+                position: absolute;
+                left: 0;
+            }
+
+            .tab {
+                display: flex;
+
+                .tablinks {
+                    font-weight: bold;
+                    font-size: 17px;
+                    line-height: 22px;
+                    letter-spacing: -0.408px;
+                    color: #504D60;
+                    margin-right: 16px;
+                    cursor: pointer;
+                    transition: .3s;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .tab div.active {
+                color: #EBEBF5;
+            }
+        }
+
+        input {
+            padding-left: 50px;
+            background: #19181F url('../img/icon/search.svg') 19px 50% / 16px no-repeat;
+            margin-bottom: 28px;
+        }
+
+        .followers-content {
+            .followers__row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                a {
+                    display: block;
+                }
+
+                .followers__user {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .avatar {
+                        width: 50px;
+                        min-width: 50px;
+                        height: 50px;
+                        margin-right: 16px;
+                    }
+
+                    .followers__user_name {
+                        font-weight: bold;
+                        margin-bottom: 6px;
+                    }
+
+                    .followers__user_level {
+                        opacity: 0.5;
+                    }
+                }
+
+                button {
+                    width: 79px;
+                    height: 32px;
+                    text-align: center;
+                    background-color: #6E4AFF;
+                }
+
+            }
+        }
+
+        .followers-content.following {
+
+        }
+
+    }
+}
+
+
+@media (max-width: 1023px) { // mobile
+
+    #profile.profiles .profile__info .private {
+        padding: 20px 0;
+    }
+
+    #profile.profiles .feed__header_menu {
+        right: 0;
+    }
+}

@@ -1,0 +1,218 @@
+.notifications {
+    min-height: 100%;
+
+    .feed__col2 {
+        position: relative;
+        overflow: hidden;
+        padding-top: 0 !important;
+
+        .feed__header {
+            justify-content: center;
+            font-weight: bold;
+            font-size: 17px;
+            line-height: 22px;
+            letter-spacing: -0.408px;
+            position: sticky !important;
+        }
+
+        .notifications__content {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            overflow-y: auto;
+            padding-top: 70px;
+
+            /* хром, сафари */
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+
+            /* ie 10+ */
+            & {
+                -ms-overflow-style: none;
+            }
+
+            /* фф (свойство больше не работает, других способов тоже нет)*/
+            & {
+                overflow: -moz-scrollbars-none;
+            }
+
+            @media (max-width: 1023px) {
+                width: calc(100% - 40px);
+            }
+
+            .requests {
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: bold;
+                cursor: pointer;
+
+                .requests__counter-wrapper {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .requests__counter {
+                    height: 50px;
+                    width: 50px;
+                    background: #6E4AFF;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 16px;
+                }
+
+                .requests__arrow {
+                    height: 15px;
+                    width: 15px;
+                    background: url('../img/icon/arrow-right.png') center / 9px no-repeat;
+                }
+            }
+
+            .notifications__row {
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+
+                .notifications__text {
+                    width: calc(100% - 150px);
+                }
+
+                .avatar {
+                    width: 50px;
+                    min-width: 50px;
+                    height: 50px;
+                    margin-right: 16px;
+                }
+
+                .user__text {
+                    font-weight: 400;
+                }
+
+                .user__time {
+                    font-weight: 400;
+                    opacity: .5;
+                }
+
+                .notifications__btn {
+                    width: 79px;
+                    height: 32px;
+                    margin-left: auto;
+                    transition: .2s;
+                    background-color: rgba(20, 19, 26, .8);
+                    font-size: 12px;
+
+                    &:hover {
+                        background-color: rgba(20, 19, 26, 1);
+
+                    }
+
+                    &:active {
+                        background-color: rgba(20, 19, 26, .7);
+                    }
+                }
+
+                .notifications__btn.join {
+                    background-color: rgba(110, 74, 255, 1);
+
+                    &:active {
+                        background-color: rgba(110, 74, 255, .7);
+                    }
+                }
+            }
+        }
+
+        .notifications__content.follow-requests {
+            position: absolute;
+            top: -70px;
+            left: 100%;
+            min-height: 100%;
+            width: 100%;
+            background: #000;
+            transition: .5s;
+
+            @media (max-width: 1023px) {
+                top: 0;
+            }
+
+            .btn-back {
+                top: auto;
+            }
+        }
+
+        .followers__no-results {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            height: calc(100% - 140px);
+
+            .invite-people {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .invite-people__img img {
+                    width: 129px;
+                    margin-bottom: 16px;
+                }
+
+                .invite-people__title {
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 120%;
+                    letter-spacing: -0.408px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+
+                .invite-people__description {
+                    text-align: center;
+                    line-height: 150%;
+                    color: rgba(235, 235, 245, 0.5);
+                    margin-bottom: 20px;
+                }
+
+                button {
+                    height: 31px;
+                    width: 115px;
+                }
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 1023px) { // mobile
+
+    #feed.notifications .feed__col2 {
+        padding-top: 60px;
+
+        .notifications__content .notifications__row .avatar {
+            min-width: 50px;
+        }
+
+        .notifications__content.follow-requests .feed__header {
+           position: absolute;
+       }
+
+       .notifications__content.follow-requests  {
+           padding: 0 20px;
+
+           .btn-back {
+               //left: 20px;
+           }
+       }
+
+        .notifications__content.follow-requests {
+            z-index: 2;
+        }
+    }
+}

@@ -1,0 +1,194 @@
+.platforms {
+    height: 100%;
+    background-color: #000;
+    opacity: 1;
+    z-index: 13;
+
+    &__wrapper {
+        width: 710px;
+        margin: 0 auto;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+        padding-top: 220px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+        z-index: 1;
+    }
+
+    &__description {
+        font-size: 17px;
+        line-height: 22px;
+        text-align: center;
+        opacity: 0.5;
+        margin-bottom: 50px;
+        z-index: 1;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__card {
+        width: 130px;
+        border-radius: 20px;
+        height: 180px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        &:nth-child(n) {
+            margin: 5px;
+        }
+
+        &_input {
+            display: none;
+        }
+
+        input[type=checkbox]:checked + label + .platforms__card_name {
+            color: rgba(235, 235, 245, 1);
+        }
+
+        input[type=checkbox]:checked + label[for=pc] {
+            background-color: #6E4AFF;
+        }
+
+        input[type=checkbox]:checked + label[for=ps] {
+            background-color: #184292;
+        }
+
+        input[type=checkbox]:checked + label[for=switch] {
+            background-color: #EB4335;
+        }
+
+        input[type=checkbox]:checked + label[for=xbox] {
+            background-color: #077D07;
+        }
+
+        input[type=checkbox]:checked + label[for=mobile] {
+            background-color: #D2C867;
+        }
+
+        input[type=checkbox]:checked + label ~ button {
+            display: block;
+        }
+
+        &_label {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+            & [for=pc] {
+                background: url('../img/icon/pc.svg') center 49.7px / 58.2px no-repeat;
+            }
+
+            & [for=ps] {
+                background: url('../img/icon/ps.svg') center 48.7px / 63px no-repeat;
+            }
+
+            & [for=switch] {
+                background: url('../img/icon/switch.svg') center 49.5px / 49px no-repeat;
+            }
+
+            & [for=xbox] {
+                background: url('../img/icon/xbox.svg') center 48.5px / 49px no-repeat;
+            }
+
+            & [for=mobile] {
+                background: url('../img/icon/mobile.svg') center 46px / 40px no-repeat;
+            }
+
+        &_name {
+            color: rgba(235, 235, 245, 0.5);
+            margin-bottom: 26px;
+            z-index: 1;
+            transition: .5s;
+        }
+    }
+
+    &__button {
+        width: 139px;
+        margin: 0 auto;
+        margin-top: 40px;
+        // position: fixed;
+        // bottom: 50px;
+        // left: calc(50% - 71.5px);
+        display: none;
+        --animate-duration: .3s;
+        z-index: 2;
+    }
+}
+
+.bg-red-blue {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+@media (max-width: 723px) {
+    .header__logo {
+        display: none;
+    }
+
+    .platforms {
+        &__wrapper {
+            width: 500px;
+        }
+
+        &__container {
+            padding-top: 50px;
+        }
+
+        &__form {
+            justify-content: space-around;
+        }
+
+        &__button {
+            bottom: 30px;
+            position: fixed;
+            left: calc(50% - 71.5px);
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .header__logo {
+        display: none;
+    }
+
+    .platforms {
+        &__wrapper {
+            width: 300px;
+        }
+
+        &__container {
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        &__form {
+            justify-content: space-around;
+        }
+    }
+}

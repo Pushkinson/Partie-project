@@ -1,0 +1,704 @@
+#hostPartie {
+
+    @media (max-width: 1023px) {
+        .modal {
+            overflow-y: auto;
+        }
+    }
+
+    .bg-click {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,.7);
+        opacity: 0;
+        transition: .5s;
+        z-index: -1;
+    }
+
+    .choose-game__game {
+        position: relative;
+        max-width: 315px;
+        margin: 0 auto 90px;
+        justify-content: flex-start;
+
+        @media (min-width: 1024px) {
+            height: 500px;
+            overflow-y: auto;
+            &::-webkit-scrollbar { width: 0; }
+            -ms-overflow-style: none;
+            overflow: -moz-scrollbars-none;
+        }
+
+    }
+
+    input {
+        border: 0;
+    }
+
+    .game__img {
+        position: relative;
+
+        .card__partie {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 65px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 17px;
+            border-radius: 0 20px 0 0;
+
+            img {
+                width: 10px;
+                margin: 0 7px 0 0;
+            }
+        }
+    }
+
+    .shortcuts {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        padding: 20px;
+        background-color: #000;
+        transition: .5s;
+        z-index: 2;
+
+        @media (max-width: 1023px) {
+            position: fixed;
+        }
+
+        .shortcuts__title {
+            font-size: 13px;
+            color: rgba(235, 235, 245, .5);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .btn-up {
+                cursor: pointer;
+                transition: .5s;
+            }
+        }
+
+        .shortcuts__box {
+            background: #19181F;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            margin-bottom: 10px;
+            position: relative;
+            cursor: pointer;
+
+            .shortcuts__box_menu {
+                display: none;
+                position: fixed;
+                width: 280px;
+                height: 112px;
+                background: #14131A;
+                border-radius: 20px;
+                z-index: 1;
+
+                @media (max-width: 1023px) {
+                    display: block;
+                    position: fixed;
+                    bottom: -100%;
+                    left: 0;
+                    background: #000;
+                    border-radius: 0;
+                    width: 100%;
+                    font-weight: 700;
+                    z-index: 12;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .3s;
+                }
+
+                .menu-wrapper {
+                    padding: 28px;
+                }
+
+                .edit-shortcut {
+                    margin-bottom: 20px;
+
+                    span {
+                        padding-left: 38px;
+                        background: url('../img/icon/edit.png') 0 50% / 18px no-repeat;
+                        line-height: 18px;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+                }
+
+
+                .delete {
+                    span {
+                        padding-left: 38px;
+                        background: url('../img/icon/remove.png') 0 50% / 18px no-repeat;
+                        line-height: 18px;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .shortcuts__box_btns {
+                display: flex;
+                align-items: center;
+            }
+
+            .shortcuts__btn {
+                position: relative;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin-right: 8px;
+                cursor: pointer;
+            }
+
+            .shortcuts__btn.origin {
+                background: rgba(50, 47, 66, 0.4) url('../img/icon/origin.svg') center / 13px no-repeat;
+            }
+
+            .shortcuts__btn.pc {
+                background: rgba(50, 47, 66, 0.4) url('../img/icon/pc.svg') center / 18px no-repeat;
+            }
+
+            .shortcuts__btn.mic {
+                background: rgba(50, 47, 66, 0.4) url('../img/icon/mic.svg') center / 10px no-repeat;
+            }
+
+            .shortcuts__btn:hover .tooltip {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .tooltip, .tooltip:before {
+                background: #1E1D24;
+                border: 0;
+            }
+
+            .shortcuts__btn-limited {
+                height: 32px;
+                width: 79px;
+                background: rgba(210, 200, 103, .1);
+                border-radius: 40px;
+                font-size: 13px;
+                line-height: 17px;
+                color: #D2C867;
+                font-weight: 400;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: inline;
+                padding: 0 9px;
+                overflow: hidden;
+            }
+        }
+
+        .shortcuts__create {
+            text-align: center;
+            font-weight: 700;
+            margin-top: 20px;
+            
+            span {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.platforms {
+    //top: 0;
+    .modal__head {
+        margin-bottom: 35px;
+    }
+
+    .platform__title {
+        font-size: 13px;
+        opacity: 0.5;
+        margin-bottom: 18px;
+    }
+
+    button {
+        height: 64px;
+        margin-bottom: 10px;
+        font-weight: 400;
+        transition: .3s;
+        
+        &:hover {
+            background-color: rgba(20,19,26,1) !important;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    button.host-xb {
+        background: rgba(20, 19, 26, .8) url('../img/icon/xbox.svg') 31px 50% / 17.5px no-repeat;
+    }
+
+    button.host-ps {
+        background: rgba(20, 19, 26, .8) url('../img/icon/ps.svg') 28.7px 50% / 22.5px no-repeat;
+    }
+
+    button.host-pc {
+        background: rgba(20, 19, 26, .8) url('../img/icon/pc.svg') 31.7px 50% / 20.8px no-repeat;
+    }
+
+    button.host-sw {
+        background: rgba(20, 19, 26, .8) url('../img/icon/switch.svg') 31.2px 50% / 17.5px no-repeat;
+    }
+
+    button.host-mob {
+        background: rgba(20, 19, 26, .8) url('../img/icon/mobile.svg') 33.7px 50% / 12.5px no-repeat;
+    }
+
+    button.host-origin {
+        background: rgba(20, 19, 26, .8) url('../img/icon/origin.svg') 31px 50% / 17.7px no-repeat;
+    }
+
+    button.host-EG {
+        background: rgba(20, 19, 26, .8) url('../img/icon/epic.svg') 31px 50% / 18.8px no-repeat;
+    }
+
+    button.host-steam {
+        background: rgba(20, 19, 26, .8) url('../img/icon/steam.png') 30px 50% / 20px no-repeat;
+    }
+
+}
+
+#gametrag {
+    //top: 0;
+    .modal__head {
+        margin-bottom: 35px;
+    }
+
+    .gametrag__title {
+        font-size: 13px;
+        opacity: 0.5;
+        margin-bottom: 18px;
+    }
+
+    .gametrag__GameLiveShow {
+        background: #3069E8 url('../img/icon/ps.svg') 28.7px 50% / 22.5px no-repeat;
+        height: 64px;
+        margin-bottom: 26px;
+    }
+
+    .add-gametrag {
+        text-align: center;
+        margin-bottom: 20px;
+
+        span {
+            cursor: pointer;
+        }
+    }
+}
+
+#gametragPlatform.platforms {
+    //top: 0;
+
+    button.platforms__create {
+        background-color: #6E4AFF;
+        height: auto;
+        width: auto;
+        font-size: 13px;
+        line-height: 17px;
+        font-weight: 700;
+        padding: 8px 9px;
+        position: absolute;
+        right: 0;
+        top: -6px;
+    }
+
+    input[type=radio] {
+        display: none;
+    }
+
+    label {
+        width: 100%;
+        height: 64px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: .3s;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            background-color: rgba(20, 19, 26, 1) !important;
+        }
+    }
+
+    input[type=radio]:checked + label {
+        background-color: #6E4AFF !important;
+    }
+
+    label.host-xb {
+        background: rgba(20, 19, 26, .8) url('../img/icon/xbox.svg') 31px 50% / 17.5px no-repeat;
+    }
+
+    label.host-ps {
+        background: rgba(20, 19, 26, .8) url('../img/icon/ps.svg') 28.7px 50% / 22.5px no-repeat;
+    }
+
+    label.host-pc {
+        background: rgba(20, 19, 26, .8) url('../img/icon/pc.svg') 31.7px 50% / 20.8px no-repeat;
+    }
+
+    label.host-sw {
+        background: rgba(20, 19, 26, .8) url('../img/icon/switch.svg') 31.2px 50% / 17.5px no-repeat;
+    }
+
+    label.host-mob {
+        background: rgba(20, 19, 26, .8) url('../img/icon/mobile.svg') 33.7px 50% / 12.5px no-repeat;
+    }
+
+    label.host-origin {
+        background: rgba(20, 19, 26, .8) url('../img/icon/origin.svg') 31px 50% / 17.7px no-repeat;
+    }
+
+    label.host-EG {
+        background: rgba(20, 19, 26, .8) url('../img/icon/epic.svg') 31px 50% / 18.8px no-repeat;
+    }
+
+    label.host-steam {
+        background: rgba(20, 19, 26, .8) url('../img/icon/steam.png') 30px 50% / 20px no-repeat;
+    }
+}
+
+#addGametrag.platforms {
+    //top: 0;
+    .modal__head {
+        margin-bottom: 35px;
+    }
+
+    .platforms__done {
+        background-color: #6E4AFF;
+        height: auto;
+        width: auto;
+        font-size: 13px;
+        line-height: 17px;
+        font-weight: 700;
+        padding: 8px 9px;
+        position: absolute;
+        right: 0;
+        top: -6px;
+    }
+
+    .platform__title_gametrag {
+        margin-bottom: 5px;
+    }
+
+    textarea {
+        width: 100%;
+        border: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+    
+    .modal__content button {
+        cursor: auto;
+    }
+}
+
+.hostLiveShow {
+    //top: 0;
+
+    button.game {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        height: 64px;
+        margin-bottom: 20px;
+        font-weight: 400;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            filter: blur(15px);
+            z-index: 0;
+            opacity: .5;
+        }
+
+        .game__icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            position: absolute;
+            left: 27px;
+            top: calc(50% - 16px);
+        }
+    }
+
+    button.game.AL:before {
+        background: #19181F url('../img/pic/slide2.png') center / cover no-repeat;
+    }
+
+    button.game.AL .game__icon {
+        background: url('../img/pic/slide2.png') center / cover no-repeat;
+    }
+
+    button.game.FN:before {
+        background: #19181F url('../img/pic/slide4.png') center / cover no-repeat;
+    }
+
+    button.game.FN .game__icon {
+        background: url('../img/pic/slide4.png') center / cover no-repeat;
+    }
+
+    textarea {
+        width: 100%;
+        margin-bottom: 38px;
+    }
+
+    input {
+        border: 0;
+        padding: 0;
+        height: auto;
+        border-radius: 0;
+        margin-bottom: 38px;
+
+        &:focus {
+            border: 0;
+        }
+    }
+
+    .platform__title {
+        font-size: 13px;
+        opacity: 0.5;
+        margin-bottom: 5px;
+    }
+
+    .hostLiveShow__btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        input[type=file] {
+            display: none;
+        }
+
+        input[type=file] + label {
+            width: 32px;
+            min-width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #F8F6FF url('../img/icon/photo.png') center / 14px no-repeat;
+            cursor: pointer;
+            margin-right: 8px;
+            display: block;
+        }
+
+        .btn-public {
+            height: 32px;
+            padding: 0 12px;
+            background: #D2C867;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 17px;
+            color: #000000;
+            margin-right: 8px;
+            transition: background-color .3s;
+        }
+
+        .btn-round {
+            height: 32px;
+            width: 32px;
+            min-width: 32px;
+            border-radius: 50%;
+            margin-right: 8px;
+            cursor: pointer;
+            position: relative;
+
+            &:hover .btn-round__hover {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .btn-round__hover {
+                padding: 13px 25px 13px 47px;
+                position: absolute;
+                top: -60px;
+                left: calc(50% - 90px);
+                background: #14131A;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1;
+                width: 182px;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s opacity;
+                &:before {
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    background-color: #14131A;
+                    border: 1px solid #14131A;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    bottom: -8px;
+                    left: calc(50% - 8px);
+                }
+            }
+
+        }
+
+        .epic {
+            background: #14131A url('../img/icon/epic.svg') center / 13px no-repeat;
+
+            .btn-round__hover {
+                background: #14131A url('../img/icon/epic.svg') 20px center / 13px no-repeat;
+            }
+        }
+
+        .pc {
+            background: #14131A url('../img/icon/pc.svg') center / 18px no-repeat;
+        }
+
+        .mic {
+            background: #14131A url('../img/icon/mic.svg') center / 10.3px no-repeat;
+        }
+
+        .other {
+            background: #14131A url('../img/icon/other.png') center / 16px no-repeat;
+            position: relative;
+
+            .other__counter {
+                height: 14px;
+                padding: 0 4px;
+                background: #F45365;
+                border-radius: 3px;
+                font-weight: bold;
+                font-size: 10px;
+                line-height: 14px;
+                text-align: center;
+                position: absolute;
+                right: -5px;
+                top: -7px;
+                color: #EBEBF5;
+            }
+        }
+
+        .btn-create {
+            background: #6E4AFF;
+            border-radius: 20px;
+            height: 32px;
+            width: 67px;
+            padding: 0 4px;
+        }
+    }
+
+    .hostLiveShow__save {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .hostLiveShow__save_title {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .hostLiveShow__save_desc {
+            font-size: 13px;
+            line-height: 16px;
+            opacity: 0.5;
+        }
+    }
+
+}
+
+#additionalSettings {
+    //top: 0;
+
+    .modal__head {
+        margin-bottom: 35px;
+    }
+
+    .additionalSettings__block {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .additionalSettings__block_title {
+            font-size: 13px;
+            opacity: 0.5;
+            margin-bottom: 10px;
+        }
+
+        button {
+            color: rgba(248, 246, 255, .4);
+            font-weight: 400;
+
+            &:hover {
+                background-color: rgba(20,19,26,1);
+                color: rgba(248, 246, 255, .5);
+            }
+        }
+    }
+}
+
+#selectGame {
+    //top: 0;
+
+    .modal__head {
+        margin-bottom: 35px;
+    }
+
+    input[type=radio] {
+        display: none;
+    }
+
+    input[type=radio] + label {
+        width: 100%;
+        height: 64px;
+        background: rgba(20, 19, 26, .8);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        transition: .3s background-color;
+        cursor: pointer;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        
+        &:hover {
+            background: rgba(20, 19, 26, 1);
+        }
+    }
+
+    input[type=radio]:checked + label {
+        background: #6E4AFF url('../img/icon/ok-w.svg') 28px 50% / 14px no-repeat;
+    }
+}

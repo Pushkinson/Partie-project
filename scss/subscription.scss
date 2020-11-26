@@ -1,0 +1,475 @@
+.subscription {
+
+    .btn-back {
+        position: absolute;
+        width: 52px;
+        height: 52px;
+        left: 40px;
+        top: calc(100% - 92px);
+        z-index: 100;
+        border-radius: 50%;
+        background: #19181F url('../img/icon/arrow_back.png') center no-repeat;
+        cursor: pointer;
+    }
+
+    #addCreditCard.modal-wrapp {
+        //top: 0;
+    }
+
+    .modal-wrapp {
+        background-color: #000;
+        left: 100%;
+        top: 0;
+        transition: .5s;
+        opacity: 1 !important;
+        z-index: 0;
+
+        .subscription__modal {
+            padding: 30px 0;
+            width: 424px;
+            opacity: 1 !important;
+        }
+
+        .subscription__title {
+            font-weight: bold;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .radio-group {
+            margin-bottom: 20px;
+
+            .subscription__radio {
+                position: relative;
+                overflow: hidden;
+                border-radius: 20px;
+                height: 64px;
+                margin-bottom: 10px;
+            }
+
+            .checkbox-round {
+                position: absolute;
+                left: 15px;
+                top: calc(50% - 16px);
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+                background-color: #19181F;
+            }
+
+            input[type=radio] {
+                display: none;
+            }
+
+            label {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transition: .5s;
+            }
+
+            input[type=radio]:checked + label {
+                color: #000000 !important;
+                background: #D2C867 url('../img/icon/ok-black.svg') 25px center no-repeat;
+                transition: 0s background;
+
+                .checkbox-round {
+                    display: none;
+                }
+            }
+
+            .subscription__annual {
+                padding: 15px 30px 15px 60px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 16px;
+                cursor: pointer;
+
+                .subscription__annual-name {
+                    font-weight: bold;
+                    display: flex;
+
+                    img {
+                        margin-right: 28px;
+                    }
+                }
+
+                .subscription__annual-price {
+                    text-align: right;
+
+                    div:nth-child(1) {
+                        margin-bottom: 6px;
+                    }
+
+                    div:nth-child(2) {
+                        font-size: 13px;
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
+
+        .subscription__description {
+            margin-bottom: 40px;
+
+            .subscription__description-article {
+                font-size: 14px;
+                color: rgba(235, 235, 245, 0.5);
+                margin-bottom: 10px;
+                background: url('../img/icon/ok-yellow.png') 25px center no-repeat;
+                padding-left: 60px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+            }
+        }
+
+        button, a.btn {
+            margin-bottom: 20px;
+        }
+
+        .subscription__payment {
+            display: flex;
+
+            .subscription__payment-card {
+                margin-right: 10px;
+                background: rgba(20, 19, 26, .8) url('../img/icon/credit-card.png') 20px center no-repeat;
+
+                &:hover {
+                    background-color: rgba(20, 19, 26, 1)
+                }
+            }
+
+            .subscription__payment-paypal {
+                background: rgba(20, 19, 26, .8) url('../img/icon/paypel.png') 20px center no-repeat;
+
+                &:hover {
+                    background-color: rgba(20, 19, 26, 1)
+                }
+            }
+        }
+
+        .subscription__policy {
+            font-size: 12px;
+            text-align: center;
+            color: rgba(248, 246, 255, 0.3);
+            line-height: 150%;
+
+            span {
+                color: #EBEBF5;
+            }
+        }
+
+        .add-credit-card {
+            padding: 30px 0;
+            width: 424px;
+            opacity: 1 !important;
+            z-index: 13;
+
+            .subscription__title {
+                margin-bottom: 20px;
+            }
+
+            .add-credit-card__text {
+                font-size: 17px;
+                text-align: center;
+                opacity: 0.5;
+                padding: 0 40px;
+                margin-bottom: 40px;
+                line-height: 22px;
+            }
+
+            > input {
+                margin-bottom: 20px;
+            }
+
+            .add-credit-card__input-group {
+                display: flex;
+                margin-bottom: 40px;
+
+                input {
+                    width: 98px;
+                    margin-right: 17px;
+                }
+            }
+
+            input.card-number {
+                background: url('../img/icon/logo-card.png') calc(100% - 15px) 50% / 32px no-repeat;
+            }
+
+            a.btn {
+                transition: .3s;
+
+                &:hover {
+                    background-color: rgba(20, 19, 26, 1);
+                }
+
+            }
+        }
+
+    }
+}
+
+@media (max-width: 1023px) { // mobile
+    .subscription {
+        //display: none;
+
+        .btn-back {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            left: 20px !important;
+            top: 20px;
+            z-index: 10;
+            background: url('../img/icon/arrow_back.png') center / 24px no-repeat;
+            cursor: pointer;
+        }
+
+        #subscriptionModal .btn-back {
+            display: none;
+        }
+
+        #addCreditCard.modal-wrapp {
+            top: 0;
+        }
+
+        .modal-wrapp {
+            background-color: #000;
+            left: 100%;
+            top: 0;
+            transition: .3s;
+
+            .subscription__modal {
+                padding: 64px 20px 54px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                left: 100%;
+            }
+
+            .subscription__title {
+                font-weight: bold;
+                font-size: 32px;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .radio-group {
+                margin-bottom: 20px;
+
+                .subscription__radio {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 20px;
+                    height: 64px;
+                    margin-bottom: 10px;
+                }
+
+                .checkbox-round {
+                    position: absolute;
+                    left: 15px;
+                    top: calc(50% - 16px);
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 50%;
+                    background-color: #19181F;
+                }
+
+                input[type=radio] {
+                    display: none;
+                }
+
+                label {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    transition: .5s;
+                }
+
+                input[type=radio]:checked + label {
+                    color: #000000 !important;
+                    background: #D2C867 url('../img/icon/ok-black.svg') 25px center no-repeat;
+                    transition: 0s background;
+
+                    .checkbox-round {
+                        display: none;
+                    }
+                }
+
+                .subscription__annual {
+                    padding: 15px 30px 15px 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    cursor: pointer;
+
+                    .subscription__annual-name {
+                        font-weight: bold;
+                        display: flex;
+
+                        img {
+                            margin-right: 28px;
+                        }
+                    }
+
+                    .subscription__annual-price {
+                        text-align: right;
+
+                        div:nth-child(1) {
+                            margin-bottom: 6px;
+                        }
+
+                        div:nth-child(2) {
+                            font-size: 13px;
+                            opacity: 0.4;
+                        }
+                    }
+                }
+            }
+
+            .subscription__description {
+                margin-bottom: 40px;
+                flex-grow: 1;
+
+                .subscription__description-article {
+                    font-size: 14px;
+                    color: rgba(235, 235, 245, 0.5);
+                    margin-bottom: 10px;
+                    background: url('../img/icon/ok-yellow.png') 25px center no-repeat;
+                    padding-left: 60px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                }
+            }
+
+            button, a.btn {
+                margin-bottom: 20px;
+                min-height: 52px;
+            }
+
+            .subscription__payment {
+                display: none;
+
+                .subscription__payment-card {
+                    margin-right: 10px;
+                    background: rgba(20, 19, 26, .8) url('../img/icon/credit-card.png') 20px center no-repeat;
+
+                    &:hover {
+                        background-color: rgba(20, 19, 26, 1)
+                    }
+                }
+
+                .subscription__payment-paypal {
+                    background: rgba(20, 19, 26, .8) url('../img/icon/paypel.png') 20px center no-repeat;
+
+                    &:hover {
+                        background-color: rgba(20, 19, 26, 1)
+                    }
+                }
+            }
+
+            .subscription__policy {
+                font-size: 12px;
+                text-align: center;
+                color: rgba(248, 246, 255, 0.3);
+                line-height: 150%;
+
+                span {
+                    color: #EBEBF5;
+                }
+            }
+
+            .add-credit-card {
+                padding: 64px 20px 54px;
+                width: 100%;
+                left: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+                a.btn {
+                    transition: .3s;
+
+                    &:hover {
+                        background-color: rgba(20, 19, 26, 1);
+                    }
+                }
+
+                .subscription__title {
+                    margin-bottom: 20px;
+                }
+
+                .add-credit-card__text {
+                    font-size: 17px;
+                    text-align: center;
+                    opacity: 0.5;
+                    padding: 0 40px;
+                    margin-bottom: 40px;
+                }
+
+                > input {
+                    margin-bottom: 20px;
+                    min-height: 52px;
+                }
+
+                .add-credit-card__input-group {
+                    display: flex;
+                    margin-bottom: 40px;
+                    flex-grow: 1;
+
+                    input {
+                        width: 98px;
+                        margin-right: 17px;
+                    }
+                }
+
+                input.card-number {
+                    background: url('../img/icon/logo-card.png') calc(100% - 15px) 50% / 32px no-repeat;
+                }
+            }
+
+        }
+
+        .btn-container-show {
+            .subscription__payment {
+                .subscription__payment_title {
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 17px;
+                    line-height: 22px;
+                    letter-spacing: -0.408px;
+                    margin-bottom: 20px;
+                }
+
+                .subscription__payment-card {
+                    background: rgba(20, 19, 26, .8) url('../img/icon/credit-card.png') 24px 50% / 18.6px no-repeat;
+
+                    &:hover {
+                        background-color: rgba(20, 19, 26, 1);
+                    }
+                }
+
+                .subscription__payment-paypal {
+                    background: rgba(20, 19, 26, .8) url('../img/icon/paypel.png') 24px 50% / 24px no-repeat;
+                    margin-bottom: 10px;
+
+                    &:hover {
+                        background-color: rgba(20, 19, 26, 1);
+                    }
+                }
+            }
+        }
+    }
+
+}

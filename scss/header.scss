@@ -1,0 +1,55 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 35px 40px 35px 253px;
+    .header__col1 {
+        display: flex;
+        align-items: center;
+
+        ul.header__nav {
+            display: flex;
+            align-items: center;
+
+            li:not(:last-child) {
+                margin-right: 50px;
+            }
+        }
+    }
+
+    .header__col2 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+
+        .header__logIn {
+            display: flex;
+            align-items: center;
+
+            a {
+                margin-right: 41px;
+                cursor: pointer;
+            }
+
+            button {
+                width: 134px;
+                border-radius: 40px;
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 1023px) {
+    .header {
+        display: none;
+    }
+}

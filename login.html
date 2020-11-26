@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <title>Partie</title>
+</head>
+<body>
+    <a href="#" onclick="location.reload()" class="header__logIn_logo">
+        <img src="img/icon/fiolet-logo.png" height="50"/>
+        <div class="header__logIn_logo-text"></div>
+    </a>
+
+    <div id="logInIn" class="logIn blackBG">
+        <div class="logIn__in">
+            <div class="sign-up__tab">
+                <div class="sign-up__tab_sign-up">
+                    <a href="/signup.html" class="color-gray">Sign up</a>
+                </div>
+                <div class="sign-up__tab_log-in">
+                    <a href="#">Log in</a>
+                </div>
+            </div>
+
+            <div class="sign-up__top">
+                Log in
+                <a href="/">
+                    <svg id="back" onclick="closeModal(logInIn)" class="btn-back" width="24" height="24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"/>
+                        <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+
+            <form onsubmit="return false;" class="sign-up__forms">
+                <div class="sign-up__form">
+                    <div class="title">Username</div>
+                    <input class="valid-ok" placeholder="Enter username" type="text">
+                </div>
+                <div class="sign-up__form">
+                    <div class="title">Password</div>
+                    <input placeholder="At least 6 characters" type="password">
+                </div>
+                <div onclick="next(resetPass, logInIn)" class="forgot"><a href="/resetPassword.html">Forgot password?</a></div>
+            </form>
+
+            <div class="logIn__menu d-block">
+                <button onclick="next(subscriptionModal, logInIn)" class="btn-in bg-fiolet">Log in</button>
+                <div class="need-help">Need help? Contact Us</div>
+                <div class="or"><span>or</span></div>
+                <div id="btnContainer" class="btn-container">
+                    <button id="btnApple" class="btn-apple">Log in with Apple</button>
+                </div>
+
+                <div class="btn-container-wrapp">
+                    <div id="btnSocial" class="btn-container-show animate__animated">
+                        <!--                <button id="btnApple" class="btn-apple">Log in with Apple</button>-->
+                        <button id="btnGoogle2" class="btn-google animate__animated">Log in with
+                            Google
+                        </button>
+                        <button id="btnFacebook2" class="btn-facebook animate__animated">Connect with
+                            Facebook
+                        </button>
+                    </div>
+                </div>
+
+                <div id="showAll" class="show-all">
+                    <a href="#" onclick="showAllBtns()">Show all</a>
+                </div>
+            </div>
+            @@include('_loginButtons.html')
+
+        </div>
+    </div>
+
+    <div class="btn-container-wrapp">
+        <div id="btnSocialMobile" class="btn-container-show animate__animated">
+            <button id="btnAppleMobile" class="btn-apple">Log in with Apple</button>
+            <button id="btnGoogleMobile" class="btn-google animate__animated">Log in with
+                Google
+            </button>
+            <button id="btnFacebookMobile" class="btn-facebook animate__animated">Connect with
+                Facebook
+            </button>
+            <div onclick="closeBtns(this)" class="close-tap mobile"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+.selectGames {
+   padding-top: 93px;
+   background-color: #000;
+   &__wrapper {
+      width: 490px;
+      margin: 0 auto;
+   }
+
+   &__container {
+      position: relative;
+   }
+
+   &__header {
+      max-width: 220px;
+      margin: 0 auto;
+   }
+
+   &__title {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: -0.02em;
+      margin: 0 auto 20px;
+   }
+
+   &__description {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+      opacity: 0.5;
+      margin-bottom: 28px;
+      color: #EBEBF5;
+   }
+
+   &__search {
+      position: sticky;
+      top: 0;
+      padding: 12px 0;
+      margin-bottom: 16px;
+      z-index: 1;
+      background: #000;
+      &-input {
+         background-color: #19181F;
+         border: none;
+         padding: 0 20px 0 44px;
+         line-height: 50px;
+      }
+
+      &--loupe {
+         position: absolute;
+         width: 16px;
+         height: 16px;
+         top: 50%;
+         left: 20px;
+         transform: translateY(-50%);
+         background-image: url(../img/svg/Group.svg);
+      }
+   }
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+
+   &__item {
+      width: 150px;
+      height: 234px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      position: relative;
+   }
+
+   &__game {
+      cursor: pointer;
+   }
+
+   &__checkbox:not(:checked) ~ .selectGames__game > .selectGames__customCheckbox {
+         display: none;
+   }
+
+   &__checkbox:not(:checked) ~ .selectGames__btn {
+      display: none;
+   }
+
+   &__customCheckbox {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background-color: #6E4AFF;
+      border-radius: 50%;
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      &::before {
+         content: '';
+         background-image: url('../img/svg/Vector.svg');
+         background-repeat: no-repeat;
+         background-position: center;
+         position: absolute;
+         width: 32px;
+         height: 32px;
+         top: 0;
+         left: 0;
+      }
+   }
+
+   &__img {
+      width: 150px;
+      height: 200px;
+      img {
+         width: 100%;
+      }
+   }
+
+   &__name {
+      margin: 19px auto 0;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 14px;
+      text-align: center;
+      opacity: 0.5;
+   }
+
+   &__btn {
+      position: fixed;
+      display: none;
+      bottom: 20px;
+      width: 146px;
+      left: calc(50% - 73px);
+      border-radius: 20px;
+      height: 52px;
+      color: rgb(235, 235, 245);
+      font-weight: 700;
+      cursor: pointer;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      font-size: 14px;
+      transition: all 0.3s ease 0s;
+   }
+}
+
+@media (max-width: 1023px) {
+   .header__logo {
+      display: none;
+   }
+}
+
+@media (max-width: 556px) {
+   .selectGames {
+      &__wrapper {
+         width: 100%;
+         padding: 0 5%;
+      }
+
+      &__item {
+         width: 47%;
+         height: auto;
+      }
+
+      &__img {
+         width: 100%;
+         height: auto;
+      }
+
+      &__checkbox {
+         display: none;
+      }
+   }
+}

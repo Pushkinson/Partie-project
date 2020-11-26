@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="shortcut icon" type="image/png" href="img/icon/fiolet-logo.png"/>
+    <title>Partie</title>
+</head>
+<body>
+<!--modals-->
+@@include('_modals.html')
+
+<!--profile-->
+<div id="profile" class="feed settings">
+
+    <div class="feed__col1">
+        <div class="feed__search">
+            <a href="/" class="feed__search_logo"></a>
+            <div class="search-win">
+                <input class="feed__search_search" type="text" placeholder="Search">
+                <div class="search-win__box">
+                    <div class="search-win__content">
+                        <div class="recent">Recent</div>
+                        <ul>
+                            <li>
+                                <div class="clock"></div>
+                                Apex
+                                <div class="delete"></div>
+                            </li>
+                            <li>
+                                <div class="clock"></div>
+                                Apx
+                                <div class="delete"></div>
+                            </li>
+                            <li>
+                                <div class="clock"></div>
+                                Ape
+                                <div class="delete"></div>
+                            </li>
+                            <li>
+                                <div class="clock"></div>
+                                Ax
+                                <div class="delete"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-win__content search-win__content-search">
+                        <ul>
+                            <li>
+                                <div class="search-icon"></div>
+                                Apex
+                            </li>
+                            <li>
+                                <div class="search-icon"></div>
+                                Apx
+                            </li>
+                            <li>
+                                <div class="search-icon"></div>
+                                Ape
+                            </li>
+                            <li>
+                                <div class="search-icon"></div>
+                                Ax
+                            </li>
+                        </ul>
+                        <a href="/search.html">Show gg results</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feed__nav">
+            <ul>
+                <li>
+                    <a href="/feed.html">
+                        <svg width="18" height="20" class="svg-feed" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.558576 8.77588C0.200188 9.14847 0 9.64537 0 10.1623V18.9999C0 19.5522 0.447716 19.9999 1 19.9999H6V15.0001C6 14.4478 6.44772 14.0001 7 14.0001H11C11.5523 14.0001 12 14.4478 12 15.0001V19.9999H17C17.5523 19.9999 18 19.5522 18 18.9999V10.1623C18 9.64537 17.7998 9.14847 17.4414 8.77588L9.72071 0.749148C9.32729 0.340127 8.67271 0.340128 8.27929 0.749149L0.558576 8.77588Z"
+                                  fill="#322F42"/>
+                        </svg>
+                        Feed
+                    </a>
+                </li>
+                <li>
+                    <a href="/partie.html">
+                        <svg width="16" height="21" class="svg-partie" viewBox="0 0 16 21" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.8499 8.3887V12.3823C15.8499 12.3823 15.843 12.7838 15.4485 12.7838H10.8389V16.369C10.8389 16.369 10.8389 16.7705 10.4374 16.7705H5.82779V20.3558C5.82779 20.5772 5.64092 20.7572 5.42635 20.7572H0.40836C0.186877 20.7572 0.00692074 20.5703 0.00692074 20.3558V16.3621C0.00692074 16.3621 0.0207637 15.9607 0.40836 15.9607H5.01799V12.7838H0.40836C0.40836 12.7838 0.048449 12.7976 0.00692074 12.3823V8.3887C0.00692074 8.3887 0.00692093 7.98727 0.40836 7.98727C0.8098 7.98727 5.01799 7.98727 5.01799 7.98727V4.78959H0.394518C0.00692117 4.78959 0 4.39507 0 4.39507V0.40144C0 0.0069216 0.40144 0 0.40144 0H5.41251C5.80703 0 5.81395 0.40144 5.81395 0.40144V3.98671H10.4236C10.4236 3.98671 10.825 4.0144 10.825 4.38815V7.97342H15.4347C15.4416 7.98726 15.8499 7.99419 15.8499 8.3887ZM10.0221 11.974V8.79706H5.81395V11.974H10.0221Z"
+                                  fill="#322F42"/>
+                        </svg>
+                        Partie
+                    </a>
+                </li>
+                <li>
+                    <a href="/chats.html">
+                        <svg width="20" height="21" class="svg-chats" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.1558 16.0238C19.2777 15.7667 19.3837 15.5048 19.4744 15.2385H19.4511C21.0394 10.5766 17.6992 5.67682 12.7681 5.43824C12.7682 5.4385 12.7681 5.43799 12.7681 5.43824C8.52527 5.24272 5 8.6391 5 12.8515C5 16.9408 8.32356 20.2678 12.4114 20.2737C13.5203 20.2722 14.583 20.0335 15.5741 19.5634C19.4425 20.3282 19.1408 20.2738 19.2297 20.2738C19.6317 20.2738 19.9321 19.9054 19.8535 19.5129L19.1558 16.0238Z"
+                                  fill="#322F42"/>
+                            <path d="M0.710273 10.5946C0.588376 10.3375 0.482385 10.0755 0.391705 9.80931H0.41499C-1.17331 5.14736 2.16687 0.247594 7.09794 0.00901824C9.88218 -0.119289 12.3575 1.29872 13.7303 3.47973L12.8601 3.43962C7.47299 3.19137 3.00011 7.50317 3.00011 12.8515C3.00011 13.3669 3.04165 13.8727 3.12156 14.3658C2.76361 14.4366 2.45851 14.4971 2.1983 14.5486C0.729322 14.8397 0.691175 14.8472 0.653527 14.8453C0.652525 14.8452 0.651524 14.8452 0.650497 14.8451C0.646641 14.8449 0.642412 14.8446 0.636388 14.8446C0.234352 14.8446 -0.065978 14.4762 0.0125292 14.0837L0.710273 10.5946Z"
+                                  fill="#322F42"/>
+                            <path d="M14.6833 5.78124C14.6834 5.78146 14.6833 5.78103 14.6833 5.78124V5.78124Z"
+                                  fill="#322F42"/>
+                            <path d="M5 12.8515C5 12.8515 5 12.8515 5 12.8515C5 12.8866 5.00036 12.9217 5.00085 12.9567C5.00464 13.2284 5.02311 13.4967 5.05549 13.7607C5.08571 14.007 5.12803 14.2497 5.18186 14.488"
+                                  fill="#322F42"/>
+                        </svg>
+                        Chats
+                    </a>
+                </li>
+                <li>
+                    <a href="/notifications.html">
+                        <div class="notifications">
+                            <svg width="17" height="22" class="svg-notify" viewBox="0 0 17 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.4099 14.7083L16.8628 17.13C16.9406 17.2603 16.9432 17.4245 16.8678 17.5566C16.7925 17.6886 16.6521 17.7706 16.4997 17.7706H0.422497C0.270186 17.7706 0.130568 17.6885 0.0552457 17.5557C-0.0200768 17.4228 -0.0183713 17.2604 0.0603227 17.1292L1.51319 14.7075C2.18335 13.5896 2.53791 12.3102 2.53791 11.0071V8.88578C2.53791 6.20765 4.32503 3.94246 6.76874 3.2122V1.69333C6.76874 0.759993 7.52776 0.000976562 8.4611 0.000976562C9.39444 0.000976562 10.1535 0.759993 10.1535 1.69333V3.2122C12.5972 3.94246 14.3843 6.20765 14.3843 8.88578V11.0071C14.3843 12.3102 14.7389 13.5905 15.4099 14.7083Z"
+                                      fill="#322F42"/>
+                                <path d="M8.46108 21.291C7.28408 21.291 6.27375 20.5954 5.79651 19.5986H11.1257C10.6484 20.5954 9.63808 21.291 8.46108 21.291Z"
+                                      fill="#322F42"/>
+                            </svg>
+                            <div class="notifications-counter">99+</div>
+                        </div>
+                        Notifications
+                    </a>
+                </li>
+                <li>
+                    <a href="/profile.html" class="active-tab">
+                        <div class="feed__profile">
+                            <div class="avatar">
+                                <img src="img/icon/profile.png" height="32" width="32"/>
+                            </div>
+                        </div>
+                        <div>Profile</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="feed__col2">
+        <div class="col2-settings">
+            <div class="col2-settings-wrapp">
+                <div class="feed__header">
+                    <a href="/profile.html">
+                        <svg id="back" class="btn-back mobile" width="24" height="24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                            <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                        </svg>
+                    </a>
+                    Settings
+                </div>
+                <div class="tab">
+                    <div class="tablinks-setting" id="defaultOpenSetting" onclick="openSetting(event, 'Account')">
+                        Account
+                    </div>
+                    <div class="tablinks-setting" onclick="openSetting(event, 'Preferences')">Preferences</div>
+                    <div class="tablinks-setting" onclick="openSetting(event, 'Subscription')">Subscription</div>
+                    <div class="tablinks-setting" onclick="openSetting(event, 'Notifications')">Notifications</div>
+                    <div class="tablinks-setting" onclick="openSetting(event, 'PrivacySafety')">Privacy & Safety</div>
+                    <div class="tablinks-setting" onclick="openSetting(event, 'LinkedAccounts')">Linked accounts</div>
+                    <div class="tablinks-setting" onclick="openSetting(event, 'Language')">
+                        Language
+                        <div class="description mobile"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="feed__col3">
+                <div id="Account" class="tabcontent-setting">
+                    <div class="account-wrapp">
+                        <div class="feed__col3_header">
+                            <svg onclick="backSettingsMobile('Account')" id="back" class="btn-back mobile" width="24"
+                                 height="24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                                <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                            </svg>
+                            Account
+                        </div>
+                        <form>
+                            <div class="input-box">
+                                <div class="input-box__title">Username</div>
+                                <input type="text">
+                            </div>
+                            <div class="input-box">
+                                <div class="input-box__title">Email</div>
+                                <input type="email">
+                            </div>
+                            <div class="input-box">
+                                <div class="input-box__title">Date of Birth</div>
+                                <input type="text">
+                            </div>
+                            <div onclick="openSettings(changePasswordPage)" class="change-password">Change password</div>
+                        </form>
+                        <div class="delete-account__wrapp">
+                            <span onclick="openModal(deleteAccount)" class="delete-account">Delet account</span>
+                        </div>
+                    </div>
+                    <div class="change-password-page">
+                        <div class="feed__col3_header">
+                            <svg id="back" onclick="backSettings(changePasswordPage)" class="btn-back" width="24"
+                                 height="24"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                                <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                            </svg>
+                            Change Password
+                        </div>
+                        <form action="">
+                            <div class="sign-up__form">
+                                <div class="title">Old Password</div>
+                                <input placeholder="At least 6 characters" type="password">
+                                <div class="hint animate__animated animate__fadeInDown">
+                                    You’ll need to verify that you own email
+                                    account.
+                                </div>
+                            </div>
+                            <div class="sign-up__form">
+                                <div class="title">New Password</div>
+                                <input placeholder="At least 6 characters" type="password">
+                            </div>
+                            <div class="sign-up__form">
+                                <div class="title">Repeat New Password</div>
+                                <input class="valid-error" placeholder="At least 6 characters" type="password">
+                                <div class="hint error animate__animated animate__fadeInDown">
+                                    Password doesn’t match
+                                </div>
+                            </div>
+                            <button type="submit" class="bg-fiolet">Save</button>
+                        </form>
+
+
+                    </div>
+
+                </div>
+
+                <div id="Preferences" class="tabcontent-setting">
+                    <div class="feed__col3_header">
+                        <svg onclick="backSettingsMobile('Preferences')" id="back" class="btn-back mobile" width="24"
+                             height="24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                            <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                        </svg>
+                        Preferences
+                    </div>
+                    <div class="btn-box">
+                        <div class="btn-box__title">
+                            <div class="btn-box__title_title">Plattfform</div>
+                            <div onclick="openModal(settingsPlatforms)" class="btn-box__title_change">Change</div>
+                        </div>
+                        <button class="ps">Playstation</button>
+                    </div>
+
+                    <div class="btn-box">
+                        <div class="btn-box__title">
+                            <div class="btn-box__title_title">Favorite games</div>
+                            <div onclick="openModal(chooseGameSettings)" class="btn-box__title_change">Change</div>
+                        </div>
+                        <button class="game AL">
+                            <div class="game__icon"></div>
+                            Apex Legends
+                        </button>
+                        <button class="game FN">
+                            <div class="game__icon"></div>
+                            Fortnite
+                        </button>
+                    </div>
+                </div>
+
+                <div id="Subscription" class="tabcontent-setting">
+                    <div class="feed__col3_header">
+                        <svg onclick="backSettingsMobile('Subscription')" id="back" class="btn-back mobile" width="24"
+                             height="24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                            <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                        </svg>
+                        Subscription
+                    </div>
+                    <div class="subscription__annual">
+                        <div class="subscription__annual-name">
+                            <div class="checkbox-round"></div>
+                            <div>Annual</div>
+                        </div>
+                        <div class="subscription__annual-price">
+                            <div class="">$49.99 annual</div>
+                            <div class="">billed once</div>
+                        </div>
+                    </div>
+                    <div class="subscription__text">Your plan is scheldeled to renew on 23 July 2021</div>
+                    <div class="subscription__manage-wrapp">
+                        <span onclick="openSettings(subscriptionManage)" class="subscription__manage-btn">Manage subscription</span>
+                    </div>
+                    <div class="subscription__manage">
+                        <div class="feed__col3_header">
+                            <svg id="back" onclick="backSettings(subscriptionManage)" class="btn-back" width="24"
+                                 height="24"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                                <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                            </svg>
+                            Subscription
+                        </div>
+                        <div class="btn-box">
+                            <div class="btn-box__title">
+                                <div class="btn-box__title_title">Payment info</div>
+                            </div>
+                            <div class="subscription__card">
+                                <div class="subscription__card_ending">Mastercard ending in 2345</div>
+                                <div class="subscription__card_expires">Expires: 12/2021</div>
+                            </div>
+                            <div class="subscription__change">Change payment method</div>
+                            <div onclick="showBtns(this)" class="subscription__change mobile">Manage subscription</div>
+
+                            <div class="subscription">
+                                <div class="btn-container-wrapp">
+                                    <div class="btn-container-show animate__animated animate__fadeInUp">
+                                        <div class="subscription__payment">
+                                            <div class="subscription__payment_title">
+                                                Payment method
+                                            </div>
+                                            <button class="subscription__payment-paypal">Paypal</button>
+                                            <button onclick="openModal(addCreditCardSetting)"
+                                                    class="subscription__payment-card">
+                                                Credit card
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subscription__pay-btns">
+                                <button onclick="openModal(addCreditCardSetting)" class="creditCard">Credit card
+                                </button>
+                                <button class="paypal">Paypal</button>
+                            </div>
+                            <div class="subscription__description">Changing payment method would cancel existing
+                                subscription
+                                and re-subscribe using the new CC info
+                            </div>
+                            <div class="manage__cancel_wrapp">
+                                <span onclick="openModal(changePaymentMethod)" class="subscription__manage_cancel">
+                                    Cancel subscription
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="Notifications" class="tabcontent-setting">
+                    <div class="feed__col3_header">
+                        <svg onclick="backSettingsMobile('Notifications')" id="back" class="btn-back mobile" width="24"
+                             height="24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                            <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                        </svg>
+                        App Notifications
+                    </div>
+                    <div class="notifications__box">
+                        <div class="notifications__row">
+                            <input id="Requests" type="checkbox">
+                            <label for="Requests">
+                                <div class="title">Follow Requests</div>
+                                <div class="description">Notify me of new follow requests</div>
+                            </label>
+                            <label for="Requests" class="switch">
+                                <span class="round"></span>
+                            </label>
+                        </div>
+                        <div class="notifications__row">
+                            <input id="Chats" type="checkbox">
+                            <label for="Chats">
+                                <div class="title">Chats</div>
+                                <div class="description">Notify me of new messages</div>
+                            </label>
+                            <label for="Chats" class="switch">
+                                <span class="round"></span>
+                            </label>
+                        </div>
+                        <div class="notifications__row">
+                            <input id="NewParties" type="checkbox">
+                            <label for="NewParties">
+                                <div class="title">New Parties</div>
+                                <div class="description">Notify me when friends start a Partie</div>
+                            </label>
+                            <label for="NewParties" class="switch">
+                                <span class="round"></span>
+                            </label>
+                        </div>
+                        <div class="notifications__row">
+                            <input id="PartieInvites" type="checkbox">
+                            <label for="PartieInvites">
+                                <div class="title">Partie invites</div>
+                                <div class="description">Notify me when friends start a Partie</div>
+                            </label>
+                            <label for="PartieInvites" class="switch">
+                                <span class="round"></span>
+                            </label>
+                        </div>
+                        <div class="notifications__row">
+                            <input id="Something" type="checkbox">
+                            <label for="Something">
+                                <div class="title">Something</div>
+                                <div class="description">Pew pew one more</div>
+                            </label>
+                            <label for="Something" class="switch">
+                                <span class="round"></span>
+                            </label>
+                        </div>
+                        <div class="notifications__row">
+                            <div onclick="openSettings(emailNotificationsPage)" class="pointer">
+                                <div class="title">Email Notifications</div>
+                                <div class="description">Some notifications on</div>
+                            </div>
+                            <div class="arrow">
+                                <img src="img/icon/arrow-right.png" width="9"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="email-notifications-page">
+                        <div class="feed__col3_header">
+                            <svg id="back" onclick="backSettings(emailNotificationsPage)" class="btn-back" width="24"
+                                 height="24"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                                <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                            </svg>
+                            Email Notifications
+                        </div>
+                        <div class="notifications__box">
+                            <div class="notifications__row">
+                                <input id="Request" type="checkbox">
+                                <label for="Request">
+                                    <div class="title">Follow Requests</div>
+                                    <div class="description">Notify me of new follow requests</div>
+                                </label>
+                                <label for="Request" class="switch">
+                                    <span class="round"></span>
+                                </label>
+                            </div>
+                            <div class="notifications__row">
+                                <input id="Chat" type="checkbox">
+                                <label for="Chat">
+                                    <div class="title">Chats</div>
+                                    <div class="description">Notify me of new messages</div>
+                                </label>
+                                <label for="Chat" class="switch">
+                                    <span class="round"></span>
+                                </label>
+                            </div>
+                            <div class="notifications__row">
+                                <input id="NewPartie" type="checkbox">
+                                <label for="NewPartie">
+                                    <div class="title">New Parties</div>
+                                    <div class="description">Notify me when friends start a Partie</div>
+                                </label>
+                                <label for="NewPartie" class="switch">
+                                    <span class="round"></span>
+                                </label>
+                            </div>
+                            <div class="notifications__row">
+                                <input id="PartieInvite" type="checkbox">
+                                <label for="PartieInvite">
+                                    <div class="title">Partie invites</div>
+                                    <div class="description">Notify me when friends start a Partie</div>
+                                </label>
+                                <label for="PartieInvite" class="switch">
+                                    <span class="round"></span>
+                                </label>
+                            </div>
+                            <div class="notifications__row">
+                                <input id="Somethin" type="checkbox">
+                                <label for="Somethin">
+                                    <div class="title">Something</div>
+                                    <div class="description">Pew pew one more</div>
+                                </label>
+                                <label for="Somethin" class="switch">
+                                    <span class="round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="PrivacySafety" class="tabcontent-setting">
+                    <div class="feed__col3_header">
+                        <svg onclick="backSettingsMobile('PrivacySafety')" id="back" class="btn-back mobile" width="24"
+                             height="24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                            <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                        </svg>
+                        Privacy & Safety
+                    </div>
+                    <div class="appear-offline">
+                        <input id="Offline" type="checkbox">
+                        <label for="Offline">
+                            <div class="title">Appear Offline</div>
+                            <div class="description">Description here</div>
+                        </label>
+                        <label for="Offline" class="switch">
+                            <span class="round"></span>
+                        </label>
+                    </div>
+                    <div onclick="openSettings(privateAccount)" class="private-account">
+                        <div class="title">Private account</div>
+                        <div class="description">
+                            When your account is private, only people you approve can seen your parties and
+                            posts in your profile.
+                        </div>
+                        <div class="description mobile"></div>
+                        <div class="form">
+                            <div class="feed__col3_header mobile">
+                                <svg onclick="backSettings(privateAccount)" id="back" class="btn-back mobile test23"
+                                     width="24" height="24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                                </svg>
+                                Private account
+                            </div>
+                            <div class="input-row">
+                                <input id="private-1" name="privateAccount" value="Everyone" type="radio">
+                                <label for="private-1">Everyone</label>
+                                <label class="checkbox" for="private-1"></label>
+                            </div>
+
+                            <div class="input-row">
+                                <input id="private-2" name="privateAccount" value="Followers only" type="radio">
+                                <label for="private-2">Followers only</label>
+                                <label class="checkbox" for="private-2"></label>
+                            </div>
+
+                            <div class="input-row">
+                                <input id="private-3" name="privateAccount" value="Only me" type="radio">
+                                <label for="private-3">Only me</label>
+                                <label class="checkbox" for="private-3"></label>
+                            </div>
+                            <div class="description mobile">
+                                When your account is private, only people you approve can seen your parties and
+                                posts in your profile.
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="openSettings(gamertagPrivacy)" class="gamertag-privacy">
+                        <div class="title">Gamertag Privacy</div>
+                        <div class="description">
+                            When your account is private, only people you approve can seen your parties and posts
+                            in your profile.
+                        </div>
+                        <div class="description mobile"></div>
+                        <div class="form">
+                            <div class="feed__col3_header mobile">
+                                <svg onclick="backSettings(gamertagPrivacy)" id="back" class="btn-back mobile"
+                                     width="24" height="24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                                    <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                                </svg>
+                                Gamertag Privacy
+                            </div>
+                            <div class="input-row">
+                                <input id="privateGamertag-1" name="privateGamertag" value="Everyone" type="radio">
+                                <label for="privateGamertag-1">Everyone</label>
+                                <label class="checkbox" for="privateGamertag-1"></label>
+                            </div>
+
+                            <div class="input-row">
+                                <input id="privateGamertag-2" name="privateGamertag" value="Followers only"
+                                       type="radio">
+                                <label for="privateGamertag-2">Followers only</label>
+                                <label class="checkbox" for="privateGamertag-2"></label>
+                            </div>
+
+                            <div class="input-row">
+                                <input id="privateGamertag-3" name="privateGamertag" value="Only me" type="radio">
+                                <label for="privateGamertag-3">Only me</label>
+                                <label class="checkbox" for="privateGamertag-3"></label>
+                            </div>
+                            <div class="description mobile">
+                                When your account is private, only people you approve can seen your parties and
+                                posts in your profile.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div onclick="openSettings(mutedAccountsPage)" class="muted-accounts">Muted Accounts</div>
+                    <div onclick="openSettings(blockedAccountsPage)" class="blocked-accounts">Blocked Accounts</div>
+                    <div class="muted-accounts-page">
+                        <div class="feed__col3_header">
+                            <svg id="back" onclick="backSettings(mutedAccountsPage)" class="btn-back" width="24"
+                                 height="24"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                                <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                            </svg>
+                            Muted Accounts
+                        </div>
+                        <div class="user">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="user__name">gboy6827</div>
+                                <div class="user__level">54 level</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blocked-accounts-page">
+                        <div class="feed__col3_header">
+                            <svg id="back" onclick="backSettings(blockedAccountsPage)" class="btn-back" width="24"
+                                 height="24"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                                <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                            </svg>
+                            Blocked Accounts
+                        </div>
+                        <div class="blocked-accounts__container">
+                            <div class="blocked-accounts__img"></div>
+                            <div class="blocked-accounts__title">No one here</div>
+                            <div class="blocked-accounts__description">You have not blocked anyone.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="LinkedAccounts" class="tabcontent-setting">
+                    <div class="feed__col3_header">
+                        <svg onclick="backSettingsMobile('LinkedAccounts')" id="back" class="btn-back mobile" width="24"
+                             height="24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                            <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                        </svg>
+                        Linked Accounts
+                    </div>
+                    <div class="form">
+                        <div class="input-row">
+                            <input checked disabled id="LinkedFacebook" name="LinkedAccounts" type="checkbox">
+                            <label for="LinkedFacebook">
+                                <svg width="14" height="22" viewBox="0 0 14 22" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.87292 22.0006V11.965H12.5803L13.1354 8.05399H8.87292V5.55691C8.87292 4.4246 9.21903 3.65287 11.0063 3.65287L13.2856 3.65191V0.153943C12.8912 0.106453 11.5383 0 9.9642 0C6.67785 0 4.42794 1.82256 4.42794 5.16977V8.0541H0.710938V11.9651H4.42782V22.0007L8.87292 22.0006Z"
+                                          fill="white"/>
+                                </svg>
+                                Facebook
+                            </label>
+                            <label for="LinkedFacebook" class="checkbox"></label>
+                        </div>
+                        <div class="input-row">
+                            <input disabled id="LinkedGoogle" name="LinkedAccounts" type="checkbox">
+                            <label for="LinkedGoogle">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7347 4.82002C12.0714 4.20997 10.9082 3.47998 9.18369 3.47998C6.75514 3.47998 4.69393 5.05 3.94896 7.21999L3.94894 7.21998L3.94894 7.21999C3.76527 7.77998 3.65307 8.37995 3.65307 8.99999C3.65307 9.61996 3.76527 10.22 3.95914 10.78L3.95913 10.78L3.95916 10.78C4.69393 12.95 6.75514 14.52 9.18369 14.52C10.551 14.52 11.5918 14.15 12.3673 13.62L12.3673 13.6199C13.5918 12.78 14.1429 11.53 14.2449 10.7H9.18368V7.36H17.8061C17.9387 7.91999 18 8.45999 18 9.19999C18 11.94 17 14.25 15.2653 15.82L15.2653 15.82C13.7449 17.2 11.6632 18 9.18369 18C5.59182 18 2.48978 15.9799 0.979589 13.04L0.979601 13.0399L0.979568 13.04C0.357147 11.8199 0 10.45 0 8.99999C0 7.55 0.357147 6.17997 0.979568 4.95996L0.9796 4.95994C2.48979 2.01997 5.59183 0 9.18369 0C11.6632 0 13.7347 0.890004 15.3265 2.34L12.7347 4.82002Z"
+                                          fill="white"/>
+                                </svg>
+                                Google
+                            </label>
+                            <label for="LinkedGoogle" class="checkbox"></label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="Language" class="tabcontent-setting">
+                    <div class="feed__col3_header">
+                        <svg onclick="backSettingsMobile('Language')" id="back" class="btn-back mobile" width="24"
+                             height="24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"></path>
+                            <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"></path>
+                        </svg>
+                        Language
+                    </div>
+
+                    <div class="form">
+                        <div class="input-row">
+                            <input id="English" name="language" value="English" type="radio">
+                            <label for="English">English</label>
+                            <label class="checkbox" for="English"></label>
+                        </div>
+
+                        <div class="input-row">
+                            <input id="Estonian" name="language" value="Estonian" type="radio">
+                            <label for="Estonian">Estonian</label>
+                            <label class="checkbox" for="Estonian"></label>
+                        </div>
+
+                        <div class="input-row">
+                            <input id="Portuguese" name="language" value="Portuguese (BRA)" type="radio">
+                            <label for="Portuguese">Portuguese (BRA)</label>
+                            <label class="checkbox" for="Portuguese"></label>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feed__col3"></div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+</html>

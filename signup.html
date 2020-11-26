@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <title>Partie</title>
+</head>
+<body>
+    <a href="#" onclick="location.reload()" class="header__logIn_logo">
+        <img src="img/icon/fiolet-logo.png" height="50"/>
+        <div class="header__logIn_logo-text"></div>
+    </a>
+
+    <div id="signUpPage" class="logIn blackBG">
+        <div class="sign-up">
+            <div class="sign-up__tab">
+                <div class="sign-up__tab_sign-up">
+                    <a href="#">Sign up</a>
+                </div>
+                <div class="sign-up__tab_log-in">
+                    <a href="/login.html" class="color-gray">Log in</a>
+                </div>
+            </div>
+            <div class="sign-up__top">
+                Sign up
+                <a href="/">
+                    <svg id="back" onclick="back(signUpPage)" class="btn-back" width="24" height="24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"/>
+                        <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+            <form onsubmit="return false;" class="sign-up__forms">
+                <div class="sign-up__form">
+                    <div class="title">Username</div>
+                    <input class="valid-error" placeholder="Enter username" type="text">
+                    <div class="hint animate__animated animate__fadeInDown">You can always change it later.</div>
+                    <div class="hint error animate__animated animate__fadeInDown">This username is unavailable.
+                    </div>
+                </div>
+                <div class="sign-up__form">
+                    <div class="title">Email</div>
+                    <input class="valid-ok" placeholder="Enter email" type="text">
+                    <div class="hint animate__animated animate__fadeInDown">You’ll need to verify that you own email
+                        account.
+                    </div>
+                </div>
+                <div class="sign-up__form">
+                    <div class="title">Password</div>
+                    <input placeholder="At least 6 characters" type="password">
+                </div>
+                <div class="sign-up__form">
+                    <div class="title">Date of Birth</div>
+                    <div class="signUpModalMonth"></div>
+                    <div class="signUpModalDay"></div>
+                    <div class="signUpModalYear"></div>
+                    <div class="input-group">
+                        <!-- <select>
+
+                        </select> -->
+                        <input class="month selectMonth" placeholder="month">
+                        <!-- <div class="signUpModalDay"></div> -->
+                        <input class="day selectDay" placeholder="day">
+                        <!-- <div class="signUpModalYear"></div> -->
+                        <input class="year selectYear" placeholder="year">
+                    </div>
+                </div>
+                <!-- <div class="sign-up__form mobile">
+                    <div class="title">Date of Birth</div>
+                    <input class="border-error" type="date">
+                </div> -->
+                <button id="btnSignUpForms" onclick="next(logInCode, signUpPage)" class="sign-up__btn btn-valid-ok">
+                    Sign up
+                </button>
+                <div class="sign-up__privacy">By signing up, your agree to Partie’s
+                    <span>Terms and Conditions</span>,<br> End-User License Agreement and Privacy
+                    Policy.
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <script>
+        const inputMonth = document.querySelector('.month');
+        let flag = false;
+        let flagDay = false;
+        let flagYear = false;
+        const singUpModalItem = document.querySelector('.signUpModal__item');
+        const selectMonth = document.querySelector('.selectMonth');
+        const selectDay = document.querySelector('.selectDay');
+        const selectYear = document.querySelector('.selectYear');
+        const signUpModal = document.querySelector('.signUpModalMonth');
+        const signUpModalDay = document.querySelector('.signUpModalDay');
+        const signUpModalYear = document.querySelector('.signUpModalYear');
+
+        const monthArr = ['January', 'February', 'March', 'April',
+            'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+        selectMonth.addEventListener('click', () => {
+            if (!flag) {
+                let html = '';
+                monthArr.forEach((item) => {
+                    html += `<div class="signUpModalMonth__item" onclick="
+                        document.querySelector('.month').value = this.innerText;
+                        document.querySelector('.signUpModalMonth').style.display = 'none';
+                        selectMonth.classList.add('bg-gray');
+                    ">${item}<div class="signUpModalMonth__selected ${selectMonth.value === item ? '' : 'dispNone'} "></div></div>`;
+                });
+                signUpModal.insertAdjacentHTML('afterBegin', html);
+                flag = true;
+            } else {
+                const list = signUpModal.getElementsByClassName('signUpModalMonth__item')
+                for (let item of list) {
+                    if (item.innerText === selectMonth.value) {
+                        item.getElementsByClassName('signUpModalMonth__selected')[0].classList.remove('dispNone')
+                    } else {
+                        item.getElementsByClassName('signUpModalMonth__selected')[0].classList.add('dispNone')
+                    }
+                }
+            }
+            signUpModal.style.display = 'block';
+        });
+
+        selectDay.addEventListener('click', () => {
+            if (!flagDay) {
+                let html = '';
+                for (item = 1; item < 31; item++) {
+                    html += `<div class="signUpModalDay__item" onclick="
+                        document.querySelector('.day').value = this.innerText;
+                        document.querySelector('.signUpModalDay').style.display = 'none';
+                        selectDay.classList.add('bg-gray');
+                    ">${item}<div class="signUpModalDay__selected ${selectDay.value === item ? '' : 'dispNone'} "></div></div>`;
+                }
+                signUpModalDay.insertAdjacentHTML('afterBegin', html);
+                flagDay = true;
+            }
+            else {
+                const list = signUpModalDay.getElementsByClassName('signUpModalDay__item')
+                for (let item of list) {
+                    if (item.innerText === selectDay.value) {
+                        item.getElementsByClassName('signUpModalDay__selected')[0].classList.remove('dispNone')
+                    } else {
+                        item.getElementsByClassName('signUpModalDay__selected')[0].classList.add('dispNone')
+                    }
+                }
+            }
+            signUpModalDay.style.display = 'block';
+        });
+
+        document.addEventListener('click', (e) => {
+            const classList = ['month', 'day', 'year'];
+            const elClassList = e.target.classList.toString().split(' ');
+            if (classList.includes(elClassList[0])) {
+                switch(elClassList[0]) {
+                    case 'month':
+                        signUpModalDay.style.display = signUpModalDay.style.display === 'block' ? 'none' : 'none';
+                        signUpModalYear.style.display = signUpModalYear.style.display === 'block' ? 'none' : 'none';
+                        return;
+                    case 'day':
+                        signUpModal.style.display = signUpModal.style.display === 'block' ? 'none' : 'none';
+                        signUpModalYear.style.display = signUpModalYear.style.display === 'block' ? 'none' : 'none';
+                        return;
+                    case 'year':
+                        signUpModalDay.style.display = signUpModalDay.style.display === 'block' ? 'none' : 'none';
+                        signUpModal.style.display = signUpModal.style.display === 'block' ? 'none' : 'none';
+                        return;
+                    default:
+                        return;
+                }
+            } else {
+                signUpModal.style.display = 'none';
+                signUpModalDay.style.display = 'none';
+                signUpModalYear.style.display = 'none';
+            }
+        });
+        selectYear.addEventListener('click', () => {
+            if (!flagYear) {
+                let html = '';
+                for (item = 1980; item < new Date().getFullYear(); item++) {
+                    html += `<div class="signUpModalYear__item" onclick="
+                        document.querySelector('.year').value = this.innerText;
+                        document.querySelector('.signUpModalYear').style.display = 'none';
+                        selectYear.classList.add('bg-gray');
+                    ">${item}<div class="signUpModalYear__selected ${selectYear.value === item ? '' : 'dispNone'} "></div></div>`;
+                }
+                signUpModalYear.insertAdjacentHTML('afterBegin', html);
+                flagYear = true;
+            }
+            else {
+                const list = signUpModalYear.getElementsByClassName('signUpModalYear__item')
+                for (let item of list) {
+                    if (item.innerText === selectYear.value) {
+                        item.getElementsByClassName('signUpModalYear__selected')[0].classList.remove('dispNone');
+                    } else {
+                        item.getElementsByClassName('signUpModalYear__selected')[0].classList.add('dispNone');
+                    }
+                }
+            }
+            signUpModalYear.style.display = 'block';
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+</html>

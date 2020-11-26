@@ -1,0 +1,1211 @@
+.burger__wrapp {
+    position: absolute;
+    right: 0;
+
+    .burger-bg {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: -50px;
+        left: 0;
+        background-color: rgba(23, 22, 31, .9);
+        border-radius: 16px;
+    }
+
+    .burger__menu {
+        background: #14131A;
+        border-radius: 20px;
+        position: absolute;
+        top: 30px;
+        left: -30px;
+        width: 280px;
+        z-index: 11;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+
+        > div {
+            padding: 30px 20px 20px;
+        }
+
+        a {
+            line-height: normal;
+        }
+
+        li {
+            margin-bottom: 18px;
+
+            &:nth-child(1) {
+                display: flex;
+                justify-content: space-between;
+
+                span {
+                    line-height: 19px;
+                    font-weight: bold;
+                    color: #504D60;
+                    cursor: pointer;
+                }
+            }
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                height: 19px;
+
+                //@media not all and (min-resolution:.001dpcm){ @supports (-webkit-appearance:none) {
+                //@media screen and (-webkit-min-device-pixel-ratio:0) {
+                //    svg {
+                //        margin-top: -4px;
+                //    }
+                //}
+            }
+
+            &:nth-child(1) a svg {
+                margin-right: 16px;
+
+            }
+
+            &:nth-child(2) a svg {
+                margin-right: 21px;
+            }
+
+            &:nth-child(3) a svg {
+                margin-right: 22px;
+            }
+
+            &:nth-child(4) a svg {
+                margin-right: 24px;
+            }
+        }
+    }
+}
+
+.settings {
+    min-height: 100%;
+
+    .feed__col1 {
+        position: relative;
+        flex-grow: 1;
+    }
+
+    .feed__col2 {
+        //margin: 0;
+        //flex-grow: 0;
+        //width: 320px;
+        //min-width: 320px;
+        //border-left: 1px solid rgba(255,255,255,.1);
+        //border-right: 1px solid rgba(255,255,255,.1);
+        //position: relative;
+
+
+        .col2-settings {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background-color: #000;
+            display: flex;
+
+            .col2-settings-wrapp {
+                width: 320px;
+                border-left: 1px solid rgba(255, 255, 255, .1);
+                border-right: 1px solid rgba(255, 255, 255, .1);
+            }
+
+            .feed__col3 {
+                max-width: 564px;
+            }
+
+        }
+
+        .feed__header {
+            justify-content: center;
+            font-weight: bold;
+            font-size: 17px;
+            line-height: 22px;
+            letter-spacing: -0.408px;
+        }
+    }
+
+    .feed__col3 {
+        flex-grow: 1;
+        position: relative;
+        z-index: -1;
+        max-width: none;
+        padding-left: 20px;
+        overflow-y: auto;
+
+        .form {
+            margin-top: 34px;
+            font-size: 17px;
+
+            .input-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 12px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            input[type=radio] {
+                display: none;
+            }
+
+            input[type=radio]:checked + label + label {
+                background: #6E4AFF url('../img/icon/ok-w.svg') center / 15px no-repeat;
+            }
+
+            label {
+                cursor: pointer;
+            }
+
+            label.checkbox {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                background-color: #19181F;
+                transition: .3s background-color;
+            }
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+
+        .description {
+            font-size: 13px;
+            line-height: 140%;
+            opacity: 0.5;
+        }
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        input:checked + label + label span {
+            background-color: #19181F;
+        }
+
+        input:checked + label + label span:before {
+            -webkit-transform: translateX(19px);
+            -ms-transform: translateX(19px);
+            transform: translateX(19px);
+            background-color: #6E4AFF;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 53px;
+            height: 32px;
+            margin-top: -6px;
+
+            span {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #19181F;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            span:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 3px;
+                background-color: #4B4A51;
+                -webkit-transition: .5s;
+                transition: .5s;
+            }
+
+            span.round {
+                border-radius: 34px;
+            }
+
+            span.round:before {
+                border-radius: 50%;
+            }
+        }
+
+        .feed__col3_header {
+            position: relative;
+            text-align: center;
+            font-weight: bold;
+            font-size: 17px;
+            line-height: 60px;
+            letter-spacing: -0.408px;
+            height: 60px;
+            margin-bottom: 6px;
+
+            .btn-back {
+                top: calc(50% - 12px);
+            }
+        }
+
+        .input-box {
+            margin-bottom: 20px;
+
+            &:nth-child(3) input {
+                width: 187px;
+            }
+
+            .input-box__title {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .change-password {
+            font-weight: 700;
+            margin-top: 40px;
+            border: 0;
+            width: auto;
+            padding: 0;
+            height: auto;
+            border-radius: 0;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        .delete-account {
+            font-weight: bold;
+            color: #F45365;
+            cursor: pointer;
+            position: absolute;
+            bottom: 56px;
+        }
+
+        .btn-box {
+            margin-bottom: 24px;
+
+            .btn-box__title {
+                display: flex;
+                justify-content: space-between;
+                font-size: 13px;
+                margin-bottom: 10px;
+
+                .btn-box__title_title {
+                    opacity: 0.5;
+                }
+
+                .btn-box__title_change {
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+
+            button {
+                height: 64px;
+                margin-bottom: 10px;
+                font-weight: 400;
+                cursor: initial;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            button.ps {
+                background: #19181F url('../img/icon/ps.svg') 27px 50% / 23px no-repeat;
+            }
+
+            button.game {
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    filter: blur(15px);
+                    z-index: 0;
+                    opacity: .5;
+                }
+
+                .game__icon {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 10px;
+                    position: absolute;
+                    left: 27px;
+                    top: calc(50% - 16px);
+                }
+            }
+
+            button.game.AL:before {
+                background: #19181F url('../img/pic/slide2.png') center / cover no-repeat;
+            }
+
+            button.game.AL .game__icon {
+                background: url('../img/pic/slide2.png') center / cover no-repeat;
+            }
+
+            button.game.FN:before {
+                background: #19181F url('../img/pic/slide4.png') center / cover no-repeat;
+            }
+
+            button.game.FN .game__icon {
+                background: url('../img/pic/slide4.png') center / cover no-repeat;
+            }
+        }
+
+        .subscription__annual {
+            padding: 15px 30px 15px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 16px;
+            cursor: pointer;
+            color: #000 !important;
+            background: #d2c867 url('../img/icon/ok-black.svg') 25px center no-repeat;
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+            .subscription__annual-name {
+                font-weight: bold;
+                display: flex;
+
+                img {
+                    margin-right: 28px;
+                }
+            }
+
+            .subscription__annual-price {
+                text-align: right;
+
+                div:nth-child(1) {
+                    margin-bottom: 6px;
+                }
+
+                div:nth-child(2) {
+                    font-size: 13px;
+                    opacity: 0.4;
+                }
+            }
+        }
+
+        .subscription__text {
+            line-height: 150%;
+            color: rgba(235, 235, 245, 0.5);
+            margin-bottom: 40px;
+        }
+
+        .subscription__manage-btn {
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .subscription__manage {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #000;
+            top: 0;
+            left: 100%;
+            padding: 0 20px;
+            transition: .5s;
+
+            .subscription__card {
+                padding: 20px 0 16px 80px;
+                border-radius: 20px;
+                background: rgba(20, 19, 26, .8) url('../img/icon/logo-card.png') 24px 50% / 32px no-repeat;
+                margin-bottom: 40px;
+
+                .subscription__card_ending {
+                    font-size: 17px;
+                    margin-bottom: 4px;
+                }
+            }
+
+            .subscription__card_expires {
+                line-height: 150%;
+                color: rgba(235, 235, 245, 0.5);
+            }
+
+            .subscription__change {
+                font-weight: bold;
+                font-size: 17px;
+                line-height: 22px;
+                letter-spacing: -0.408px;
+                margin-bottom: 3px;
+            }
+
+            .subscription__description {
+                line-height: 150%;
+                color: rgba(235, 235, 245, 0.5);
+            }
+
+            .manage__cancel_wrapp {
+                position: absolute;
+                bottom: 38px;
+                left: 0;
+                text-align: center;
+                width: 100%;
+
+                .subscription__manage_cancel {
+                    font-weight: bold;
+                    line-height: 140%;
+                    color: #F45365;
+                    cursor: pointer;
+                }
+            }
+
+
+            .subscription__pay-btns {
+                display: flex;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                button {
+                    width: 207px;
+                    height: 52px;
+                    font-weight: 700;
+                }
+
+                .creditCard {
+                    background: #17171A url('../img/icon/credit-card.png') 20px 50% / 24px no-repeat;
+                    margin-right: 10px;
+                    margin-bottom: 0;
+                }
+
+                .paypal {
+                    background: #17171A url('../img/icon/paypel.png') 20px 50% / 18.6px no-repeat;
+                }
+            }
+        }
+
+        #Account {
+            .change-password-page {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: #000;
+                top: 0;
+                //left: 0;
+                left: 100%;
+                padding: 0 20px;
+                transition: .5s;
+
+                form {
+                    .sign-up__form {
+                        margin-bottom: 20px;
+                    }
+
+                    .title {
+                        font-size: 13px;
+                        font-weight: 400;
+                        margin-bottom: 10px;
+                    }
+
+                    button {
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+
+        #PrivacySafety {
+
+            .appear-offline {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 40px;
+            }
+
+            .private-account,
+            .gamertag-privacy {
+                margin-bottom: 45px;
+            }
+
+            .muted-accounts,
+            .blocked-accounts {
+                font-weight: bold;
+                font-size: 17px;
+                color: #F8F6FF;
+                margin-bottom: 40px;
+                cursor: pointer;
+            }
+
+            .blocked-accounts {
+                margin-bottom: 0;
+            }
+
+            .muted-accounts-page {
+                position: absolute;
+                min-height: 100%;
+                width: 100%;
+                background-color: #000;
+                top: 0;
+                left: 100%;
+                padding: 0 20px 20px;
+                transition: .5s;
+                overflow-y: auto;
+
+                .user:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .blocked-accounts-page {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: #000;
+                top: 0;
+                left: 100%;
+                padding: 0 20px;
+                transition: .5s;
+
+                .blocked-accounts__container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    margin-top: -70px;
+
+                    .blocked-accounts__img {
+                        width: 130px;
+                        height: 140px;
+                        background: url('../img/pic/invite.png') center / contain no-repeat;
+                        margin-bottom: 16px;
+                    }
+
+                    .blocked-accounts__title {
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 120%;
+                        letter-spacing: -0.408px;
+                        margin-bottom: 10px;
+                    }
+
+                    .blocked-accounts__description {
+                        line-height: 150%;
+                        color: rgba(235, 235, 245, 0.5);
+                    }
+                }
+            }
+        }
+
+        #Notifications {
+            .notifications__row {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 40px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .email-notifications-page {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: #000;
+                top: 0;
+                left: 100%;
+                padding: 0 20px;
+                transition: .5s;
+            }
+        }
+
+        #Language {
+            input + label {
+                padding-left: 38px;
+            }
+
+            input + label[for=English] {
+                background: url('../img/icon/English.png') 0 50% / 24px no-repeat;
+            }
+
+            input + label[for=Estonian] {
+                background: url('../img/icon/Estonian.png') 0 50% / 24px no-repeat;
+            }
+
+            input + label[for=Portuguese] {
+                background: url('../img/icon/Portuguese.png') 0 50% / 24px no-repeat;
+            }
+        }
+
+    }
+
+    .tab {
+        .tablinks-setting {
+            height: 52px;
+            padding: 18px 0 17px 20px;
+            font-weight: bold;
+            font-size: 17px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .active {
+            background-color: rgba(20, 19, 26, .8);
+        }
+    }
+}
+
+//modals
+#inviteFriendsSetting {
+    //top: 0;
+
+    .invite__img {
+        width: 122px;
+        height: 120px;
+        background: url('../img/pic/invite.png') center / contain no-repeat;
+        margin: 0 auto 20px;
+    }
+
+    .modal__close {
+        top: 0;
+    }
+
+    .invite__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: -0.408px;
+        margin-bottom: 10px;
+    }
+
+    .invite__text {
+        line-height: 150%;
+        text-align: center;
+        color: rgba(235, 235, 245, 0.5);
+        margin-bottom: 40px;
+    }
+
+    .invite__refactor {
+        line-height: 150%;
+        text-align: center;
+        color: rgba(235, 235, 245, 0.5);
+        margin-bottom: 6px;
+    }
+
+    .invite__link {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .invite__btns {
+        display: flex;
+
+        button {
+            width: 50%;
+        }
+
+        button.bg-fiolet {
+            margin-left: 12px;
+        }
+    }
+}
+
+#deleteAccount.leaveChat {
+    //top: 0;
+}
+
+#changePaymentMethod {
+    //top: 0;
+
+    .changePaymentMethod__description {
+        line-height: 150%;
+        text-align: center;
+        color: rgba(235, 235, 245, 0.5);
+        padding: 0 40px;
+        margin-bottom: 30px;
+    }
+
+    .radio-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 16px;
+
+        &:last-child {
+            margin-bottom: 46px;
+        }
+    }
+
+    input[type=radio] {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    label.checkbox {
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, .2);
+        margin-right: 20px;
+        transition: .3s background-color;
+    }
+
+    input[type=radio]:checked + label {
+        background: #6E4AFF url('../img/icon/ok-w.svg') center / 15px no-repeat;
+    }
+
+    textarea {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        height: auto;
+        margin-bottom: 33px;
+        width: 100%;
+    }
+
+}
+
+#addCreditCardSetting {
+
+    .add-credit-card {
+        padding: 20px;
+
+        .subscription__title {
+            margin-bottom: 20px;
+        }
+
+        a.btn {
+            transition: .3s;
+
+            &:hover {
+                background-color: rgba(20, 19, 26, 1);
+            }
+        }
+
+        .add-credit-card__text {
+            font-size: 14px;
+            line-height: 150%;
+            text-align: center;
+            color: rgba(235, 235, 245, 0.5);
+            padding: 0 30px;
+            margin-bottom: 40px;
+        }
+
+        > input {
+            margin-bottom: 20px;
+        }
+
+        .add-credit-card__input-group {
+            display: flex;
+            margin-bottom: 40px;
+
+            input {
+                width: 98px;
+                margin-right: 17px;
+            }
+        }
+
+        input.card-number {
+            background: url('../img/icon/logo-card.png') calc(100% - 15px) 50% / 32px no-repeat;
+        }
+
+        a.btn {
+            margin-bottom: 20px;
+        }
+
+        .subscription__policy {
+            font-size: 12px;
+            line-height: 150%;
+            text-align: center;
+            color: rgba(248, 246, 255, 0.3);
+
+            span {
+                color: rgba(248, 246, 255, 1);
+            }
+        }
+    }
+
+}
+
+#LinkedAccounts {
+    .input-row label {
+        display: flex;
+        align-items: center;
+        opacity: .5;
+
+        + label {
+            background-color: #000;
+        }
+
+        svg {
+            margin-right: 20px;
+        }
+    }
+
+    input[type=checkbox]:checked + label {
+        opacity: 1;
+        + label {
+            opacity: 1;
+            background: url('../img/icon/ok-w.svg') center / 15px no-repeat !important;
+        }
+    }
+}
+
+#settingsPlatforms {
+
+    input[type=radio] {
+        display: none;
+    }
+
+    label {
+        height: 64px;
+        margin-bottom: 10px;
+        font-weight: 400;
+        background-color: rgba(20,19,26,.8);
+        border-radius: 20px;
+        width: 100%;
+        color: #ebebf5;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        transition: .3s;
+    }
+}
+
+#chooseGameSettings {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+        padding: 0 55px;
+
+        .card {
+            width: 50%;
+            padding: 0 10px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+
+            &:hover .card__name{
+                color: rgba(235, 235, 245, 1);
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .card__name {
+                color: rgba(235, 235, 245, 0.5);
+                margin-top: 20px;
+                transition: .3s;
+            }
+
+            .card__img {
+                position: relative;
+            }
+        }
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        label {
+            position: relative;
+            cursor: pointer;
+        }
+
+        label label {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #6E4AFF url('../img/icon/ok-w.svg') center / 15px no-repeat;
+            transition: .3s;
+            opacity: 0;
+        }
+
+        input[type=checkbox]:checked + label {
+
+            .card__name {
+                color: rgba(235, 235, 245, 1);
+            }
+
+            label {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) { // mobile
+
+    .settings {
+        .feed__col2 {
+            padding: 0;
+
+            .col2-settings {
+
+
+                .col2-settings-wrapp {
+
+                }
+
+                .feed__col3 {
+                    display: block !important;
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    left: 100%;
+                    width: 100%;
+                    z-index: 1;
+                    background-color: #000;
+                    padding: 0 20px;
+                    transition: .5s;
+
+
+                    .delete-account__wrapp {
+                        //position: absolute;
+                        //bottom: 50px;
+                        left: 0;
+                        text-align: center;
+                        width: 100%;
+
+                        .delete-account {
+                            position: initial;
+                        }
+                    }
+                }
+
+                .feed__header {
+                    .btn-back {
+                        top: auto;
+                        left: 20px;
+                    }
+                }
+
+                .col2-settings-wrapp {
+                    width: 100%;
+                }
+
+                .tabcontent-setting {
+                    width: 100%;
+                    position: fixed;
+                    top: 0;
+                    left: 100%;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #000;
+                    padding: 0 20px;
+                    transition: .5s;
+                }
+
+                .subscription__manage-wrapp {
+                    position: absolute;
+                    bottom: 50px;
+                    left: 0;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                .subscription__text {
+                    width: 261px;
+                }
+
+                .subscription__change,
+                .subscription__pay-btns {
+                    display: none;
+                }
+
+                .subscription__change.mobile {
+                    display: block;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 140%;
+                    color: #FFFFFF;
+                }
+
+                .subscription .btn-container-show .subscription__payment .subscription__payment-paypal,
+                .subscription .btn-container-show .subscription__payment .subscription__payment-card {
+                    height: 52px;
+                }
+
+            }
+        }
+    }
+
+    .col2-settings .col2-settings-wrapp {
+        border-left: 0;
+        border-right: 0;
+    }
+
+    #addCreditCardSetting {
+
+        .add-credit-card.modal {
+            display: flex;
+            flex-direction: column;
+
+            .add-credit-card__input-group {
+                flex-grow: 1;
+            }
+        }
+
+        .modal__head {
+            justify-content: start;
+
+            .btn-back.mobile {
+                position: absolute;
+            }
+
+            span {
+                margin-top: 42px;
+                font-weight: bold;
+                font-size: 32px;
+                letter-spacing: -0.408px;
+            }
+
+            .modal__close {
+                display: none;
+            }
+        }
+
+        .add-credit-card .add-credit-card__text {
+            text-align: left;
+            padding: 0;
+        }
+    }
+
+    #changePaymentMethod {
+        .modal__close {
+            display: none;
+        }
+
+        .btn-back.mobile {
+            position: absolute;
+        }
+    }
+
+    .settings .feed__col3 #PrivacySafety {
+        .gamertag-privacy .form,
+        .private-account .form {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            top: 0;
+            left: 100%;
+            padding: 0 20px;
+            transition: .5s;
+            margin-top: 0;
+            z-index: 1;
+        }
+
+        .private-account .title,
+        .gamertag-privacy .title,
+        .muted-accounts,
+        .blocked-accounts {
+            background: url('../img/icon/arrow-right.png') 100% 50% / 7px no-repeat;
+        }
+
+        .private-account .description,
+        .gamertag-privacy .description {
+            display: none;
+        }
+
+        .private-account .description.mobile,
+        .gamertag-privacy .description.mobile {
+            display: block;
+        }
+
+        .form .description.mobile {
+            margin-top: 20px;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+
+            .avatar {
+                width: 50px;
+                min-width: 50px;
+                height: 50px;
+                margin-right: 15px;
+                cursor: pointer;
+                min-width: 50px;
+            }
+
+            .user__name {
+                font-weight: bold;
+                margin-bottom: 6px;
+                cursor: pointer;
+            }
+
+            .user__level,
+            .user__message {
+                opacity: 0.5;
+            }
+        }
+
+    }
+
+    #Account,
+    .col2-settings-wrapp,
+    #Preferences,
+    #Notifications,
+    .email-notifications-page,
+    #PrivacySafety {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .account-wrapp,
+    .subscription__manage {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+        min-height: 100%;
+
+        form {
+            flex-grow: 1;
+            margin-bottom: 40px;
+        }
+    }
+
+    .settings .feed__col3 #Notifications .email-notifications-page {
+        position: fixed;
+    }
+
+    .settings .tab .tablinks-setting {
+        background: url('../img/icon/arrow-right.png') calc(100% - 20px) 50% / 7px no-repeat;
+    }
+
+    .settings .feed__col3 .feed__col3_header .btn-back {
+        position: absolute;
+    }
+
+    .settings .tab .description.mobile {
+        font-size: 14px;
+        margin-top: 4px;
+        opacity: 0.5;
+        font-weight: 400;
+    }
+
+}

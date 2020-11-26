@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <title>Partie</title>
+</head>
+<body>
+<a href="#" onclick="location.reload()" class="header__logo">
+    <img src="img/icon/fiolet-logo.png" height="50"/>
+    <div class="header__logo-text">partie</div>
+</a>
+@@include('_bg-animation.html')
+
+<div class="btn-container-wrapp">
+    <div id="btnSocialMobile" class="btn-container-show animate__animated">
+        <button id="btnAppleMobile" class="btn-apple">Log in with Apple</button>
+        <button id="btnGoogleMobile" class="btn-google animate__animated">Log in with
+            Google
+        </button>
+        <button id="btnFacebookMobile" class="btn-facebook animate__animated">Connect with
+            Facebook
+        </button>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!--header-->
+    <div class="header">
+        <div class="header__col1">
+            <ul class="header__nav">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help & Support</a></li>
+            </ul>
+        </div>
+
+        <div class="header__col2">
+            <div class="header__logIn">
+                <a class="header__logIn_login" onclick="openModal(logInIn)">Log In</a>
+                <button onclick="openModal(signUpPage)" class="bg-fiolet">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <!--logIn-->
+    <div class="logIn">
+        <div class="links">
+            <ul>
+                <li><a href="http://partie.igorvetrov.ru/">Login/Singup + Subscription</a></li>
+                <li><a href="http://partie.igorvetrov.ru/feed.html">Feed</a></li>
+                <li><a href="http://partie.igorvetrov.ru/partie.html">Partie</a></li>
+                <li><a href="http://partie.igorvetrov.ru/partie_id.html">Partie id</a></li>
+                <li><a href="http://partie.igorvetrov.ru/profile.html">Profile</a></li>
+                <li><a href="http://partie.igorvetrov.ru/profiles.html">Profiles + Create parties</a></li>
+                <li><a href="http://partie.igorvetrov.ru/profiles.html">Active partie Invite People</a></li>
+                <li><a href="http://partie.igorvetrov.ru/active_partie.html">Active partie</a></li>
+                <li><a href="http://partie.igorvetrov.ru/chats.html">Chats</a></li>
+                <li><a href="http://partie.igorvetrov.ru/settings.html">Settings</a></li>
+                <li><a href="http://partie.igorvetrov.ru/search.html">Search</a></li>
+                <li><a href="http://partie.igorvetrov.ru/search-no-results.html">Search no results users</a></li>
+                <li><a href="http://partie.igorvetrov.ru/notifications.html">Notifications</a></li>
+                <li><a href="http://partie.igorvetrov.ru/notifications-no-results.html">Notifications no results</a>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="http://partie.igorvetrov.ru/modal-41.html">modal 41</a></li>
+            </ul>
+        </div>
+        <!--1mobile-->
+        <div class="logo animate__animated">
+            <div class="salutation animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="">More Than Matchmaking</div>
+                <a href="#" class="btn-play"></a>
+            </div>
+
+            <svg id="logo" class="animate__animated animate__fadeInUp animate__delay-1s" width="134" height="117"
+                 viewBox="0 0 134 117" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M90.9284 25.076V37.0097C90.9284 37.0097 90.8992 38.2205 89.7066 38.2205H75.7899V48.9331C75.7899 48.9331 75.7899 50.1438 74.5681 50.1438H60.6514V60.8709C60.6514 61.529 60.0896 62.0816 59.4296 62.0816H44.2931C43.629 62.0816 43.0713 61.5249 43.0713 60.8709V48.9331C43.0713 48.9331 43.1047 47.7223 44.2931 47.7223H58.2098V38.2184H44.2931C44.2931 38.2184 43.1987 38.2515 43.0713 37.0077V25.074C43.0713 25.074 43.0755 23.8632 44.2931 23.8632C45.5108 23.8632 58.2098 23.8632 58.2098 23.8632V14.3138H44.2535C43.0776 14.3138 43.0713 13.1424 43.0713 13.1424V1.21075C43.0713 0.0393236 44.2931 0 44.2931 0H59.4317C60.6138 0 60.6535 1.21075 60.6535 1.21075V11.9295H74.5702C74.5702 11.9295 75.792 12.0123 75.792 13.1403V23.8674H89.7087C89.7066 23.8653 90.9284 23.9046 90.9284 25.076ZM73.3483 35.7886V26.2847H60.6514V35.7886H73.3483Z"
+                      fill="#F6F7FB"/>
+                <path d="M13.2885 82.7936C15.6979 82.7936 17.8722 83.3578 19.8115 84.4861C21.7655 85.5995 23.2934 87.1509 24.3953 89.1403C25.4971 91.1297 26.0481 93.3492 26.0481 95.7988C26.0481 98.2484 25.4971 100.475 24.3953 102.48C23.2934 104.469 21.7655 106.028 19.8115 107.156C17.8722 108.284 15.6979 108.849 13.2885 108.849C10.8203 108.849 8.5872 108.158 6.58915 106.778V116.999H0V83.4839H4.34135L5.46525 85.7331C7.65429 83.7734 10.262 82.7936 13.2885 82.7936ZM7.9775 100.631C9.24097 101.908 10.8277 102.546 12.7376 102.546C14.6475 102.546 16.2268 101.908 17.4756 100.631C18.739 99.3545 19.3708 97.7437 19.3708 95.7988C19.3708 93.854 18.739 92.2432 17.4756 90.9664C16.2268 89.6896 14.6475 89.0513 12.7376 89.0513C10.8277 89.0513 9.24097 89.6971 7.9775 90.9887C6.72872 92.2654 6.10433 93.8688 6.10433 95.7988C6.10433 97.7288 6.72872 99.3396 7.9775 100.631Z"
+                      fill="#EBEBF5"/>
+                <path d="M50.6417 83.4394H55.5781V108.069H50.3993L49.8263 105.865C47.6079 107.824 44.9781 108.804 41.937 108.804C39.5276 108.804 37.3459 108.24 35.3919 107.112C33.4379 105.983 31.91 104.424 30.8081 102.435C29.7063 100.431 29.1553 98.2039 29.1553 95.7543C29.1553 93.3195 29.7063 91.1149 30.8081 89.1403C31.91 87.1509 33.4379 85.5995 35.3919 84.4861C37.3459 83.3578 39.5276 82.7936 41.937 82.7936C45.0369 82.7936 47.7034 83.7957 49.9365 85.7999L50.6417 83.4394ZM37.7058 100.587C38.9693 101.863 40.556 102.502 42.4659 102.502C44.3758 102.502 45.9551 101.863 47.2039 100.587C48.4674 99.3099 49.0991 97.6991 49.0991 95.7543C49.0991 93.8094 48.4674 92.1986 47.2039 90.9219C45.9551 89.6451 44.3758 89.0067 42.4659 89.0067C40.556 89.0067 38.9693 89.6525 37.7058 90.9441C36.457 92.2209 35.8326 93.8243 35.8326 95.7543C35.8326 97.6843 36.457 99.2951 37.7058 100.587Z"
+                      fill="#EBEBF5"/>
+                <path d="M72.5706 83.3503H74.7302V89.6303H71.8874C70.0363 89.6303 68.7067 90.0756 67.8987 90.9664C67.1053 91.8423 66.7087 93.2898 66.7087 95.3089V108.114H60.1195V83.4839H64.3286L65.4966 86.5126C67.1714 84.4044 69.5294 83.3503 72.5706 83.3503Z"
+                      fill="#EBEBF5"/>
+                <path d="M91.3014 102.19H94.2985V108.114H89.6266C86.9527 108.114 84.8371 107.334 83.2798 105.775C81.7372 104.202 80.9659 102.049 80.9659 99.3174V88.8286H76.5585V87.4033L86.1888 77.0481H87.4449V83.4839H94.1663V88.8286H87.5551V98.4266C87.5551 99.6291 87.8783 100.557 88.5247 101.21C89.1711 101.863 90.0967 102.19 91.3014 102.19Z"
+                      fill="#EBEBF5"/>
+                <path d="M98.7941 80.2104V74.0195H105.361V80.2104H98.7941ZM98.7941 108.114V83.4839H105.383V108.114H98.7941Z"
+                      fill="#EBEBF5"/>
+                <path d="M134 95.7097C134 96.3778 133.956 97.0311 133.868 97.6694H115.423C115.702 99.3471 116.363 100.639 117.406 101.544C118.464 102.435 119.793 102.88 121.395 102.88C122.526 102.88 123.941 102.911 124.837 102.406C125.748 101.901 126.453 101.203 126.952 100.312H133.872C132.991 103 131.463 105.137 129.288 106.726C127.114 108.3 124.215 108.804 121.395 108.804C119.029 108.804 116.877 108.24 114.938 107.112C113.013 105.968 111.5 104.402 110.398 102.413C109.296 100.423 108.745 98.2187 108.745 95.7988C108.745 93.3641 109.289 91.152 110.376 89.1626C111.478 87.1732 112.991 85.6144 114.916 84.4861C116.855 83.3578 119.015 82.7936 121.395 82.7936C123.833 82.7936 126.022 83.38 127.962 84.5529C129.901 85.7109 131.392 87.2697 132.435 89.2294C133.478 91.1891 134 93.3492 134 95.7097ZM121.395 88.4723C119.94 88.4723 118.706 88.8805 117.692 89.6971C116.679 90.5136 115.981 91.6568 115.599 93.1265H127.411C126.955 91.6271 126.206 90.4765 125.163 89.6748C124.135 88.8731 122.879 88.4723 121.395 88.4723Z"
+                      fill="#EBEBF5"/>
+            </svg>
+        </div>
+
+        <div class="logIn__menu animate__animated animate__fadeInUp">
+            <button id="signUp" onclick="openModal(signUpPage)" class="bg-fiolet">Sign up to Partie</button>
+            <button onclick="openModal(logInIn)" class="btn-in">Log in</button>
+            <div class="or"><span>or</span></div>
+
+            <div id="btnContainer" class="btn-container">
+                <button id="btnApple" class="btn-apple">Log in with Apple</button>
+            </div>
+            <div id="showAll" class="show-all">
+                <a href="#" onclick="showAllBtns()">Show all</a>
+            </div>
+        </div>
+        <div id="bgShow" class="bg-btn-container-show"></div>
+        <!--        <div class="btn-container-wrapp">-->
+        <!--            <div id="btnSocial" class="btn-container-show animate__animated">-->
+        <!--                &lt;!&ndash;                <button id="btnApple" class="btn-apple">Log in with Apple</button>&ndash;&gt;-->
+        <!--                <button id="btnGoogle2" class="btn-google animate__animated">Log in with-->
+        <!--                    Google-->
+        <!--                </button>-->
+        <!--                <button id="btnFacebook2" class="btn-facebook animate__animated">Connect with-->
+        <!--                    Facebook-->
+        <!--                </button>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <!--        @@include('_loginButtons.html')-->
+
+        <!--signUpPage-->
+        <div id="signUpPage" class="modal-wrapp open-modal">
+            <div class="sign-up center modal">
+                <div class="sign-up__tab">
+                    <div class="sign-up__tab_sign-up">
+                        <a href="#">Sign up</a>
+                    </div>
+                    <div class="sign-up__tab_log-in">
+                        <a href="#" class="color-gray">Log in</a>
+                    </div>
+                    <div onclick="closeModal(signUpPage)" class="close">
+                        <img src="img/icon/close.png" height="16"/>
+                    </div>
+                </div>
+                <div class="sign-up__top">
+                    Sign up to Partie
+                    <svg id="back" onclick="back(signUpPage)" class="btn-back" width="24" height="24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"/>
+                        <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"/>
+                    </svg>
+                </div>
+                <form onsubmit="return false;" class="sign-up__forms">
+                    <div class="sign-up__form">
+                        <div class="title">Username</div>
+                        <input class="valid-error" placeholder="Enter username" type="text">
+                        <div class="hint animate__animated animate__fadeInDown">You can always change it later.</div>
+                        <div class="hint error animate__animated animate__fadeInDown">This username is unavailable.
+                        </div>
+                    </div>
+                    <div class="sign-up__form">
+                        <div class="title">Email</div>
+                        <input class="valid-ok" placeholder="Enter email" type="text">
+                        <div class="hint animate__animated animate__fadeInDown">You’ll need to verify that you own email
+                            account.
+                        </div>
+                    </div>
+                    <div class="sign-up__form">
+                        <div class="title">Password</div>
+                        <input placeholder="At least 6 characters" type="password">
+                    </div>
+                    <div class="sign-up__form">
+                        <div class="title">Date of Birth</div>
+                        <div class="input-group">
+                            <input class="month" placeholder="month">
+                            <input class="day" placeholder="day">
+                            <input class="year" placeholder="year">
+                        </div>
+                    </div>
+                    <div class="sign-up__form mobile">
+                        <div class="title">Date of Birth</div>
+                        <input class="border-error" type="date">
+                    </div>
+                    <button id="btnSignUpForms" onclick="next(logInCode, signUpPage)" class="sign-up__btn btn-valid-ok">
+                        Sign up
+                    </button>
+                    <div class="sign-up__privacy">By signing up, your agree to Partie’s
+                        <span>Terms and Conditions</span>,<br> End-User License Agreement and Privacy
+                        Policy.
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!--logIn__code-->
+        <div id="logInCode" class="modal-wrapp">
+            <div class="logIn__code center">
+                <div class="logIn__code_title">Do you have <br> creator code?</div>
+                <div class="logIn__code_description">Enter it below</div>
+                <form onsubmit="return false;">
+                    <div class="logIn__code_code">
+                        <input oninput="enterCodeCenter(this)" autofocus placeholder="Enter code" maxlength="5" type="text">
+                    </div>
+                    <div class="logInCode__past">Paste</div>
+                    <button id="btnCode" onclick="next(logInPlatforms, logInCode)" class="bg-fiolet">Continue</button>
+                </form>
+
+            </div>
+        </div>
+        <!--logIn__platforms-->
+        <div id="logInPlatforms" class="modal-wrapp">
+            <div class="logIn__platforms center">
+                <div class="logIn__platforms-title">Where do you play?</div>
+                <div class="logIn__platforms-description">You can select multiply <br> choices</div>
+                <form onsubmit="return false;" class="logIn__platforms-platforms">
+                    <div class="card">
+                        <input id="pc" name="platforms" type="checkbox">
+                        <label for="pc"></label>
+                        <div class="card__name">PC</div>
+                    </div>
+                    <div class="card">
+                        <input id="ps" name="platforms" type="checkbox">
+                        <label for="ps"></label>
+                        <div class="card__name">Playstation</div>
+                    </div>
+                    <div class="card">
+                        <input id="xbox" name="platforms" type="checkbox">
+                        <label for="xbox"></label>
+                        <div class="card__name">XBOX</div>
+                    </div>
+                    <div class="card">
+                        <input id="switch" name="platforms" type="checkbox">
+                        <label for="switch"></label>
+                        <div class="card__name">Switch</div>
+                    </div>
+                    <div class="card">
+                        <input id="mobile" name="platforms" type="checkbox">
+                        <label for="mobile"></label>
+                        <div class="card__name">Mobile</div>
+                    </div>
+                    <button id="btnPlatforms" onclick="next(logInPlatformsGames, logInPlatforms)"
+                            class="bg-fiolet animate__animated">Continue
+                    </button>
+                </form>
+                <div class="bg-red-blue">
+                    <div class="bg-animate red-blue">
+                        <div class="line-1 line"></div>
+                        <div class="line-2 line"></div>
+                        <div class="line-3 line"></div>
+                        <div class="line-4 line"></div>
+                        <div class="line-5 line"></div>
+                        <div class="line-6 line"></div>
+                        <div class="line-7 line"></div>
+                        <div class="line-8 line"></div>
+                        <div class="line-9 line"></div>
+                        <div class="line-10 line"></div>
+                        <div class="line-11 line"></div>
+                        <div class="line-12 line"></div>
+                        <div class="line-13 line"></div>
+                    </div>
+                    <div class="bg-animate red-blue screen-1">
+                        <div class="line-1 line2"></div>
+                        <div class="line-2 line2"></div>
+                        <div class="line-3 line2"></div>
+                        <div class="line-4 line2"></div>
+                        <div class="line-5 line2"></div>
+                        <div class="line-6 line2"></div>
+                        <div class="line-7 line2"></div>
+                        <div class="line-8 line2"></div>
+                        <div class="line-9 line2"></div>
+                        <div class="line-10 line2"></div>
+                        <div class="line-11 line2"></div>
+                        <div class="line-12 line"></div>
+                        <div class="line-13 line"></div>
+                    </div>
+                    <div class="bg-animate red-blue screen-2">
+                        <div class="line-1 line2"></div>
+                        <div class="line-2 line2"></div>
+                        <div class="line-3 line2"></div>
+                        <div class="line-4 line2"></div>
+                        <div class="line-5 line2"></div>
+                        <div class="line-6 line2"></div>
+                        <div class="line-7 line2"></div>
+                        <div class="line-8 line2"></div>
+                        <div class="line-9 line2"></div>
+                        <div class="line-10 line2"></div>
+                        <div class="line-11 line2"></div>
+                        <div class="line-12 line"></div>
+                        <div class="line-13 line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--logIn__platforms-games-->
+        <div id="logInPlatformsGames" class="modal-wrapp">
+            <div class="logIn__platforms-games center">
+                <div class="logInPlatformsGames__wrapp">
+                    <div class="logInPlatformsGames__title">
+                        What games <br> do you play?
+                    </div>
+                    <div class="logInPlatformsGames__description">
+                        You can select multiply <br> choices
+                    </div>
+
+                    <div class="feed__search_cont">
+                        <input class="feed__search_search" type="text" placeholder="Search">
+                    </div>
+
+                    <div class="cards">
+                        <input id="card-1" type="checkbox">
+                        <label for="card-1" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide4.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-1"></label>
+                        </label>
+
+                        <input id="card-2" type="checkbox">
+                        <label for="card-2" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide1.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-2"></label>
+                        </label>
+
+                        <input id="card-3" type="checkbox">
+                        <label for="card-3" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide2.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-3"></label>
+                        </label>
+
+
+                        <input id="card-4" type="checkbox">
+                        <label for="card-4" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide3.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-4"></label>
+                        </label>
+
+                        <input id="card-5" type="checkbox">
+                        <label for="card-5" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide4.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-5"></label>
+                        </label>
+
+                        <input id="card-6" type="checkbox">
+                        <label for="card-6" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide1.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-6"></label>
+                        </label>
+
+                        <input id="card-7" type="checkbox">
+                        <label for="card-7" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide2.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-7"></label>
+                        </label>
+
+                        <input id="card-8" type="checkbox">
+                        <label for="card-8" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide3.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-8"></label>
+                        </label>
+
+                        <input id="card-9" type="checkbox">
+                        <label for="card-9" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide4.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-9"></label>
+                        </label>
+
+                        <input id="card-10" type="checkbox">
+                        <label for="card-10" class="card">
+                            <div class="card__img">
+                                <img src="img/pic/slide1.png"/>
+                            </div>
+                            <div class="card__name">Fortnite</div>
+                            <label for="card-10"></label>
+                        </label>
+                    </div>
+                    <a href="/feed.html" id="btnPlatformsGames" class="btn bg-fiolet animate__animated">
+                        Continue
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--resetPass-->
+        <div id="resetPass" class="modal-wrapp">
+            <div class="logIn__reset-pass center modal">
+
+                <div class="sign-up__top d-block">
+                    <span>Reset Password</span>
+                    <!--                    <div class="password-reseted">Password reseted</div>-->
+                    <svg id="back" onclick="back(resetPass, logInIn)" class="btn-back" width="24" height="24"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"/>
+                        <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"/>
+                    </svg>
+                </div>
+
+                <form onsubmit="return false;" class="sign-up__forms">
+                    <div class="sign-up__form">
+                        <div class="title">Email</div>
+                        <input placeholder="Enter email" type="text">
+                        <div class="hint animate__animated animate__fadeInDown">Enter the email address
+                            associated with your account.
+                        </div>
+                    </div>
+                </form>
+                <button onclick="next(checkEmail, resetPass)" class="bg-fiolet">Reset Password</button>
+                <div class="need-help">Need help? Contact Us</div>
+            </div>
+        </div>
+        <!--logIn__check-email-->
+        <div id="checkEmail" class="modal-wrapp">
+            <div class="logIn__check-email center modal">
+                <div class="sign-up__top">
+                    <svg id="back" onclick="back(checkEmail, resetPass)" class="btn-back" width="24" height="24"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"/>
+                        <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="pc-wrapper">
+                    <div class="logIn__check-email_cont">
+                        <img src="img/pic/checkemail.png" width="100%"/>
+                        <div class="title">Check your email</div>
+                        <div class="description">An email was sent to janecooper@gmail.com, tap to link to
+                            create
+                            new
+                            Partie
+                            password
+                        </div>
+                    </div>
+                    <button class="bg-fiolet">
+                        Dismiss
+                    </button>
+                    <div class="need-help">Need help? Contact Us</div>
+                </div>
+            </div>
+        </div>
+        <!--logInIn-->
+        <div id="logInIn" class="modal-wrapp">
+            <div class="logIn__in center modal">
+                <div class="sign-up__tab">
+                    <div class="sign-up__tab_sign-up">
+                        <a href="#" class="color-gray">Sign up</a>
+                    </div>
+                    <div class="sign-up__tab_log-in">
+                        <a href="#">Log in</a>
+                    </div>
+                    <div onclick="closeModal(logInIn)" class="close">
+                        <img src="img/icon/close.png" height="16"/>
+                    </div>
+                </div>
+
+                <div class="sign-up__top">
+                    Log in to Partie
+                    <svg id="back" onclick="closeModal(logInIn)" class="btn-back" width="24" height="24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 4l-8 8 8 8" stroke="#F8F6FF" stroke-width="2"/>
+                        <path d="M2 12h20.571" stroke="#EBEBF5" stroke-width="2"/>
+                    </svg>
+                </div>
+
+                <form onsubmit="return false;" class="sign-up__forms">
+                    <div class="sign-up__form">
+                        <div class="title">Username</div>
+                        <input class="valid-ok" placeholder="Enter username" type="text">
+                        <div class="hint animate__animated animate__fadeInDown">You can always change it later.</div>
+                        <div class="hint error animate__animated animate__fadeInDown">This username is unavailable.
+                        </div>
+                    </div>
+                    <div class="sign-up__form">
+                        <div class="title">Password</div>
+                        <input placeholder="At least 6 characters" type="password">
+                    </div>
+                    <div onclick="next(resetPass, logInIn)" class="forgot"><a href="#">Forgot password?</a></div>
+                </form>
+
+                <div class="logIn__menu d-block">
+                    <button onclick="next(subscriptionModal, logInIn)" class="btn-in bg-fiolet">Log in</button>
+                    <div class="need-help">Need help? Contact Us</div>
+                    <div class="or"><span>or</span></div>
+                    <div id="btnContainer" class="btn-container">
+                        <button id="btnApple" class="btn-apple">Log in with Apple</button>
+                    </div>
+
+                    <div class="btn-container-wrapp">
+                        <div id="btnSocial" class="btn-container-show animate__animated">
+                            <!--                <button id="btnApple" class="btn-apple">Log in with Apple</button>-->
+                            <button id="btnGoogle2" class="btn-google animate__animated">Log in with
+                                Google
+                            </button>
+                            <button id="btnFacebook2" class="btn-facebook animate__animated">Connect with
+                                Facebook
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="showAll" class="show-all">
+                        <a href="#" onclick="showAllBtns()">Show all</a>
+                    </div>
+                </div>
+                @@include('_loginButtons.html')
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Subscription-->
+    <div class="subscription">
+        <div class="btn-container-wrapp">
+            <div class="btn-container-show animate__animated animate__fadeInUp">
+                <div class="subscription__payment">
+                    <div class="subscription__payment_title">
+                        Payment method
+                    </div>
+                    <button class="subscription__payment-paypal">Paypal</button>
+                    <button onclick="next(addCreditCard,subscriptionModal)" class="subscription__payment-card">
+                        Credit card
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <form onsubmit="return false;" id="subscriptionModal" class="modal-wrapp">
+            <div onclick="closeModal(subscriptionModal)" class="btn-back"></div>
+            <div class="subscription__modal center modal">
+                <div class="subscription__title">Partie Subscriptions</div>
+                <div class="radio-group">
+                    <div class="subscription__radio">
+                        <input checked id="annual" name="subscription" type="radio">
+                        <label for="annual">
+                            <div class="subscription__annual">
+                                <div class="subscription__annual-name">
+                                    <div class="checkbox-round"></div>
+                                    <div>Annual</div>
+                                </div>
+                                <div class="subscription__annual-price">
+                                    <div class="">$49.99 annual</div>
+                                    <div class="">billed once</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="subscription__radio">
+                        <input id="Monthly" name="subscription" type="radio">
+                        <label for="Monthly">
+                            <div class="subscription__annual">
+                                <div class="subscription__annual-name">
+                                    <div class="checkbox-round"></div>
+                                    <div>Monthly</div>
+                                </div>
+                                <div class="subscription__annual-price">
+                                    <div class="">$4.99</div>
+                                    <div class="">per month</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="subscription__description">
+                    <div class="subscription__description-article">Ad free</div>
+                    <div class="subscription__description-article">Unlock the full partie experience</div>
+                    <div class="subscription__description-article">Unlimited parties</div>
+                    <div class="subscription__description-article">Personal customize your partie</div>
+                </div>
+
+                <button onclick="showBtns(this)" class="bg-fiolet">Start 30 day trial</button>
+                <div class="subscription__payment">
+                    <button onclick="next(addCreditCard,subscriptionModal)" class="subscription__payment-card">Credit
+                        card
+                    </button>
+                    <button class="subscription__payment-paypal">Paypal</button>
+                </div>
+
+                <div class="subscription__policy">
+                    By signing up, your agree to Partie’s <span>Terms and Conditions</span>,<br>
+                    End-User License Agreement and Privacy Policy.
+                </div>
+            </div>
+            <div class="bg-yellow-blue">
+                <div class="bg-animate yellow-blue">
+                    <div class="line-1 line"></div>
+                    <div class="line-2 line"></div>
+                    <div class="line-3 line"></div>
+                    <div class="line-4 line"></div>
+                    <div class="line-5 line"></div>
+                    <div class="line-6 line"></div>
+                    <div class="line-7 line"></div>
+                    <div class="line-8 line"></div>
+                    <div class="line-9 line"></div>
+                    <div class="line-10 line"></div>
+                    <div class="line-11 line"></div>
+                    <div class="line-12 line"></div>
+                    <div class="line-13 line"></div>
+                </div>
+                <div class="bg-animate yellow-blue screen-1">
+                    <div class="line-1 line2"></div>
+                    <div class="line-2 line2"></div>
+                    <div class="line-3 line2"></div>
+                    <div class="line-4 line2"></div>
+                    <div class="line-5 line2"></div>
+                    <div class="line-6 line2"></div>
+                    <div class="line-7 line2"></div>
+                    <div class="line-8 line2"></div>
+                    <div class="line-9 line2"></div>
+                    <div class="line-10 line2"></div>
+                    <div class="line-11 line2"></div>
+                    <div class="line-12 line"></div>
+                    <div class="line-13 line"></div>
+                </div>
+                <div class="bg-animate yellow-blue screen-2">
+                    <div class="line-1 line2"></div>
+                    <div class="line-2 line2"></div>
+                    <div class="line-3 line2"></div>
+                    <div class="line-4 line2"></div>
+                    <div class="line-5 line2"></div>
+                    <div class="line-6 line2"></div>
+                    <div class="line-7 line2"></div>
+                    <div class="line-8 line2"></div>
+                    <div class="line-9 line2"></div>
+                    <div class="line-10 line2"></div>
+                    <div class="line-11 line2"></div>
+                    <div class="line-12 line"></div>
+                    <div class="line-13 line"></div>
+                </div>
+            </div>
+        </form>
+        <form onsubmit="return false;" id="addCreditCard" class="modal-wrapp">
+            <div onclick="back(addCreditCard, subscriptionModal)" class="btn-back"></div>
+            <div class="add-credit-card center modal">
+                <div class="subscription__title">Add a Credit card</div>
+                <div class="add-credit-card__text">Few words about privacy and something like that and Privacy Policy.
+                </div>
+                <input class="card-number" type="text" placeholder="Card number">
+                <input class="card-name" type="text" placeholder="Name on the card">
+                <div class="add-credit-card__input-group">
+                    <input class="input-date" type="text" placeholder="Date">
+                    <input class="input-CVC" type="password" placeholder="CVC" maxlength="3">
+                </div>
+                <button onclick="next(welcomeMobile, addCreditCard)" >Confirm</button>
+                <div class="subscription__policy">
+                    By signing up, your agree to Partie’s <span>Terms and Conditions</span>,<br>
+                    End-User License Agreement and Privacy Policy.
+                </div>
+            </div>
+        </form>
+
+        <div id="welcomeMobile" class="modal-wrapp">
+            <div class="logIn__check-email center modal">
+                <div class="pc-wrapper">
+                    <div class="logIn__check-email_cont">
+                        <img src="img/pic/checkemail.png" width="100%"/>
+                        <div class="title">Welcome to the Partie</div>
+                        <div class="description">
+                            Few words about privacy and something like that and Privacy Policy.
+                        </div>
+                    </div>
+                    <a href="/feed.html" class="btn bg-fiolet">
+                        Start
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/script.min.js"></script>
+</div>
+</body>
+
+</html>
